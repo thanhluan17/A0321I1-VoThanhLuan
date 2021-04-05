@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hobbies Form</title>
+</head>
+<body>
+    <style>
+        #hobby-form{
+            display: inline-block;
+            text-align:center;
+            align:center;
+            border: 1px solid black;
+            width: 700px;
+            height: 350px;
+        }
+        #hobby-form p{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            color: white;
+            background: orangered;
+        }
+        body{
+            font-family: Courier;
+            text-align: center;
+            align: center;
+            margin: 100px;
+        }
+        #hobby-table{
+            padding: 10px;
+        }
+        .tr-info .td-right{
+            color: blue;
+            width: 100px;
+            text-align: right;
+        }
+        #hobby-table, tr, td{
+            color: orangered;
+            padding: 10px;
+            text-align: left;
+        }
+
+    </style>
+    <form id="hobby-form" action="so_thich_cua_ban.html" method="post">
+        <p>SỞ THÍCH CỦA BẠN</p>
+        <table id="hobby-table">
+            <tr class="tr-info">
+                <td class="td-right">Họ và tên</td>
+                <td colspan="2"><input type="text" name="name" size="50px"/></td>
+            </tr>
+            <tr class="tr-info">
+                <td class="td-right">Email</td>
+                <td colspan="2"><input type="text" name="email" size="30px"/></td>
+            </tr>
+            <tr class="tr-info">
+                <td class="td-right">Sở thích</td>
+                <td><input type="checkbox" id="tt" name="hobby"/><label for="tt">Thể thao</label></td>
+                <td><input type="checkbox" id="an" name="hobby"/><label for="an">Âm nhạc</label></td>
+                <td><input type="checkbox" id="ds" name="hobby"/><label for="ds"></label>Đọc sách</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" id="lw" name="hobby"/><label for="lw">Lướt web</label></td>
+                <td><input type="checkbox" id="cg" name="hobby"/><label for="cg">Chơi game</label></td>
+                <td><input type="checkbox" id="da" name="hobby"/><label for="da">Điên Ảnh</label></td>
+            </tr>
+            <tr>
+                <td><td><input type="checkbox" id="dl" name="hobby"/><label for="dl">Du lịch</label></td></td>
+            </tr>
+        </table>
+        <input type="submit" value="Gửi thông tin"/>
+        <input type="reset" value="Nhập lại"/>
+    </form>
+</body>
+</html>

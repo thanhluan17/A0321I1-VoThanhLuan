@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar Table</title>
+</head>
+<body>
+    <style>
+        h2{
+            color: blue;
+        }
+        div{
+            width: 100%;
+            text-align: center;
+        }
+        table{
+            border-collapse: collapse;
+            display: inline-block;
+        }
+        td, th{
+            border: 1px solid black;
+        }
+        th{
+            color: red;
+            background-color: white;
+        }
+        td:nth-child(7){
+            color: blue;
+            background-color: white;
+        }
+        tr:nth-child(1) td{
+            border: 1px solid white;
+        }
+        tr:nth-child(1) td:nth-child(n+2){
+            background-color: orange;
+            color: white;
+        }
+        tr:nth-child(1) td:first-child{
+            background-color: red;
+            color: white;
+        }
+        tr:nth-child(1) td:last-child{
+            background-color: blue;
+            color: white;
+        }
+        tr:nth-child(2) td{
+            border: none;
+        }
+        tr:nth-child(2) td:first-child{
+            color: red;
+        }
+        td, th{
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+        }
+    </style>
+    <div>
+        <h2>Tháng 10 - October</h2>
+        <table>
+            <tr>
+                <td>C.Nhật</td>
+                <td>T.Hai</td>
+                <td>T.Ba</td>
+                <td>T.Tư</td>
+                <td>T.Năm</td>
+                <td>T.Sáu</td>
+                <td>T.Bảy</td>
+            </tr>
+            <tr>
+                <td>Sun</td>
+                <td>Mon</td>
+                <td>Tue</td>
+                <td>Wen</td>
+                <td>Thus</td>
+                <td>Fri</td>
+                <td>Sat</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1<sub>13</sub></td>
+                <td>2<sub>14</sub></td>
+                <td>3<sub>15</sub></td>
+            </tr>
+            <tr>
+                <th>4<sub>16</sub></th>
+                <td>5<sub>17</sub></td>
+                <td>6<sub>18</sub></td>
+                <td>7<sub>19</sub></td>
+                <td>8<sub>30</sub></td>
+                <td>9<sub>21</sub></td>
+                <td>10<sub>22</sub></td>
+            </tr>
+            <tr>
+                <th>11<sub>23</sub></th>
+                <td>12<sub>24</sub></td>
+                <td>13<sub>25</sub></td>
+                <td>14<sub>26</sub></td>
+                <td>15<sub>27</sub></td>
+                <td>16<sub>28</sub></td>
+                <td>17<sub>29</sub></td>
+            </tr>
+            <tr>
+                <th>18<sub>1.9</sub></th>
+                <td>19<sub>2</sub></td>
+                <td>20<sub>3</sub></td>
+                <td>21<sub>4</sub></td>
+                <td>22<sub>5</sub></td>
+                <td>23<sub>6</sub></td>
+                <td>24<sub>7</sub></td>
+            </tr>
+            <tr>
+                <th>25<sub>8</sub></th>
+                <td>26<sub>9</sub></td>
+                <td>27<sub>10</sub></td>
+                <td>28<sub>11</sub></td>
+                <td>29<sub>12</sub></td>
+                <td>30<sub>13</sub></td>
+                <td>31<sub>14</sub></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

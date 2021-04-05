@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 100px;
+        }
+        input{
+            margin: 10px;
+        }
+    </style>
+    <form action="http://demo.codegym.vn/6/registration_form/register.php" method="post">
+        <b>Họ và tên:</b><br>
+        <input type="text" name="name"/><br>
+        <b>Email:</b><br>
+        <input type="text" name="email"/><br>
+        <b>Số điện thoại:</b><br>
+        <input type="tel" name="phone"/><br>
+        <b>Giới tính:</b><br>
+        <input type="radio" name="gender" id="nam" checked/>
+        <label for="nam">Nam</label>
+        <input type="radio" name="gender" id="nu"/>
+        <label for="nu">Nữ</label><br>
+        <input type="submit" value="Đăng ký"/>
+    </form>
+</body>
+</html>
