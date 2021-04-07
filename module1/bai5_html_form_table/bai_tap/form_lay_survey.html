@@ -26,6 +26,18 @@
             text-align: left;
             padding-left: 5px;
         }
+        tr:nth-child(odd){
+            background-color: lightgray;
+        }
+        p{
+            font-weight: bold;
+        }
+        #spa{
+            margin-left: 45px;
+        }
+        #spb{
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -33,7 +45,7 @@
     <p>Please take a few moments to complete this satisfaction survey.</p><hr>
     <form action="" method="post" name="survey" id="survey-form">
         <div class="age-income">
-            <label>What is your age range?</label><br>
+            <p>What is your age range?</p>
             <select name="age">
                 <option value="A">18-24</option>
                 <option value="B">25-34</option>
@@ -42,7 +54,7 @@
             </select>
         </div>
         <div class="age-income">
-            <label>What is your yearly income range?</label><br>
+            <p>What is your yearly income range?</p>
             <select name="income">
                 <option value="A">$0 - $25,000</option>
                 <option value="B">$25,001 - $50,000</option>
@@ -51,7 +63,7 @@
             </select>
         </div>
         <div class="gender">
-            <label>Gender Identity</label><br>
+            <p>Gender Identity</p><br>
             <input type="radio" name="gender" id="nam" checked/>
             <label for="nam">Male</label><br>
             <input type="radio" name="gender" id="nu"/>
@@ -63,7 +75,7 @@
             <input type="text" size="20px"/>
         </div>
         <div class="product">
-            <label>Which of the following products have your purchased in the last 2 months. Please check all that apply.</label><br>
+            <p>Which of the following products have your purchased in the last 2 months. Please check all that apply.</p>
             <input type="checkbox" name="product" id="1"/>
             <label for="1">Product 1</label><br>
             <input type="checkbox" name="product" id="2"/>
@@ -72,7 +84,7 @@
             <label for="3">Product 3</label><br>
         </div>
         <div class="frequency">
-            <label>How often would you use our new product?</label><br>
+            <p>How often would you use our new product?</p>
             <input type="radio" name="gender" id="d"/>
             <label for="d">Daily</label><br>
             <input type="radio" name="gender" id="ư"/>
@@ -81,17 +93,17 @@
             <label for="m">Monthly</label><br>
         </div>
         <div class="pay">
-            <label>What would you pay for the new product?</label><br>
+            <p>What would you pay for the new product?</p><br>
             <span>$ <input type="text" size="7px" id="pay"/><span> . </span><input type="text" size="1px" id="dot"/></span><br>
-            <label for="pay">&nbsp&nbsp Dollars</label>
-            <label for="dot">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Cents</label>
+            <span id="spb" for="pay">Dollars</span>
+            <span id="spa" for="dot">Cents</span>
         </div>
         <div class="feature">
-            <label>What features would you like to see in the new product.</label><br>
+            <p>What features would you like to see in the new product.</p>
             <textarea cols="100" rows="10"></textarea>
         </div>
         <div class="rate">
-            <label>Please rate your level of agreement with the following statements.</label><br>
+            <p>Please rate your level of agreement with the following statements.</p>
             <table>
                 <tr>
                     <th></th>
