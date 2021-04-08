@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Average Score</title>
+</head>
+<body>
+<script>
+    let physic = parseFloat(prompt("Nhập điểm môn lý: "));
+    let chemistry = parseFloat(prompt("Nhập điểm môn hóa: "));
+    let biology = parseFloat(prompt("Nhập điểm môn sinh: "));
+    let average = (physic + chemistry + biology) / 3;
+    let sum = physic + chemistry + biology;
+    document.writeln("Điểm trung bình: " + average.toFixed(2));
+    document.writeln("\nTổng điểm: " + sum);
+</script>
+</body>
+</html>

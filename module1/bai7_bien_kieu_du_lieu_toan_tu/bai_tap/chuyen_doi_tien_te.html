@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Convert</title>
+</head>
+<body>
+<style>
+    span{
+        margin: 50px;
+    }
+    #amount{
+        width: 100px;
+        margin-left: 50px;
+    }
+    #from{
+        width: 100px;
+        margin-left: 45px;
+    }
+    #to{
+        width: 100px;
+        margin-left: 100px;
+    }
+    button{
+        margin-left: 50px;
+        background-color: darkcyan;
+        color: white;
+    }
+    p{
+        font-size: 17px;
+        margin-left: 50px;
+        color: blue;
+    }
+</style>
+<div>
+    <h2>Convert Currency</h2>
+    <span>Amount</span>
+    <span>From Currency</span>
+    <span>To Currency</span><br>
+    <input type="number" id="amount"/>
+    <select id="from">
+        <option id="usd">USD</option>
+    </select>
+    <select id="to">
+        <option id="vn">VietNam</option>
+        <option id="lao">Laos</option>
+        <option id="cam">Campuchia</option>
+    </select>
+    <button id="btn" onclick="convertCurrency()">Convert</button>
+    <p id="result"></p>
+</div>
+<script>
+    function convertCurrency() {
+        var amount = document.getElementById("amount").value;
+        // var selectFrom = document.getElementById("from");
+        // var from = selectFrom.options[selectFrom.selectedIndex].id;
+        var selectTo = document.getElementById("to");
+        var to = selectTo.options[selectTo.selectedIndex].id;
+        let result;
+        if(to === "vn") {
+            result = 23100 * amount;
+            document.getElementById("result").innerText = "Result: " + result + " VND";
+        }
+        if(to === "lao"){
+                result = 9401*amount;
+                document.getElementById("result").innerText= "Result: " + result + " Kip";
+        }
+        if(to === "cam"){
+                result = 4044*amount;
+                document.getElementById("result").innerText= "Result: " + result + " Riel";
+        }
+    }
+</script>
+</body>
+</html>
