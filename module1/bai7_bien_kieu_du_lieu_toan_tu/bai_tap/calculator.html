@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<style>
+    button{
+        margin: 10px;
+    }
+    input{
+        width: 135px;
+        margin-left: 10px;
+    }
+</style>
+<div>
+    <h1>Calculator</h1>
+    <input type="number" id="a"/>
+    <input type="number" id="b"/><br>
+    <button id="add" onclick="addNum()">Add (+)</button>
+    <button id="sub" onclick="subNum()">Sub (-)</button>
+    <button id="mul" onclick="mulNum()">Mul (*)</button>
+    <button id="div" onclick="divNum()">Div (/)</button>
+    <p id="rs"></p>
+</div>
+<script>
+    function addNum() {
+        var a = parseInt(document.getElementById("a").value);
+        var b = parseInt(document.getElementById("b").value);
+        var add = a+b;
+        document.getElementById("rs").innerText="Result Addition: " + add;
+    }
+    function subNum() {
+        var a = parseInt(document.getElementById("a").value);
+        var b = parseInt(document.getElementById("b").value);
+        var sub = a-b;
+        document.getElementById("rs").innerText="Result Subtraction: " + sub;
+    }
+    function mulNum() {
+        var a = parseInt(document.getElementById("a").value);
+        var b = parseInt(document.getElementById("b").value);
+        var mul = a*b;
+        document.getElementById("rs").innerText="Result Multiplication: " + mul;
+    }
+    function divNum() {
+        var a = parseInt(document.getElementById("a").value);
+        var b = parseInt(document.getElementById("b").value);
+        if(b==0){
+            document.getElementById("rs").innerText = "Please input b difference 0 to divive!"
+        }else {
+            var div = a / b;
+            document.getElementById("rs").innerText = "Result Division: " + div.toFixed(2);
+        }
+    }
+</script>
+</body>
+</html>

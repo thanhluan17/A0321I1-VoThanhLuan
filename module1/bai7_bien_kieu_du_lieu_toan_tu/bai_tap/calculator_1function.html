@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator with 1 Function</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+    </head>
+<body>
+<style>
+    button{
+        margin: 10px;
+    }
+    input{
+        width: 135px;
+        margin-left: 10px;
+    }
+</style>
+<div>
+    <h1>Calculator</h1>
+    <input type="number" id="a"/>
+    <input type="number" id="b"/><br>
+    <button id="add" onclick="calculate('+')">Add (+)</button>
+    <button id="sub" onclick="calculate('-')">Sub (-)</button>
+    <button id="mul" onclick="calculate('*')">Mul (*)</button>
+    <button id="div" onclick="calculate('/')">Div (/)</button>
+    <p id="rs"></p>
+</div>
+<script>
+    function calculate(operator) {
+        var a = parseInt(document.getElementById("a").value);
+        var b = parseInt(document.getElementById("b").value);
+        switch (operator) {
+            case '+': {
+                var add = a + b;
+                document.getElementById("rs").innerText = "Result Addition: " + add;
+                break;
+            }
+            case '-':{
+                var sub = a-b;
+                document.getElementById("rs").innerText="Result Subtraction: " + sub;
+                break;
+            }
+            case '*':{
+                var mul = a*b;
+                document.getElementById("rs").innerText="Result Multiplication: " + mul;
+                break;
+            }
+            case '/':{
+                var div = a / b;
+                document.getElementById("rs").innerText = "Result Division: " + div.toFixed(2);
+                break;
+            }
+            default:
+                break;
+        }
+    }
+</script>
+</body>
+</html>
