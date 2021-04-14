@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>You Must Love Me</title>
+</head>
+<body>
+<style>
+    body {
+        margin: 8px;
+        width: 80%;
+        height: 80%;
+    }
+    button{
+        margin: 5px;
+    }
+    h1{
+        position: absolute;
+        left: 500px;
+        top: 150px;
+    }
+    #no-btn{
+        position: absolute;
+        left: 600px;
+        top: 300px;
+    }
+    #yes-btn{
+        position: absolute;
+        left: 530px;
+        top: 300px;
+    }
+</style>
+<h1>Do you love me?</h1>
+<button id="yes-btn" onclick="yesClick()">YES</button>
+<button id="no-btn" onmouseover="noHover() ">NO</button>
+<script>
+    function yesClick() {
+        alert("<3!");
+    }
+    function noHover() {
+        var btn = document.getElementById('no-btn');
+        var left = Math.round(Math.random() * window.innerWidth);
+        var top = Math.round(Math.random() * window.innerHeight);
+        btn.style.left = left + 'px';
+        btn.style.top = top + 'px';
+    }
+</script>
+</body>
+</html>
