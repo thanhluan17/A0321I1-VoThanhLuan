@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Event</title>
+</head>
+<body>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Soccer_ball.svg/1200px-Soccer_ball.svg.png" width="300px" height="300px" id="image"/>
+<p>Click button below to move image to right!</p>
+<button id="btn" onclick="moveRight()">Click Me</button>
+<script>
+    var imgObj = document.getElementById('image');
+    function init() {
+        imgObj = document.getElementById('image');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+    }
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    }
+    window.onload = init;
+</script>
+</body>
+</html>

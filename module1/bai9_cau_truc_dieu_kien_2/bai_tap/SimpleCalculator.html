@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+</head>
+<body>
+<style>
+    body{
+        text-align: center;
+    }
+    table{
+        display: inline-block;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    table, td, th {
+        border: 1px solid #000;
+        text-align: left;
+    }
+    th{
+        text-align: right;
+    }
+    th, td {
+        padding: 5px;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+    }
+</style>
+<div>
+    <table>
+        <tr>
+            <th colspan="4"><input type="text" id="rs" value="" size="30px"></th>
+        </tr>
+        <tr>
+            <td><button onclick="input('1')">1</button></td>
+            <td><button onclick="input('2')">2</button></td>
+            <td><button onclick="input('3')">3</button></td>
+            <td><button onclick="input('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="input('4')">4</button></td>
+            <td><button onclick="input('5')">5</button></td>
+            <td><button onclick="input('6')">6</button></td>
+            <td><button onclick="input('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="input('7')">7</button></td>
+            <td><button onclick="input('8')">8</button></td>
+            <td><button onclick="input('9')">9</button></td>
+            <td><button onclick="input('X')">X</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="clearInput()">C</button></td>
+            <td><button onclick="input('c')">0</button></td>
+            <td><button onclick="calculate()">=</button></td>
+            <td><button onclick="input('/')">/</button></td>
+        </tr>
+    </table>
+</div>
+<script>
+    let rs = document.getElementById('rs');
+    function input(number) {
+        rs.value = rs.value + number;
+    }
+    function calculate() {
+        rs.value = eval(rs.value);
+    }
+    function clearInput() {
+        rs.value = "";
+    }
+</script>
+</body>
+</html>
