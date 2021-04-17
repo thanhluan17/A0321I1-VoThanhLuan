@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+<style>
+    body{
+        margin-top: 100px;
+    }
+    p{
+        margin-left: 500px;
+    }
+    select{
+        margin-left: 550px;
+        width: 200px;
+        height: 25px;
+    }
+    button{
+        height: 25px;
+    }
+
+</style>
+<select id="choice">
+    <option value="1">Bài 1</option>
+    <option value="2">Bài 2</option>
+    <option value="3">Bài 3</option>
+    <option value="4">Bài 4</option>
+    <option value="5">Bài 5</option>
+    <option value="6">Bài 6</option>
+    <option value="7">Bài 7</option>
+    <option value="8">Bài 8</option>
+    <option value="9">Bài 9</option>
+    <option value="10">Bài 10</option>
+    <option value="11">Bài 11</option>
+    <option value="12">Bài 12</option>
+</select>
+<button id="btn" onclick="execute()">Thực hiện</button><br>
+<p>Bài1: Chuyển từ độ C sang độ F</p>
+<p>Bài2: Chuyển từ mét sang feet</p>
+<p>Bài3: Tính diện tích hình vuông khi biết cạnh a</p>
+<p>Bài4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b</p>
+<p>Bài5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b</p>
+<p>Bài6: Giải phương trình bậc 1</p>
+<p>Bài7: Giải phương trình bậc 2</p>
+<p>Bài8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0</p>
+<p>Bài9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là</p>
+<p>Bài10: Viết chương trình tính giá điện</p>
+<p>Bài11: Viết chương trình tính thuế thu nhập cá nhân</p>
+<p>Bài12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng</p>
+</body>
+<script>
+
+    function bai1() {
+        let tem = parseFloat(prompt('Nhập giá trị độ C: '));
+        if(isNaN(tem)){
+            alert('Nhập giá trị là số!');
+        }else {
+            alert(tem + ' độ C bằng ' + rs + ' độ F');
+        }
+    }
+
+    function bai2() {
+        let ft = parseFloat(prompt('Nhập giá giá trị feet: '));
+        let rs = ft * 3.2808;
+        if(isNaN(ft)){
+            alert('Nhập giá trị là số!');
+        }else {
+            alert(ft + ' feet bằng ' + rs + ' mét');
+        }
+    }
+
+    function bai3() {
+        let len = parseFloat(prompt('Nhập chiều dài cạnh hình vuông: '));
+        let rs = len * len;
+        if(isNaN(len)){
+            alert('Nhập giá trị là số!');
+        }else {
+            alert('Diện tích bằng: '+ rs);
+        }
+    }
+
+    function bai4() {
+        let w = parseFloat(prompt('Nhập độ dài chiều rộng: '));
+        let h = parseFloat(prompt('Nhập độ dài chiều dài: '));
+        let rs = w * h;
+        if(isNaN(w) || isNaN(h)){
+            alert('Nhập giá trị là số!');
+        }else {
+            alert('Diện tích bằng: '+ rs);
+        }
+    }
+
+    function bai5() {
+        let a = parseFloat(prompt('Nhập độ dài cạnh kề thứ nhất: '));
+        let b = parseFloat(prompt('Nhập độ dài cạnh kề thứ hai: '));
+        let rs = 1/2 *(a * b);
+        if(isNaN(a) || isNaN(b)){
+            alert('Nhập giá trị là số!');
+        }else {
+            alert('Diện tích bằng: '+ rs);
+        }
+    }
+
+    function bai6() {
+        let a = parseInt(prompt('Nhập a: '));
+        let b = parseInt(prompt('Nhập b:'));
+        if(isNaN(a) || isNaN(b)){
+            alert()
+        }
+        if (a == 0) {
+            if (b == 0)
+                alert('Phương trình có VSN');
+            else
+                alert('Phương trình vô nghiệm');
+        } else {
+            let rs = (-b / a);
+            alert('Phương trình có nghiệm là: ' + rs);
+        }
+    }
+
+    function bai7() {
+        let a = parseInt(prompt('Nhập a: '));
+        let b = parseInt(prompt('Nhập b: '));
+        let c = parseInt(prompt('Nhập c: '));
+        let delta, x1, x2;
+        if(isNaN(a) || isNaN(b) || isNaN(c)){
+            alert('Bạn phải nhập số nguyên!');
+        }else {
+            if (a == 0) {
+                if (b == 0) {
+                    if (c == 0) {
+                        alert("Phương trình có vô số nghiệm");
+                    } else {
+                        alert("Phương trình vô nghiệm");
+                    }
+                } else {
+                    x1 = (-c / b);
+                    alert("Phương trình có nghiệm duy nhất: " + x1);
+                }
+            } else {
+                delta = b * b - 4 * a * c;
+                if (delta > 0) {
+                    x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    alert("Nghiệm thứ nhất: x1 = " + x1 + "\n" + "Nghiệm thứ hai: x2 = " + x2);
+                } else if (delta == 0) {
+                    x1 = -b / 2 * a;
+                    alert("Phương trình có nghiệm kép là: x1 = x2 = " + x1);
+                } else if(delta < 0){
+                    alert("Phương trình vô nghiệm");
+                }
+            }
+        }
+    }
+
+    function bai8() {
+        let age = parseInt(prompt('Nhập tuổi'));
+        if(isNaN(age) || age > 120 || age < 0){
+            alert('Không phải là tuổi');
+        }else {
+            alert(age + ' là tuổi');
+        }
+    }
+
+    function bai9() {
+        let  a = parseFloat(prompt('Nhập a: '));
+        let  b = parseFloat(prompt('Nhập b: '));
+        let  c = parseFloat(prompt('Nhập c: '));
+        let c1 = a + b;
+        let c2 = b + c;
+        let c3 = c + a;
+        if(!isNaN(a) && !isNaN(b) && !isNaN(c)){
+            if((c1 > c) && (c2 > a) && (c3 > b) && a>0 && b>0 && c>0){
+                alert('Là 3 cạnh của 1 tam giác');
+            }else {
+                alert('Không phải là 3 cạnh của 1 tam giác');
+            }
+        }else {
+            alert('Phải nhập số thực!')
+        }
+
+    }
+
+    function bai10() {
+        let used = parseFloat(prompt('Nhập số ký điện: '));
+        let rs;
+        if(used < 50){
+            rs = used * 2000;
+        }
+        if(used >= 50){
+            rs = 50 * 2000 + (used - 50) * 2500;
+        }
+        if (isNaN(used)) {
+            alert('Bạn phải nhập số!');
+        }else {
+            alert('Cước phải trả là: ' + rs + ' VNĐ');
+        }
+    }
+
+    function bai11() {
+        let income = parseInt(prompt('Nhập thu nhập: '));
+        if(isNaN(income)){
+            alert('Thu nhập phải là số');
+        }else {
+            if(income > 384000000){
+                let rs = (25 * income) / 100;
+                alert('Thuế phải đóng là: ' + rs);
+            }else if(income > 216000000){
+                let rs = (20 * income) / 100;
+                alert('Thuế phải đóng là: ' + rs);
+            }else if(income > 120000000){
+                let rs = (15 * income) / 100;
+                alert('Thuế phải đóng là: ' + rs);
+            }else if(income > 60000000){
+                let rs = (10 * income) / 100;
+                alert('Thuế phải đóng là: ' + rs);
+            }else {
+                let rs = (5 * income) / 100;
+                alert('Thuế phải đóng là: ' + rs);
+            }
+        }
+    }
+
+    function bai12() {
+        let money = parseInt(prompt("Nhập vào số tiền muốn vay:", ""));
+        let month = parseInt(prompt("Nhập vào số tháng muốn vay:", ""));
+        if (money <= 0 || isNaN(money) || month <= 0 || isNaN(month)){
+            alert("Nhập vào số tiền và số tháng muốn vay lớn hơn 0!");
+        }
+        else {
+            for(let i = 0; i < month; i++)
+            {
+                money = money + money * 0.1 / 100;
+            }
+            alert("Số tiền phải trả sau: " + month + " tháng là: " + Math.ceil(money) );
+        }
+    }
+
+    function execute() {
+        let op = document.getElementById('choice');
+        let choose = op.options[op.selectedIndex].value;
+        switch (choose) {
+            case '1':
+                bai1();
+                break;
+            case '2':
+                bai2();
+                break;
+            case '3':
+                bai3();
+                break;
+            case '4':
+                bai4();
+                break;
+            case '5':
+                bai5();
+                break;
+            case '6':
+                bai6();
+                break;
+            case '7':
+                bai7();
+                break;
+            case '8':
+                bai8();
+                break;
+            case '9':
+                bai9();
+                break;
+            case '10':
+                bai10();
+                break;
+            case '11':
+                bai11();
+                break;
+            case '12':
+                bai12();
+                break;
+        }
+    }
+</script>
+</html>

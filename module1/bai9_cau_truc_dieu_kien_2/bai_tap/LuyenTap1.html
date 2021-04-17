@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+</head>
+<body>
+<style>
+    body{
+        margin-top: 100px;
+    }
+    p{
+        margin-left: 500px;
+    }
+    select{
+        margin-left: 550px;
+        width: 200px;
+        height: 25px;
+    }
+    button{
+        height: 25px;
+    }
+
+</style>
+<select id="choice">
+    <option value="1">Bài 1</option>
+    <option value="2">Bài 2</option>
+    <option value="3">Bài 3</option>
+    <option value="4">Bài 4</option>
+    <option value="5">Bài 5</option>
+    <option value="6">Bài 6</option>
+    <option value="7">Bài 7</option>
+</select>
+<button id="btn" onclick="execute()">Thực hiện</button><br>
+<p>Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</p>
+<p>Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10</p>
+<p>Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</p>
+<p>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</p>
+<p>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</p>
+<p>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</p>
+<p>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</p>
+</body>
+<script>
+    function bai1() {
+        let a = parseInt(prompt('Nhập a: '));
+        let b = parseInt(prompt('Nhập b: '));
+        if(isNaN(a) || isNaN(b)){
+            alert('Bạn phải nhập số!');
+        }else if(a % b == 0){
+                alert(a + ' chia hết cho ' + b);
+            }else {
+                alert(a + ' không chia hết cho ' + b);
+            }
+    }
+
+    function bai2() {
+        let tuoi = parseInt(prompt('Nhập tuổi: '));
+        if(isNaN(tuoi)){
+            alert('Tuổi phải là số!');
+        }else if(tuoi >= 15){
+            alert('Tuổi của học sinh đủ điều kiện');
+        }else {
+            alert('Tuổi học sinh chưa đủ điều kiện');
+        }
+    }
+
+    function bai3() {
+        let num = parseInt(prompt('Nhập số nguyên: '));
+        if(isNaN(num)){
+            alert('Bạn phải nhập số nguyên!');
+        }else if(num == 0){
+            alert('Bằng 0!');
+        }else if(num > 0){
+            alert(num + ' lớn hơn 0!');
+        }else if(num < 0){
+            alert(num + ' bé hơn 0!');
+        }
+    }
+
+    function bai4() {
+        let a = parseInt(prompt('Nhập a: '));
+        let b = parseInt(prompt('Nhập b: '));
+        let c = parseInt(prompt('Nhập c: '));
+        if(isNaN(a) || isNaN(b) || isNaN(c)){
+            alert('Bạn phải nhập số nguyên!');
+        }else{
+            if(a > b){
+                if(a > c){
+                    alert(a + ' là số lớn nhất!');
+                }else if(c > b){
+                    alert(c + ' là số lớn nhất!');
+                }
+            }else if(b > c){
+                alert(b + ' là số lớn nhất!');
+            }else {
+                alert(c + ' là số lớn nhất!');
+            }
+        }
+    }
+
+    function bai5() {
+        let a = parseFloat(prompt('Nhập điểm bài kiểm tra: '));
+        let b = parseFloat(prompt('Nhập điểm giữa kỳ: '));
+        let c = parseFloat(prompt('Nhập điểm cuối kỳ: '));
+        let average = (0.2*a + 0.3*b + 0.5*c).toFixed(2);
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+            alert('Bạn phải nhập số nguyên!');
+        }else {
+            if(average > 8.4 && average <= 100){
+                alert(average + ' loại A!');
+            }else if(average > 7){
+                alert(average + ' loại B!');
+            }else if(average > 5.4){
+                alert(average + ' loại C!');
+            }else if(average > 4){
+                alert(average + ' loại D!');
+            }else {
+                alert(average + ' loại F!');
+            }
+        }
+    }
+    function bai6() {
+        let a = parseInt(prompt('Nhập số sản phẩm: '));
+        let b = parseInt(prompt('Nhập giá sản phẩm: '));
+        let c = parseInt(prompt('Nhập % hoa hồng: '));
+        let rs = (a*b*c) / 100;
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+            alert('Bạn phải nhập số!');
+        }else {
+            alert('Tiền hoa hồng: ' + rs + ' VNĐ');
+        }
+    }
+
+    function bai7() {
+        let a = parseFloat(prompt('Nhập số phút gọi: '));
+        let b = parseInt(prompt('Nhập cước phí mỗi phút: '));
+        let rs = a*b;
+        if (isNaN(a) || isNaN(b)) {
+            alert('Bạn phải nhập số!');
+        }else {
+            alert('Cước phải trả là: ' + rs + ' VNĐ');
+        }
+    }
+    function execute() {
+        let op = document.getElementById('choice');
+        let choose = op.options[op.selectedIndex].value;
+        switch (choose) {
+            case '1':
+                bai1();
+                break;
+            case '2':
+                bai2();
+                break;
+            case '3':
+                bai3();
+                break;
+            case '4':
+                bai4();
+                break;
+            case '5':
+                bai5();
+                break;
+            case '6':
+                bai6();
+                break;
+            case '7':
+                bai7();
+                break;
+        }
+    }
+</script>
+</html>
