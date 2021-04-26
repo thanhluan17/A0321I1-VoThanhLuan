@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giá trị lớn nhất</title>
+</head>
+<body>
+<script>
+    let numbers = [-3, 5, 1, 3, 2, 10];
+    let max = numbers[0];
+    let i;
+    let index;
+    for(i = 1; i < numbers.length; i++){
+        if(numbers[i] > max){
+            max = numbers[i];
+            index = i;
+        }
+    }
+    document.write('Max value in array is: ' + max + ' at position ' + index);
+</script>
+</body>
+</html>
