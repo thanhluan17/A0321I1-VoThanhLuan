@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop Exercise 1</title>
+</head>
+<body>
+<style>
+    body{
+        margin-top: 100px;
+    }
+    p{
+        margin-left: 500px;
+    }
+    select{
+        margin-left: 550px;
+        width: 200px;
+        height: 25px;
+    }
+    button{
+        height: 25px;
+    }
+
+</style>
+<select id="choice">
+    <option value="1">Bài 1</option>
+    <option value="2">Bài 2</option>
+    <option value="3">Bài 3</option>
+    <option value="4">Bài 4</option>
+    <option value="5">Bài 5</option>
+    <option value="6">Bài 6</option>
+    <option value="7">Bài 7</option>
+</select>
+<button id="btn" onclick="execute()">Thực hiện</button><br>
+<p>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</p>
+<p>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập.<br>Nếu nhiệt độ nhập vào
+    trên 100, yêu cầu người dùng giảm nhiệt độ.<br>Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</p>
+<p>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</p>
+<p>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</p>
+<p>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</p>
+<p>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</p>
+<p>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100.<br>Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra
+    "Buzz" thay vì in ra số đó.<br>Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</p>
+<script>
+    function bai1() {
+        let dem = 1;
+        while (dem < 100){
+            document.writeln(dem.toString());
+            dem++;
+        }
+        document.writeln('Done!');
+    }
+
+    function bai2() {
+        let tem;
+        do{
+            tem = parseFloat(prompt('Nhập nhiệt độ: '));
+            if(tem > 100){
+                alert('Hãy giảm nhiệt độ! ');
+            }
+            if(tem < 20){
+                alert('Hãy tăng nhiệt độ!');
+            }
+        }while (tem > 100 || tem < 20);
+    }
+
+    function bai3() {
+        let i;
+        for(i = 1; i <= 20; i++){
+            document.write(fibo(i).toString() + ' ');
+        }
+    }
+    function fibo(n) {
+        let f0 = 0;
+        let f1 = 1;
+        let fn = 1;
+        let i;
+        if (n < 0) {
+            return -1;
+        } else if (n == 0 || n == 1) {
+            return n;
+        } else {
+            for (i = 2; i < n; i++) {
+                f0 = f1;
+                f1 = fn;
+                fn = f0 + f1;
+            }
+        }
+        return fn;
+    }
+
+    function bai4() {
+        let i = 1;
+        while (fibo(i) % 5 != 0){
+            i++;
+        }
+        document.write('Số fibo đầu tiên chia hết cho 5 là: ' + fibo(i));
+    }
+
+    function bai5() {
+        let total = 0;
+        let i;
+        for(i = 1; i <= 20; i++){
+            total += fibo(i);
+        }
+        document.write('Tổng 20 số fibo đầu tiên là: ' + total);
+    }
+
+    function bai6() {
+        let count = 0;
+        let i = 0;
+        let total = 0;
+        while (count != 30){
+            if(i % 7 == 0){
+                total += i;
+                count++;
+            }
+            i++
+        }
+        document.write('Tổng 30 số chia hiết cho 7 là: ' + total);
+    }
+
+    function bai7() {
+        let i = 1;
+        while (i <= 100){
+            if(i % 3 === 0 && i % 5 === 0) {
+                document.writeln('FizzBuzz');
+            }else if(i % 3 === 0){
+                document.writeln('Fizz');
+            }else if(i % 5 === 0){
+                document.writeln('Buzz');
+            }else {
+                document.writeln(i.toString());
+            }
+            i++;
+        }
+    }
+
+    function execute() {
+        let op = document.getElementById('choice');
+        let choose = op.options[op.selectedIndex].value;
+        switch (choose) {
+            case '1':
+                bai1();
+                break;
+            case '2':
+                bai2();
+                break;
+            case '3':
+                bai3();
+                break;
+            case '4':
+                bai4();
+                break;
+            case '5':
+                bai5();
+                break;
+            case '6':
+                bai6();
+                break;
+            case '7':
+                bai7();
+                break;
+        }
+    }
+</script>
+</body>
+</html>

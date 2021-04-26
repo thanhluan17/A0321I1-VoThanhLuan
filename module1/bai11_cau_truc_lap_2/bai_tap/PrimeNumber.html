@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime Number</title>
+</head>
+<body>
+<p id="rs"></p>
+<script>
+    let num = parseInt(prompt('Nhập số số nguyên tố đầu tiên muốn in: '));
+    function checkPrime(number) {
+        let dem = 0;
+        let j;
+        for(j = 1; j <= number; j++){
+            if(number % j == 0){
+                dem += 1;
+            }
+        }
+        if(dem == 2){
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+    let i = 2;
+    let rs = '';
+    let count = 0;
+    while (count < num){
+            if(checkPrime(i) == 1){
+                rs = rs + ' ' + i;
+                count++;
+            }
+        i++;
+    }
+    document.getElementById('rs').innerText = + num + ' số nguyên tố đầu tiên là: ' + rs;
+</script>
+</body>
+</html>

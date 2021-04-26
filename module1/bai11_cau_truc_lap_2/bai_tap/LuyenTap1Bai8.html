@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number guess game</title>
+</head>
+<body>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+    <h3>Game đoán số</h3>
+    <button id="play" onclick="startPlay()">Chơi</button>
+    <button>Chơi lại</button>
+<script>
+    function startPlay() {
+        let min_guess = parseInt(prompt('Nhập giá trị khoảng dự đoán: \nKhoảng dưới'));
+        let max_guess = parseInt(prompt('Nhập giá trị khoảng dự đoán: \nKhoảng trên'));
+        let num = Math.floor(Math.random() * (max_guess - min_guess + 1)) + min_guess;
+        alert(num);
+        do{
+            let guess_value = parseInt(prompt('Mời bạn nhập giá trị dự đoán: '));
+            if(guess_value === num){
+                alert('Chúc mừng bạn đã chiến thắng!');
+                break;
+            }else if(guess_value < num){
+                alert('Giá trị bạn dự đoán bé hơn giá trị ngẫu nhiên!');
+            }else if(guess_value > num){
+                alert('Giá trị bạn dự đoán lớn hơn giá trị ngẫu nhiên!');
+            }
+        }while (true);
+    }
+</script>
+</body>
+</html>
