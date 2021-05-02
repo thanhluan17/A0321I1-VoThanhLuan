@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng hàm có sẵn</title>
+</head>
+<body>
+<style>
+    body {
+        margin-top: 100px;
+    }
+
+    p {
+        margin-left: 500px;
+    }
+
+    select {
+        margin-left: 550px;
+        width: 200px;
+        height: 25px;
+    }
+
+    button {
+        height: 25px;
+    }
+
+</style>
+<select id="choice">
+    <option value="1">Bài 1</option>
+    <option value="2">Bài 2</option>
+    <option value="3">Bài 3</option>
+</select>
+<button id="btn" onclick="execute()">Thực hiện</button>
+<br>
+<p>Bài 1: Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với nhau.</p>
+<p>Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2 số chẵn.</p>
+<p>Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng
+    chữ hoa.</p>
+</body>
+<script>
+    function joinArrString() {
+        let strArray = ['Red', 'Green', 'Blue', 'White', 'Black'];
+        document.write('Kết quả sau khi nối: ' + strArray.toString());
+        // document.write('Kết quả sau khi nối: ' + stArray.join());
+    }
+
+    function insertChar() {
+        let num = prompt('Nhập số: ');
+        let str = num.toString();
+        let result = [str[0]];
+        let x;
+        for (x = 1; x < str.length; x++) {
+            if ((str[x - 1] % 2 === 0) && (str[x] % 2 === 0)) {
+                result.push('-', str[x]);
+            } else {
+                result.push(str[x]);
+            }
+        }
+        // console.log(result.join(''));
+        document.write(result.join(''));
+    }
+
+    function changeStringCase() {
+        let str = prompt('Nhập chuỗi: ');
+        let strArray = [];
+        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let i;
+        for (i = 0; i < str.length; i++) {
+            if (UPPER.indexOf(str[i]) !== -1) {
+                strArray.push(str[i].toLowerCase());
+            } else if (LOWER.indexOf(str[i]) !== -1) {
+                strArray.push(str[i].toUpperCase());
+            } else {
+                strArray.push(str[i]);
+            }
+        }
+        document.write('Chuỗi sau khi chuyển: ' + strArray.join(''));
+    }
+
+    function execute() {
+        let op = document.getElementById('choice');
+        let choose = op.options[op.selectedIndex].value;
+        switch (choose) {
+            case '1':
+                joinArrString();
+                break;
+            case '2':
+                insertChar();
+                break;
+            case '3':
+                changeStringCase();
+                break;
+        }
+    }
+</script>
+</html>

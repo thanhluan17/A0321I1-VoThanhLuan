@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Exercise 1</title>
+</head>
+<body>
+<style>
+    body {
+        margin-top: 100px;
+    }
+
+    p {
+        margin-left: 500px;
+    }
+
+    select {
+        margin-left: 550px;
+        width: 200px;
+        height: 25px;
+    }
+
+    button {
+        height: 25px;
+    }
+
+</style>
+<select id="choice">
+    <option value="1">Bài 1</option>
+    <option value="2">Bài 2</option>
+    <option value="3">Bài 3</option>
+    <option value="4">Bài 4</option>
+    <option value="5">Bài 5</option>
+    <option value="6">Bài 6</option>
+    <option value="7">Bài 7</option>
+    <option value="8">Bài 8</option>
+    <option value="9">Bài 9</option>
+</select>
+<button id="btn" onclick="execute()">Thực hiện</button>
+<br>
+<p>Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử.<br>Chương trình thực hiện tính và hiển thị xem có
+    bao nhiêu số nguyên lớn hơn hoặc bằng 10.</p>
+<p>Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.<br>Chương trình hiển thị ra được phần tử
+    có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</p>
+<p>Bài 3- Viết chương trình khởi tạo mảng số nguyên.<br>Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung
+    bình của các phần tử trong mảng.</p>
+<p>Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</p>
+<p>Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi.</p>
+<p>Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.<br>Chương
+    trình tìm xem V có nằm trong mảng số nguyên không?<br>Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn
+    lại in ra "V is not in the array".</p>
+<p>Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.<br>Chương
+    trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng<br>(Bản chất việc xoá ở đây
+    tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng).</p>
+<p>Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.<br>Chương trình sắp xếp mảng theo thứ
+    tự giảm dần và hiển thị ra mảng đã được sắp xếp.</p>
+<p>Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.<br>Mảng c là một mảng
+    được khai báo gồm 20 phần tử số nguyên.<br>
+    Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</p>
+<script>
+    function bai1() {
+        let n = 1;
+        let numArray = [];
+        while (n <= 10) {
+            let num = parseInt(prompt('Nhập phần tử thứ ' + n + ' của mảng : '));
+            numArray.push(num);
+            n++;
+        }
+        document.write('Mảng đã khỏi tạo: ' + numArray.toString());
+        let count = 0;
+        for (let i = 0; i < numArray.length; i++) {
+            if (numArray[i] >= 10) {
+                count++;
+            }
+        }
+        document.write('<br>Có ' + count + ' phần tử trong mảng lớn hơn hoặc bằng 10');
+    }
+
+    function bai2() {
+        let n = 1;
+        let numArray = [];
+        while (n <= 10) {
+            let num = parseInt(prompt('Nhập phần tử thứ ' + n + ' của mảng : '));
+            numArray.push(num);
+            n++;
+        }
+        document.write('Mảng đã khởi tạo: ' + numArray.toString());
+        let max = numArray[0];
+        let index = 0;
+        for (let i = 1; i < numArray.length; i++) {
+            if (numArray[i] > max) {
+                max = numArray[i];
+                index = i;
+            }
+        }
+        document.write('<br>Giá trị lớn nhất trong mảng là: ' + max + ' ở vị trí thứ: ' + index);
+    }
+
+    function bai3() {
+        let n = 1;
+        let numArray = [];
+        while (true) {
+            let num = prompt('Nhập phần tử thứ ' + n + ' của mảng : \nNhập q để dừng!');
+            if (num == 'q') {
+                break;
+            }
+            numArray.push(parseInt(num));
+            n++;
+        }
+        document.write('Mảng đã khởi tạo: ' + numArray.toString());
+        let max = numArray[0];
+        let sum = numArray[0];
+        let average = 0;
+        for (let i = 1; i < numArray.length; i++) {
+            sum += numArray[i];
+            if (numArray[i] > max) {
+                max = numArray[i];
+            }
+        }
+        average = sum / numArray.length;
+        document.write('<br>Giá trị lớn nhất trong mảng là: ' + max + ' và có giá trị trung bình là: ' + average);
+    }
+
+    function bai4() {
+        let n = 1;
+        let numArray = [];
+        while (true) {
+            let num = prompt('Nhập phần tử thứ ' + n + ' của mảng : \nNhập q để dừng!');
+            if (num == 'q') {
+                break;
+            }
+            numArray.push(parseInt(num));
+            n++;
+        }
+        document.write('Mảng đã khởi tạo: ' + numArray.toString());
+        let reverseArr = numArray.reverse();
+        document.write('<br>Mảng sau khi đã đảo ngược: ' + reverseArr.toString());
+    }
+
+    function bai5() {
+        let n = 1;
+        let numArray = [];
+        while (true) {
+            let num = prompt('Nhập phần tử thứ ' + n + ' của mảng : \nNhập q để dừng!');
+            if (num == 'q') {
+                break;
+            }
+            numArray.push(parseInt(num));
+            n++;
+        }
+        document.write('Mảng đã khởi tạo: ' + numArray.toString());
+        let count = 0;
+        numArray.forEach(function (item) {
+            if (item < 0) {
+                count++;
+            }
+        });
+        document.write('<br>Mảng đã tạo có ' + count + ' số nguyên âm!');
+    }
+
+    function bai6() {
+        let n = 1;
+        let numArray = [];
+        while (n <= 10) {
+            let num = parseInt(prompt('Nhập phần tử thứ ' + n + ' của mảng : '));
+            numArray.push(num);
+            n++;
+        }
+        document.write('Mảng đã khỏi tạo: ' + numArray.toString());
+        let ck_num = parseInt(prompt('Nhập số cần kiểm tra'));
+        let check;
+        for (let i = 0; i < numArray.length; i++) {
+            if (ck_num == numArray[i]) {
+                check = true;
+                break;
+            } else {
+                check = false;
+            }
+        }
+        if (check) {
+            document.write('<br>' + ck_num + ' is in the array!');
+        } else {
+            document.write('<br>' + ck_num + ' is not in the array!');
+        }
+    }
+
+    function bai7() {
+        let n = 1;
+        let numArray = [];
+        while (n <= 10) {
+            let num = parseInt(prompt('Nhập phần tử thứ ' + n + ' của mảng : '));
+            numArray.push(num);
+            n++;
+        }
+        document.write('Mảng đã khỏi tạo: ' + numArray.toString());
+        let ck_num = parseInt(prompt('Nhập số cần kiểm tra'));
+        let check;
+        let index;
+        for (let i = 0; i < numArray.length; i++) {
+            if (ck_num == numArray[i]) {
+                check = true;
+                index = i;
+                break;
+            } else {
+                check = false;
+            }
+        }
+        if (check) {
+            document.write('<br>' + ck_num + ' is in the array!');
+            numArray.splice(index, 1);
+            document.write('<br>Mảng sau khi xóa là: ' + numArray.toString());
+        } else {
+            document.write('<br>' + ck_num + ' is not in the array!');
+        }
+    }
+
+    function bai8() {
+        let n = 1;
+        let numArray = [];
+        while (n <= 10) {
+            let num = parseInt(prompt('Nhập phần tử thứ ' + n + ' của mảng : '));
+            numArray.push(num);
+            n++;
+        }
+        document.write('Mảng đã khỏi tạo: ' + numArray.toString());
+        numArray.sort(function (a, b) {
+            return b - a;
+        });
+        document.write('<br>Mảng sắp xếp giảm dần: ' + numArray.toString());
+    }
+
+    function bai9() {
+        let n = 1;
+        let numArrayA = [3, 11, 7, 5, 9, 0, 12, 21, 10, 4];
+        let numArrayB = [1, 6, 13, 9, 5, 22, 5, 10, 31, 15];
+        let numArrayC = new Array(20);
+        document.write('Mảng thứ nhất: ' + numArrayA.toString());
+        document.write('<br>Mảng thứ hai: ' + numArrayB.toString());
+        numArrayC = numArrayA.concat(numArrayB);
+        document.write('<br>Mảng sau khi nối: ' + numArrayC.toString());
+    }
+
+    function execute() {
+        let op = document.getElementById('choice');
+        let choose = op.options[op.selectedIndex].value;
+        switch (choose) {
+            case '1':
+                bai1();
+                break;
+            case '2':
+                bai2();
+                break;
+            case '3':
+                bai3();
+                break;
+            case '4':
+                bai4();
+                break;
+            case '5':
+                bai5();
+                break;
+            case '6':
+                bai6();
+                break;
+            case '7':
+                bai7();
+                break;
+            case '8':
+                bai8();
+                break;
+            case '9':
+                bai9();
+                break;
+        }
+    }
+</script>
+</body>
+</html>

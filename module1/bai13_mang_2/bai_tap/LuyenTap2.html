@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Exercise 2</title>
+</head>
+<body>
+<style>
+    body {
+        margin-top: 100px;
+    }
+
+    p {
+        margin-left: 500px;
+    }
+
+    select {
+        margin-left: 550px;
+        width: 200px;
+        height: 25px;
+    }
+
+    button {
+        height: 25px;
+    }
+
+</style>
+<select id="choice">
+    <option value="1">Bài 1</option>
+    <option value="2">Bài 2</option>
+    <option value="3">Bài 3</option>
+    <option value="4">Bài 4</option>
+    <option value="5">Bài 5</option>
+    <option value="6">Bài 6</option>
+</select>
+<button id="btn" onclick="execute()">Thực hiện</button>
+<br>
+<p>Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn, in ra các phần tử trong mảng.</p>
+<p>Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.<br>Ví dụ, nếu một mảng chứa các ký
+    tự
+    [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc".</p>
+<p>Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong
+    mảng. </p>
+<p>Bài 4: Viết một chương trình để đếm số từ trong một chuỗi.</p>
+<p>Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</p>
+<p>Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này
+    bởi ký tự ( _ ).</p>
+</body>
+<script>
+    function bai1() {
+        let numArray = [[3, 1, 5, 7, 2],
+            [9, 5, 12, 6, 4],
+            [10, 7, 3, 21, 8],
+            [0, 4, 6, 8, 11],
+            [5, 11, 19, 17, 2]];
+        for (let i in numArray) {
+            document.write("<br>row " + i + ': ');
+            for (let j in numArray[i]) {
+                document.write(" " + numArray[i][j]);
+            }
+        }
+    }
+
+    function bai2() {
+        let strArray = ['l', 'u', 'a', 'n', '1', '7'];
+        document.write('Mảng đã tạo: ' + strArray);
+        document.write('<br>Mảng sau khi đảo: ' + strArray.reverse().join(''));
+    }
+
+    function bai3() {
+        let strArray = ['l', 'u', 'a', 'n', '1', '7'];
+        document.write('Mảng đã tạo: ' + strArray);
+        let count = 0;
+        let ck_num;
+        strArray.forEach(function (item) {
+            ck_num = parseInt(item);
+            if (!isNaN(ck_num)) {
+                count++;
+            }
+        });
+        document.write('<br>Số ký tự là số trong mảng là: ' + count);
+    }
+
+    function bai4() {
+        let str = 'My name is Luan';
+        document.write('Chuỗi đã tạo: ' + str);
+        let count = 1;
+        for (var i of str) {
+            if (i == ' ') {
+                count++;
+            }
+        }
+        document.write('<br>Số từ có trong chuỗi là: ' + count);
+    }
+
+    function bai5() {
+        let strA = prompt('Nhập chuỗi thứ nhất: ');
+        let strB = prompt('Nhập chuỗi thứ hai: ');
+        if(strA === strB){
+            alert('Hai chuỗi giống nhau');
+        }else {
+            alert('Hai chuỗi không giống nhau');
+        }
+    }
+
+    function bai6() {
+        let i = 1;
+        let strArray = [];
+        while (true){
+            let str = prompt('Nhập phần tử thứ: ' + i + '\n/q để dừng');
+            if(str == '/q'){
+                break;
+            }
+            strArray.push(str);
+        }
+        document.write('Mảng đã nhập là: ' + strArray.join(' '));
+        for(let i = 0; i < strArray.length; i++){
+            if(strArray[i] == '-'){
+                strArray[i] = '_';
+            }
+        }
+        document.write('<br>Mảng sau khi thay thế: ' + strArray.join(' '));
+    }
+
+    function execute() {
+        let op = document.getElementById('choice');
+        let choose = op.options[op.selectedIndex].value;
+        switch (choose) {
+            case '1':
+                bai1();
+                break;
+            case '2':
+                bai2();
+                break;
+            case '3':
+                bai3();
+                break;
+            case '4':
+                bai4();
+                break;
+            case '5':
+                bai5();
+                break;
+            case '6':
+                bai6();
+                break;
+        }
+    }
+</script>
+</html>

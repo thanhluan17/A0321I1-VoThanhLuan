@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+<style>
+    body {
+        margin: 100px;
+        text-align: center;
+    }
+
+    hr {
+        width: 30%;
+    }
+
+    input {
+        margin: 10px;
+    }
+</style>
+<h2>Caro Game Simple</h2>
+<hr>
+<p id="board"/>
+<input type="button" value="Player 1" onclick="changeValue(1)">
+<input type="button" value="Player 2" onclick="changeValue(2)">
+<script>
+    let board = [];
+    let data = "";
+    for (let i = 0; i < 5; i++) {
+        board[i] = ['.', '.', '.', '.', '.'];
+    }
+
+    for (let i = 0; i < 5; i++) {
+        data += "<br/>";
+        for (let j = 0; j < 5; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;";
+        }
+    }
+
+    data += "<br/><br/><input type='button' value='Player 1' onclick='changeValue(1)'><input type='button' value='Player 2' onclick='changeValue(2)'>";
+    document.getElementById('board').innerHTML = data;
+
+    function changeValue(index) {
+        let positionX = parseInt(prompt("X: "));
+        let positionY = parseInt(prompt("Y: "));
+        data = "";
+        if (index == 1 && board[positionX][positionY] == ".") {
+            board[positionX][positionY] = "x";
+        } else if (board[positionX][positionY] != "o") {
+            board[positionX][positionY] = "o";
+        }
+
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "<br/><br/><input type='button' value='Player 1' onclick='changeValue(1)'><input type='button' value='Player 2' onclick='changeValue(2)'>";
+        document.getElementById('board').innerHTML = data;
+    }
+</script>
+</body>
+</html>

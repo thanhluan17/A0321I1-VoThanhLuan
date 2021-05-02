@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<style>
+    body {
+        margin: 100px;
+        text-align: center;
+    }
+</style>
+<h2>Dictionary</h2>
+<input type="text" id="txtText" placeholder="Nhập từ cần dịch">
+<button id="searchBtn" onclick="translateStr()">Dịch</button>
+<p id="result"></p>
+</body>
+<script>
+    function translateStr() {
+        let strArrUs = ['Hello', 'Goodbye', 'Sun', 'Moon'];
+        let strArrVi = ['Xin chào', 'Tạm biệt', 'Mặt trời', 'Mặt trăng'];
+        let str = document.getElementById('txtText').value;
+        let result;
+        for (let i = 0; i < strArrUs.length; i++) {
+            if (strArrUs[i] === str) {
+                result = strArrVi[i];
+                break;
+            } else {
+                result = 'Không tìm thấy';
+            }
+        }
+        document.getElementById('result').innerText = result;
+    }
+</script>
+</html>

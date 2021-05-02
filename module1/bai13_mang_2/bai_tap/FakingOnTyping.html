@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking on typing</title>
+</head>
+<body>
+<style>
+    body {
+        margin: 20px;
+        text-align: center;
+    }
+</style>
+<h2>Type anything slowly</h2>
+<textarea onkeydown="typeText()" id="txt" rows="10" cols="40"></textarea>
+<script>
+    let strArray = [' ', 'G', 'Õ', ' ', 'G', 'Ì', ' ', 'C', 'Ũ', 'N', 'G', ' ', 'R', 'A', ' ', 'T', 'H', 'Ế', ' ', 'N', 'À', 'Y'];
+    let result = "";
+
+    function typeText() {
+        let txtArea = document.getElementById('txt').value;
+        let n = txtArea.length;
+        if (n >= 0) {
+            for (let i = 1; i <= n; i++) {
+                result += strArray[i];
+                if (i == 22) {
+                    document.getElementById('txt').value = '';
+                    result = '';
+                }
+            }
+            document.getElementById('txt').value = result;
+            result = '';
+            setTimeout('typeText()', 1);
+        }
+    }
+</script>
+</body>
+</html>
