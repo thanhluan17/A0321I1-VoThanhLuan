@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Exercise 2</title>
+</head>
+<body>
+<style>
+    body {
+        margin-top: 100px;
+    }
+
+    p {
+        margin-left: 500px;
+    }
+
+    select {
+        margin-left: 550px;
+        width: 200px;
+        height: 25px;
+    }
+
+    button {
+        height: 25px;
+    }
+
+</style>
+<select id="choice">
+    <option value="1">Bài 1</option>
+    <option value="2">Bài 2</option>
+    <option value="3">Bài 3</option>
+    <option value="4">Bài 4</option>
+    <option value="5">Bài 5</option>
+    <option value="6">Bài 6</option>
+    <option value="7">Bài 7</option>
+    <option value="8">Bài 8</option>
+    <option value="9">Bài 9</option>
+
+</select>
+<button id="btn" onclick="execute()">Thực hiện</button>
+<br>
+<p>Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</p>
+<p>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được.</p>
+<p>Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</p>
+<p>Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả
+    về false.</p>
+<p>Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</p>
+<p>Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.<br>Nếu là nguyên dương
+    trả về true, ngược lại trả về false.</p>
+<p>Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</p>
+<p>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</p>
+<p>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.<br>Nếu
+    có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. </p>
+<script>
+
+    function bai1() {
+        function square(number) {
+            let rs = Math.pow(num, 2);
+            alert(num + ' bình phương bằng: ' + rs);
+        }
+
+        let num = parseInt(prompt('Nhập số cần tính: '));
+        square(num);
+    }
+
+    function bai2() {
+        function areaCircle(radius) {
+            let area = Math.pow(radius, 2) * Math.PI;
+            alert('Diện tích hình tròn là: ' + area.toFixed(2));
+        }
+
+        function perimeterCircle(radius) {
+            let perimeter = 2 * radius * Math.PI;
+            alert('Chu vi hình tròn là: ' + perimeter.toFixed(2));
+        }
+
+        let r = parseFloat(prompt('Nhập bán kính hình tròn: '));
+        areaCircle(r);
+        perimeterCircle(r);
+
+    }
+
+    function bai3() {
+        function factorial(number) {
+            let rs = 1;
+            if (number >= 0) {
+                for (let i = 1; i <= number; i++) {
+                    rs = rs * i;
+                }
+            } else {
+                rs = -1;
+            }
+            return rs;
+        }
+
+        let num = parseInt(prompt('Nhập số nguyên cân tính: '));
+        if (factorial(num) == -1) {
+            alert('Bạn phải nhập số nguyên dương!');
+        } else {
+            alert(num + ' giai thừa bằng: ' + factorial(num));
+        }
+    }
+
+    function bai4() {
+        function checkNumber(number) {
+            if (isNaN(number)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        let ck_num = prompt('Nhập số cần kiểm tra');
+        if (checkNumber(ck_num)) {
+            alert(ck_num + ' là một số!');
+        } else {
+            alert(ck_num + ' không phải là số!');
+        }
+    }
+
+    function bai5() {
+        function minValue(a, b, c) {
+            let min = a;
+            if (min > b) {
+                min = b;
+            }
+            if (min > c) {
+                min = c;
+            }
+            return min;
+        }
+
+        let a = parseInt(prompt('Nhập só thứ nhất: '));
+        let b = parseInt(prompt('Nhập só thứ hai: '));
+        let c = parseInt(prompt('Nhập só thứ ba: '));
+        alert('Giá trị nhỏ nhất trong 3 số là: ' + minValue(a, b, c));
+    }
+
+    function bai6() {
+        function checkPositive(number) {
+            if (number > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        let num = parseInt(prompt('Nhập số cần kiêm tra: '));
+        if (checkPositive(num)) {
+            alert(num + ' là số dương!');
+        } else {
+            alert(num + ' là số âm!');
+        }
+    }
+
+    function bai7() {
+        function reverseNumber() {
+            let arr = new Array(2);
+            arr[0] = parseInt(prompt('Nhập số thứ nhất: '));
+            arr[1] = parseInt(prompt('Nhập số thứ hai: '));
+            let temp = arr[0];
+            arr[0] = arr[1];
+            arr[1] = temp;
+            alert('Kết quả: a = ' + arr[0] + ', b = ' + arr[1]);
+        }
+
+        reverseNumber();
+    }
+
+    function bai8() {
+        function reverseInteger(arr) {
+            return arr.reverse();
+        }
+
+        let n = 1;
+        let arr = [];
+        while (true) {
+            let num = prompt('Nhập phần tử thứ ' + n + ' của mảng : \nNhập q để dừng!');
+            if (num == 'q') {
+                break;
+            }
+            arr.push(parseInt(num));
+            n++;
+        }
+
+        document.write(reverseInteger(arr).join(' '));
+    }
+
+    function bai9() {
+        function ckExist(arr, char) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == char) {
+                    count++;
+                }
+            }
+            if (count == 0) {
+                return -1;
+            } else {
+                return count;
+            }
+        }
+
+        let arr = ['n', 'a', 'u', 'l', 'a', 'a'];
+        let c = prompt('Nhập ký tự cần tìm: ');
+        if (ckExist(arr, c) == -1) {
+            alert(c + ' không xuất hiện trong mảng!');
+        } else {
+            alert(c + ' xuất hiện ' + ckExist(arr, c) + ' lần trong mảng!');
+        }
+    }
+
+    function execute() {
+        let op = document.getElementById('choice');
+        let choose = op.options[op.selectedIndex].value;
+        switch (choose) {
+            case '1':
+                bai1();
+                break;
+            case '2':
+                bai2();
+                break;
+            case '3':
+                bai3();
+                break;
+            case '4':
+                bai4();
+                break;
+            case '5':
+                bai5();
+                break;
+            case '6':
+                bai6();
+                break;
+            case '7':
+                bai7();
+                break;
+            case '8':
+                bai8();
+                break;
+            case '9':
+                bai9();
+                break;
+        }
+    }
+</script>
+</body>
+</html>

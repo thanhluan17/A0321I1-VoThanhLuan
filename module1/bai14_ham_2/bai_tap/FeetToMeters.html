@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feet to meters</title>
+</head>
+<body>
+<script>
+    let len = parseFloat(prompt('Nhập độ dài: '));
+    document.write(len + ' meter sang feet là: ' + meterToFoot(len));
+    document.write('<br>' + len + ' feet sang meter là: ' + footToMeter(len));
+
+    function meterToFoot(meter) {
+        let rs = 3.279 * meter;
+        return rs;
+    }
+
+    function footToMeter(foot) {
+        let rs = 0.305 * foot;
+        return rs;
+    }
+
+    document.getElementById('result').innerText = rs;
+</script>
+</body>
+</html>

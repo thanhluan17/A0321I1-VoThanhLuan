@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<style>
+    body {
+        width: 100%;
+        margin: 20px;
+    }
+
+    div {
+        width: 50%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    input {
+        border-radius: 5px;
+        border: 1px solid;
+        width: 70%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    button {
+        color: white;
+        background-color: limegreen;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
+        border: limegreen;
+        margin: 10px;
+    }
+
+    #sp-qty {
+        width: 100%;
+    }
+
+    #lb-name {
+        margin-left: 20px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    #lb-qty {
+        margin-right: 20px;
+        font-weight: bold;
+        float: right;
+        display: block;
+        color: red;
+    }
+
+    .product-input {
+        border: 0px;
+    }
+</style>
+<div>
+    <h2>Product Management</h2>
+    <h3>Add New Product</h3>
+    <hr>
+    <input type="text" id="product-name" placeholder="New Product"/>
+    <button id="btn-add" onclick="addProduct()">Add</button>
+    <h3>Display All Product</h3>
+    <hr>
+    <span id="sp-qty">
+            <label id="lb-name">Product Name</label>
+            <label id="lb-qty"></label>
+        </span><br>
+    <span id="table-product"></span>
+</div>
+</body>
+<script>
+    let productArr = ['Sony Xperia', 'Samsung Galaxy', 'Nokia 6', 'Xiaomi Redmi Note 4'];
+    display();
+
+    function display() {
+        let tableStr = '<table class="table table-striped">';
+        for (let i = 0; i < productArr.length; i++) {
+            tableStr += '<tr><td>' + productArr[i] + '</td><td><button id="btn-edit" onclick="editProduct(' + i + ')">Edit</button></td><td><button id="btn-delete" onclick="deleteProduct(' + i + ')">Delete</button></td></tr>';
+        }
+        tableStr += '</table>';
+        document.getElementById('table-product').innerHTML = tableStr;
+        countProduct();
+    }
+
+    function addProduct() {
+        let productName = document.getElementById('product-name').value;
+        productArr.push(productName);
+        display();
+    }
+
+    function editProduct(index) {
+        let newName = prompt('Nhập tên mới: ');
+        productArr[index] = newName;
+        display();
+    }
+
+    function deleteProduct(index) {
+        productArr.splice(index, 1);
+        display();
+    }
+
+    function countProduct() {
+        let count = productArr.length;
+        document.getElementById('lb-qty').innerText = count + ' sản phẩm';
+    }
+</script>
+</html>

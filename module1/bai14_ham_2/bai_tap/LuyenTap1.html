@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Exercise 1</title>
+</head>
+<body>
+<style>
+    body {
+        margin-top: 100px;
+    }
+
+    p {
+        margin-left: 500px;
+    }
+
+    select {
+        margin-left: 550px;
+        width: 200px;
+        height: 25px;
+    }
+
+    button {
+        height: 25px;
+    }
+
+</style>
+<select id="choice">
+    <option value="1">Bài 1</option>
+    <option value="2">Bài 2</option>
+    <option value="3">Bài 3</option>
+    <option value="4">Bài 4</option>
+    <option value="5">Bài 5</option>
+
+</select>
+<button id="btn" onclick="execute()">Thực hiện</button>
+<br>
+<p>Bài 1: Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi "Xin chao". Gọi hàm từ trong phần body của trang web.</p>
+<p>Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm.<br>
+    Gọi hàm từ trong phần body của trang web và hiển thị kết quả lên màn hình.</p>
+<p>Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại
+    thông báo cho người dùng.<br>
+    Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.</p>
+<p>Bài 4: Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau để bạn có thể nhìn thấy giá trị của biến
+    result trước và sau lời gọi hàm.</p>
+<p>Bài 5: Tạo mảng và hàm để chứa và xử lý các ngôi sao, chòm sao.</p>
+<script>
+
+
+    function bai1() {
+        alert('Xin chao!');
+    }
+
+    function bai2() {
+        let num = parseInt(prompt('Nhập số : '));
+
+        function increase(number) {
+            number++;
+            alert(number);
+        }
+
+        increase(num);
+    }
+
+    function bai3() {
+        let a = parseInt(prompt('Nhập tham số thứ nhất: '));
+        let b = parseInt(prompt('Nhập tham số thứ hai: '));
+
+        function checkParameter(x, y) {
+            if (x > y) {
+                alert(x + ' lớn hơn ' + y);
+            } else {
+                alert('Tổng 2 tham số là: ' + (x + y));
+            }
+        }
+
+        checkParameter(a, b);
+    }
+
+    function bai4() {
+        function addNumbers() {
+            let firstNum = 4;
+            let secondNum = 8;
+            let result = firstNum + secondNum;
+            return result;
+        }
+
+        let result = 0;
+        alert('Result before use function: ' + result);
+        result = addNumbers();
+        alert('Result after use function: ' + result);
+    }
+
+    function bai5() {
+        let starArr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let starArr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let star = prompt('Nhập tên ngôi sao: ');
+        let rs;
+
+        function starSearch(name) {
+            for (let i = 0; i < starArr1.length; i++) {
+                if (starArr1[i] == name) {
+                    rs = i;
+                    break;
+                } else {
+                    rs = -1;
+                }
+            }
+            return rs;
+        }
+
+        if (starSearch(star) == -1) {
+            alert('Không tìm thấy ngôi sao!');
+        } else {
+            alert('Tìm thấy ngôi sao ' + star + ' có chòm sao tương ứng là: ' + starArr2[starSearch(star)]);
+        }
+    }
+
+    function execute() {
+        let op = document.getElementById('choice');
+        let choose = op.options[op.selectedIndex].value;
+        switch (choose) {
+            case '1':
+                bai1();
+                break;
+            case '2':
+                bai2();
+                break;
+            case '3':
+                bai3();
+                break;
+            case '4':
+                bai4();
+                break;
+            case '5':
+                bai5();
+                break;
+        }
+    }
+</script>
+</body>
+</html>

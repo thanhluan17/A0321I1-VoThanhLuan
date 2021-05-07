@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Prime</title>
+</head>
+<body>
+<script>
+    number = parseInt(prompt('Nhập số cần kiểm tra: '));
+
+    function isPrime(num) {
+        let count = 0;
+        for (let i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                count++;
+            }
+        }
+        if (count == 2) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    if (isPrime(number) == 0 || number < 2 || number > 10000) {
+        alert(number + ' không phải số nguyên tố!');
+    } else {
+        alert(number + ' là số nguyên tố!');
+    }
+</script>
+</body>
+</html>
