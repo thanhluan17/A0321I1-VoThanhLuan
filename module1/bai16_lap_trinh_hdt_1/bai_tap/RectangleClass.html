@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle Class</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1366" height="768" style="border:0px solid #d3d3d3;"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        perimeter() {
+            return (this.width + this.height) * 2;
+        }
+
+        area() {
+            return this.width * this.height;
+        }
+
+        draw() {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.fillStyle = "cyan";
+            ctx.fillRect(10, 10, this.height, this.width);
+        }
+
+        set setWidth(w) {
+            this.width = w;
+        }
+
+        set setHeight(h) {
+            this.height = h;
+        }
+    }
+
+    let rec = new Rectangle(200, 400);
+    rec.setWidth = 100;
+    rec.setHeight = 200;
+    alert('Chu vi: ' + rec.perimeter());
+    alert('Dien tich: ' + rec.area());
+    rec.draw();
+</script>
+</body>
+</html>

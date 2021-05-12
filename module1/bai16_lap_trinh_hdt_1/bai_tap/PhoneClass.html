@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone Class</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(id, pin, isOn) {
+            this.id = id;
+            this.pin = pin;
+            this.composingMess = [];
+            this.sendedMess = [];
+            this.inboxMess = [];
+            this.isOn = isOn;
+        }
+
+        checkStatus() {
+            return this.pin > 0 && pin <= 100;
+        }
+
+        turnOn() {
+            this.isOn = true;
+            this.pin--;
+        }
+
+        turnOff() {
+            this.isOn = false;
+            this.pin--;
+        }
+
+        charge() {
+            alert('Phone is charging!');
+            this.pin = 100;
+        }
+
+        composeMess() {
+            if (this.isOn === true) {
+                let receiver = prompt('Nhập người muốn gửi: ');
+                let message = prompt('Nhập tin nhắn: ');
+                let cfm = confirm('Bạn có muốn gửi không!');
+                if (cfm) {
+                    receiverServer.push(receiver);
+                    messageServer.push(message);
+                    this.sendedMess.push(message);
+                } else {
+                    this.composingMess.push(message);
+                }
+                this.pin--;
+            } else {
+                alert('Phone is off!');
+            }
+        }
+
+        receiveMess() {
+            if (this.isOn === true) {
+                if (receiverServer.indexOf(this.id) != -1) {
+                    let index = receiverServer.indexOf(this.id);
+                    this.inboxMess.push(this.id + ': ' + messageServer[index]);
+                }
+                this.pin--;
+            } else {
+                alert('Phone is off!');
+            }
+        }
+
+        readMess() {
+            if (this.isOn === true) {
+                alert(this.id + ' inbox message: \n' + this.inboxMess);
+                this.pin--;
+            } else {
+                alert('Phone is off!');
+            }
+        }
+
+        readSended() {
+            if (this.isOn === true) {
+                alert(this.id + ' sended message: ' + this.sendedMess);
+                this.pin--;
+            } else {
+                alert('Phone is off!');
+            }
+        }
+    }
+
+    let receiverServer = [];
+    let messageServer = [];
+    let android = new Mobile('nokia', 100, true);
+    let apple = new Mobile('apple', 100, true);
+    android.composeMess();
+    apple.receiveMess();
+    apple.readMess();
+</script>
+</body>
+</html>
