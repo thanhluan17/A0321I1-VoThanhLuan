@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module1/bai4_git_html/bai_tap/bai_tap_sd_git/GitProject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module1/bai4_git_html/thuc_hanh/my_repo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module1/bai4_git_html/thuc_hanh/wf-hello" vcs="Git" />
+  </component>
+</project>
