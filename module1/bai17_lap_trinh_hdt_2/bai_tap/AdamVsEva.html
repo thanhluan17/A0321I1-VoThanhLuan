@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adame and Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        decrease() {
+            if (!this.isEmpty()) {
+                this.weight--;
+            }
+        }
+
+        isEmpty() {
+            if (this.weight == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        checkApple(apple) {
+            if (!apple.weight == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        eat(apple) {
+            if (this.checkApple(apple)) {
+                this.weight = this.weight + 1;
+                apple.weight--;
+            } else {
+                alert('an het roi!');
+            }
+        }
+
+        say(string) {
+            alert(this.name + ': ' + string);
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight() {
+            return this.weight;
+        }
+
+    }
+
+    let a = new Apple();
+    let adam = new Human('Adam', true, 70);
+    let eva = new Human('Eva', false, 50);
+    adam.say('abc');
+    eva.say('xyz');
+    adam.eat(a);
+    alert('Adam eat the apple!');
+    alert('Apple weight: ' + a.getWeight());
+    alert('Adam weight: ' + adam.getWeight());
+    eva.eat(a);
+    alert('Eva eat the apple!');
+    alert('Apple weight: ' + a.getWeight());
+    alert('Eva weight: ' + adam.getWeight());
+
+</script>
+</body>
+</html>
