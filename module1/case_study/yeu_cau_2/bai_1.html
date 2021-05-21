@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Salary</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt('Nhập lương: '));
+    let count = salary > 15000000 ? 0.2 : salary > 7000000 ? 0.1 : 0.05
+    let income = salary - salary * count;
+    let tax = salary * count;
+    alert('Tiền thuế: ' + tax);
+    alert('Thu nhập thực nhận: ' + income);
+</script>
+</body>
+</html>

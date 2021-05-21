@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Triangle</title>
+</head>
+<body>
+<center><span id="rs"></span></center>
+<script>
+    let result = '';
+    let h = 5;
+    let m = h;
+    let n = h;
+    for (let i = 1; i <= h; i++) {
+        for (let j = 1; j <= 2 * h - 1; j++) {
+            if (j >= m && j <= n) {
+                result += '*';
+            } else {
+                result += '&nbsp;';
+            }
+        }
+        m--;
+        n++;
+        result += "<br>";
+    }
+    document.getElementById('rs').innerHTML = result;
+</script>
+</body>
+</html>

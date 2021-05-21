@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    let arrA = [7, 2, 5, 3, 5, 3];
+    let arrB = [7, 2, 5, 4, 6, 3, 5, 3];
+    let arrC = [];
+    for(let i = 0 ; i< arrB.length; i++){
+        if(arrA.indexOf(arrB[i]) == -1){
+            arrC.push(arrB[i]);
+        }
+    }
+    alert(arrC.join(', '));
+</script>
+</body>
+</html>

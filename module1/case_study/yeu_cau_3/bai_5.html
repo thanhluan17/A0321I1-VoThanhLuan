@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drink Menu</title>
+</head>
+<body>
+<script>
+    let price = 0;
+    let index = 0;
+    do {
+        index = parseInt(prompt('Nhập số thứ tự để chọn đồ uống: \n1 - cà phê\n2 - cam vắt\n3 - nước ép cà rốt\n4 -' +
+            ' nước ép cà chua\n5 - nước lọc\n6 - nước dừa\n7 - exit'));
+        switch (index) {
+            case 1:
+                price = 15000;
+                alert('Giá: ' + price);
+                quanty();
+                break;
+            case 2:
+                price = 20000;
+                alert('Giá: ' + price);
+                quanty();
+                break;
+            case 3:
+                price = 25000;
+                alert('Giá: ' + price);
+                quanty();
+                break;
+            case 4:
+                price = 20000;
+                alert('Giá: ' + price);
+                quanty();
+                break;
+            case 5:
+                price = 10000;
+                alert('Giá: ' + price);
+                quanty();
+                break;
+            case 6:
+                price = 17000;
+                alert('Giá: ' + price);
+                quanty();
+                break;
+            case 7:
+                break;
+        }
+    } while (index != 7);
+
+    function quanty() {
+        let count = parseInt(prompt('Nhập số lượng: '));
+        let total = count * price;
+        alert('Tổng tiền là: ' + total);
+    }
+</script>
+</body>
+</html>

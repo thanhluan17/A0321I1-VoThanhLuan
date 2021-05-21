@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fraction</title>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4];
+    let max = numerators[0] / denominators[0];
+    let index = 0;
+    for (let i = 1; i < numerators.length; i++) {
+        if ((numerators[i] / denominators[i]) > max) {
+            index = i;
+        }
+    }
+    alert('Phân số lớn nhất là : ' + numerators[index] + '/' + denominators[index] + ', ở vị trí: ' + index);
+</script>
+</body>
+</html>

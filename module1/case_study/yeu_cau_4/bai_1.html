@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Handling</title>
+</head>
+<body>
+<script>
+    function handling(str1) {
+        let str2 = str1.replace(/\s+/g, ' ');
+        let str = str2.trim().toLowerCase();
+        let strArr = str.split(' ');
+        let rsArr = [];
+        strArr.forEach(function (item) {
+            let newItem = item.charAt(0).toUpperCase() + item.slice(1);
+            rsArr.push(newItem);
+        });
+        return rsArr;
+    }
+
+    function maxText(name) {
+        let strArr = handling(name);
+        let max = strArr[0];
+        for (i = 1; i < strArr.length; i++) {
+            if (strArr[i].length > max.length) {
+                max = strArr[i];
+            }
+        }
+        return max;
+    }
+
+    let name = prompt('Nhập chuỗi: ');
+    alert('Trước khi chuẩn hóa: ' + name);
+    alert('Chuỗi sau khi chuẩn hóa: ' + (handling(name)).join(' '));
+    alert('Từ có ký tự dài nhất là: ' + maxText(name));
+</script>
+</body>
+</html>
