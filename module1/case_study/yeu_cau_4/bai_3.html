@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Common Character</title>
+</head>
+<body>
+<script>
+    function commonCharacterCount(s1, s2) {
+        let count = 0;
+        for (let i = 0; i < s1.length; i++) {
+            let j = s2.indexOf(s1[i]);
+            if (j >= 0) {
+                count++;
+                s2 = s2.replace(s1[i], '');
+            }
+        }
+        return count;
+    }
+
+    let s1 = prompt('Nhập xâu thứ nhất: ');
+    let s2 = prompt('Nhập xâu thứ hai: ');
+    alert('Số lượng ký tự chung: ' + commonCharacterCount(s1, s2));
+</script>
+</body>
+</html>

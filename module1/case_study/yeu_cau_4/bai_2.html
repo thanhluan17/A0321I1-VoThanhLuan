@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diference Symbols</title>
+</head>
+<body>
+<script>
+    function countDifference(s) {
+        let letterArr = [];
+        let strArr = s.split('');
+        strArr.forEach(function (element) {
+            if (letterArr.includes(element) === false) {
+                letterArr.push(element);
+            }
+        });
+        return letterArr.length;
+    }
+
+    let s = prompt('Nhập xâu: ');
+    alert('Số từ khác nhau trong xâu là: ' + countDifference(s));
+</script>
+</body>
+</html>

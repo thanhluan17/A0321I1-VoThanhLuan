@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum Even</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt('Nhập vào số hàng: '));
+    let col = parseInt(prompt('Nhập vào số cột: '));
+    let numArr = new Array(row);
+    for (let i = 0; i < row; i++) {
+        numArr[i] = new Array(col);
+        for (let j = 0; j < col; j++) {
+            numArr[i][j] = parseInt(prompt('a[' + i + '][' + j + ']: '));
+        }
+    }
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < col; j++) {
+            document.write(numArr[i][j] + '');
+        }
+        document.write("<br>")
+    }
+
+    function sumEven(arr) {
+        let sum = 0;
+        for (let i = 0; i < row; i++) {
+            for (let j = 0; j < col; j++) {
+                if (arr[i][j] % 2 == 0) {
+                    sum = sum + arr[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+
+    document.write("Tổng các số chẵn trong ma trận là: " + sumEven(numArr));
+</script>
+</body>
+</html>
