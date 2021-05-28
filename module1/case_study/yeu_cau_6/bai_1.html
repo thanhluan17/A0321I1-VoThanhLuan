@@ -5,8 +5,225 @@
     <title>Lottery App</title>
 </head>
 <body>
-<script>
+<style>
+    body {
+        margin: 30px;
+    }
 
+    input {
+        width: 52px;
+        margin-bottom: 20px;
+    }
+</style>
+<hr>
+<h1>Xổ số CodeGym</h1>
+<input type="text" id="first" onchange="checkNumber('first')"/>
+<input type="text" id="second" onchange="checkNumber('second')"/>
+<input type="text" id="third" onchange="checkNumber('third')"/>
+<input type="text" id="fourth" onchange="checkNumber('fourth')"/>
+<input type="text" id="fifth" onchange="checkNumber('fifth')"/>
+<input type="text" id="sixth" onchange="checkNumber('sixth')"/><br>
+<p id="rs"></p><br>
+<button id="buy" onclick="buyTicket()">Mua vé</button>
+<button onclick="checkTicket()">Xem kết quả</button>
+<br>
+<p id="ve"></p>
+<script>
+    class Customer {
+        constructor(name) {
+            this.name = name;
+            this.ticket = [];
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getTicket() {
+            return this.ticket.toString();
+        }
+
+        buy(id) {
+            if (this.ticket.length < 4) {
+                this.ticket.push(id);
+                // document.writeln(this.ticket.join(' '));
+                document.getElementById('ve').innerHTML = this.ticket.join('<br>');
+            } else {
+                alert('Bạn đã mua quá số lượng vé rồi!');
+            }
+        }
+
+        viewResult(result) {
+            for (let i = 0; i < this.ticket.length; i++) {
+                let check = this.ticket[i];
+                check = check.split(' ');
+                if (check[0] == result[0] && check[1] == result[1] && check[2] == result[2] && check[3] == result[3] && check[4] == result[4] && check[5] == result[5]) {
+                    alert('Nhat');
+                } else {
+                    if (check[1] == result[1] && check[2] == result[2] && check[3] == result[3] && check[4] == result[4] && check[5] == result[5]) {
+                        alert('Nhi');
+                    } else {
+                        if (check[2] == result[2] && check[3] == result[3] && check[4] == result[4] && check[5] == result[5]) {
+                            alert('Ba');
+                        } else {
+                            alert('Chuc may man');
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    function buyTicket() {
+        let id = [];
+        id.push(document.getElementById('first').value);
+        id.push(document.getElementById('second').value);
+        id.push(document.getElementById('third').value);
+        id.push(document.getElementById('fourth').value);
+        id.push(document.getElementById('fifth').value);
+        id.push(document.getElementById('sixth').value);
+        id = id.join(' ');
+        c.buy(id);
+    }
+
+    function checkTicket() {
+        let rsString = '';
+        for (let i = 0; i < result.length; i++) {
+            rsString += '<input type="text" value="' + result[i] + '" disabled/>';
+        }
+        rsString += '<br>';
+        document.getElementById('rs').innerHTML = rsString;
+        c.viewResult(result);
+    }
+
+    function getRandomInt() {
+        let min = 0;
+        let max = 99;
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        let rs = Math.floor(Math.random() * (max - min + 1) + min);
+        if (rs < 10) {
+            rs = '0'.toString() + rs;
+        }
+        return rs.toString();
+
+    }
+
+    function checkNumber(index) {
+        let value;
+        switch (index) {
+            case 'first':
+                value = parseInt(document.getElementById(index).value);
+                if (!isNaN(value)) {
+                    if (value < 0 || value > 100) {
+                        alert('Vui lòng chọn từ số từ 00 đến 99!');
+                        document.getElementById(index).value = '';
+                    }
+                } else {
+                    alert('Vui lòng chọn từ số từ 00 đến 99!');
+                    document.getElementById(index).value = '';
+                }
+                break;
+            case 'second':
+                value = parseInt(document.getElementById(index).value);
+                if (!isNaN(value)) {
+                    if (value < 0 || value > 100) {
+                        alert('Vui lòng chọn từ số từ 00 đến 99!');
+                        document.getElementById(index).value = '';
+                    }
+                } else {
+                    alert('Vui lòng chọn từ số từ 00 đến 99!');
+                    document.getElementById(index).value = '';
+                }
+                break;
+            case 'third':
+                value = parseInt(document.getElementById(index).value);
+                if (!isNaN(value)) {
+                    if (value < 0 || value > 100) {
+                        alert('Vui lòng chọn từ số từ 00 đến 99!');
+                        document.getElementById(index).value = '';
+                    }
+                } else {
+                    alert('Vui lòng chọn từ số từ 00 đến 99!');
+                    document.getElementById(index).value = '';
+                }
+                break;
+            case 'fourth':
+                value = parseInt(document.getElementById(index).value);
+                if (!isNaN(value)) {
+                    if (value < 0 || value > 100) {
+                        alert('Vui lòng chọn từ số từ 00 đến 99!');
+                        document.getElementById(index).value = '';
+                    }
+                } else {
+                    alert('Vui lòng chọn từ số từ 00 đến 99!');
+                    document.getElementById(index).value = '';
+                }
+                break;
+            case 'fifth':
+                value = parseInt(document.getElementById(index).value);
+                if (!isNaN(value)) {
+                    if (value < 0 || value > 100) {
+                        alert('Vui lòng chọn từ số từ 00 đến 99!');
+                        document.getElementById(index).value = '';
+                    }
+                } else {
+                    alert('Vui lòng chọn từ số từ 00 đến 99!');
+                    document.getElementById(index).value = '';
+                }
+                break;
+            case 'sixth':
+                value = parseInt(document.getElementById(index).value);
+                if (!isNaN(value)) {
+                    if (value < 0 || value > 100) {
+                        alert('Vui lòng chọn từ số từ 00 đến 99!');
+                        document.getElementById(index).value = '';
+                    }
+                } else {
+                    alert('Vui lòng chọn từ số từ 00 đến 99!');
+                    document.getElementById(index).value = '';
+                }
+                break;
+            default:
+        }
+    }
+
+    let c = new Customer('naul');
+
+    function selectTicket() {
+        let choice;
+        choice = parseInt(prompt('Bạn có 2 lựa chọn: \n1.Bạn muốn tự chọn số\n2.Hệ thống tự random.'));
+        let id = [];
+        if (choice == 1) {
+
+        }
+        if (choice == 2) {
+            let first = getRandomInt();
+            let second = getRandomInt();
+            let third = getRandomInt();
+            let fourth = getRandomInt();
+            let fifth = getRandomInt();
+            let sixth = getRandomInt();
+
+            document.getElementById('first').value = first;
+            document.getElementById('second').value = second;
+            document.getElementById('third').value = third;
+            document.getElementById('fourth').value = fourth;
+            document.getElementById('fifth').value = fifth;
+            document.getElementById('sixth').value = sixth;
+
+        }
+        return id.join(' ');
+    }
+
+    let id = selectTicket();
+    let result = [11, 22, 33, 44, 55, 66];
 </script>
 </body>
 </html>
