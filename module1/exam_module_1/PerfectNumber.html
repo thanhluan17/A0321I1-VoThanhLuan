@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfect Number</title>
+</head>
+<body>
+<script>
+    function checkPerfect(number) {
+        let sum = 0;
+        for (let i = 1; i <= number / 2; i++) {
+            if (number % i === 0) {
+                sum += i;
+            }
+        }
+        if (number === sum) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let number = parseInt(prompt('Mời nhập số cần kiểm tra: '));
+    if (checkPerfect(number)) {
+        alert(number + ' là số hoàn hảo!');
+    } else {
+        alert(number + ' không phải số hoàn hảo!');
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee ManageMent</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<style>
+    body {
+        margin: 50px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 50px;
+    }
+</style>
+<h1>QUẢN LÝ CÔNG NHÂN</h1>
+<p id="result"></p>
+
+<script>
+
+    class Employee {
+        constructor(name, dateOfBirth, address, salary, position) {
+            this.name = name;
+            this.dateOfBirth = dateOfBirth;
+            this.address = address;
+            this.salary = salary;
+            this.position = position;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getDateOfBirth() {
+            return this.dateOfBirth;
+        }
+
+        setDateOfBirth(dateOfBirth) {
+            this.dateOfBirth = dateOfBirth;
+        }
+
+        getAddress() {
+            return this.address;
+        }
+
+        setAddress(address) {
+            this.address = address;
+        }
+
+        getSalary() {
+            return this.salary;
+        }
+
+        setSalary(salary) {
+            this.salary = salary;
+        }
+
+        getPosition() {
+            return this.position;
+        }
+
+        setPosition(position) {
+            this.position = position;
+        }
+    }
+
+    function display(list) {
+        list.sort((a, b) => (a.getName() > b.getName()) ? 1 : -1);
+        let tableString = '<table align="center" class="table table-bordered">\n' +
+            '<tr>\n' +
+            '<th>STT</th>' +
+            '<th>Họ và tên</th>' +
+            '<th>Ngày sinh</th>' +
+            '<th>Địa chỉ</th>' +
+            '<th>Lương</th>' +
+            '<th>Chức vụ</th>' +
+            '</tr>';
+        for (let i = 0; i < list.length; i++) {
+            console.log(list);
+            tableString += '<tr>\n' +
+                '<td>' + (i + 1) + '</td>\n' +
+                '<td>' + list[i].getName() + '</td>\n' +
+                '<td>' + list[i].getDateOfBirth() + '</td>\n' +
+                '<td>' + list[i].getAddress() + '</td>\n' +
+                '<td>' + list[i].getSalary() + '</td>\n' +
+                '<td>' + list[i].getPosition() + '</td>\n' +
+                '</tr>'
+        }
+        tableString += '</table>';
+        document.getElementById("result").innerHTML = tableString;
+    }
+
+    let listEmployee = [];
+    let employee1 = new Employee('Trương Tấn B', '17/01/2000', 'Quảng Ngãi', 2000, 'Def');
+    let employee2 = new Employee('Trương Tấn A', '02/04/2000', 'Đà Nẵng', 2000, 'Abc');
+    let employee3 = new Employee('Trương Tấn C', '16/08/2000', 'Quảng Nam', 2000, 'Abc');
+    let employee4 = new Employee('Trương Tấn A', '16/08/2000', 'Quảng Nam', 2000, 'Abc');
+
+    listEmployee.push(employee1);
+    listEmployee.push(employee2);
+    listEmployee.push(employee3);
+    listEmployee.push(employee4);
+    display(listEmployee);
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day Of Month</title>
+</head>
+<body>
+<script>
+
+    function countDate(month, year) {
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                return 31;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                return 30;
+            case 2:
+                if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+                    return 29;
+                } else {
+                    return 28;
+                }
+        }
+    }
+
+    let str = prompt("Nhập tháng, năm: (mm/yyyy)");
+    let dateRegEx = /(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
+    str.trim();
+    let month;
+    let year;
+    if (str.match(dateRegEx)) {
+        month = parseInt(str.substr(0, 2));
+        year = parseInt(str.substr(3, 4));
+        alert('Tháng ' + month + ' năm ' + year + ' có ' + countDate(month, year) + ' ngày!');
+    } else {
+        document.write("Sai định dạng");
+    }
+</script>
+</body>
+</html>

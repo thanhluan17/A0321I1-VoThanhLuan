@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Average Number Array</title>
+</head>
+<body>
+<script>
+    let numberArr = [];
+    let n = 1;
+    while (true) {
+        let number = prompt('Nhập phần tử thứ ' + n + ' của mảng : \nNhập /q để dừng!');
+        if (number === '/q' || n === 50) {
+            break;
+        }
+        numberArr.push(parseInt(number));
+        n++;
+    }
+    alert('Mảng đã khởi tạo là: ' + numberArr.join(', '));
+    let sum = 0;
+    let count = 0;
+    numberArr.forEach(function (item) {
+        if (item % 3 === 0) {
+            sum += item;
+            count++;
+        }
+    });
+
+    let average = sum / count;
+    alert('Giá trị trung bình của các phần tử chia hết cho 3 trong mảng là: ' + average);
+</script>
+</body>
+</html>
