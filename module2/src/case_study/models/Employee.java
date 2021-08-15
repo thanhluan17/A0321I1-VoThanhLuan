@@ -16,7 +16,8 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
-    public Employee(String name, String dob, boolean gender, String identityNumber, String phoneNumber, String email, String employeeId, String education, String position, float salary) {
+    public Employee(String name, String dob, boolean gender, String identityNumber, String phoneNumber,
+                    String email, String employeeId, String education, String position, float salary) {
         super(name, dob, gender, identityNumber, phoneNumber, email);
         this.employeeId = employeeId;
         this.education = education;
@@ -58,7 +59,9 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return "Employee{" + "employeeId='" + employeeId + '\'' + ", education='" + education + '\''
-                + ", position='" + position + '\'' + ", salary=" + salary + '}';
+        /*return "Employee{" + "employeeId='" + employeeId + '\'' + ", education='" + education + '\''
+                + ", position='" + position + '\'' + ", salary=" + salary + '}';*/
+        return super.toString() + ", employeeId='" + employeeId + '\'' + ", education='" + education + '\''
+                + ", position='" + position + '\'' + ", salary=" + salary;
     }
 }

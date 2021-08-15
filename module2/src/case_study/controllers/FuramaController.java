@@ -1,5 +1,7 @@
 package case_study.controllers;
 
+import case_study.services.EmployeeServiceImpl;
+
 import java.util.Scanner;
 
 public class FuramaController {
@@ -42,14 +44,30 @@ public class FuramaController {
     }
 
     public void employeeManagement() {
-        System.out.println("-----Employee Menu-----");
-        System.out.println("1. Display list employees");
-        System.out.println("2. Add new employee");
-        System.out.println("3. Edit employee");
-        System.out.println("4. Return main menu");
-        System.out.println("-----------------");
-        System.out.print("Enter your choice: ");
-        String choice = scanner.nextLine();
+        do {
+            System.out.println("-----Employee Menu-----");
+            System.out.println("1. Display list employees");
+            System.out.println("2. Add new employee");
+            System.out.println("3. Edit employee");
+            System.out.println("4. Return main menu");
+            System.out.println("-----------------");
+            System.out.print("Enter your choice: ");
+            String choice = scanner.nextLine();
+            EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
+            switch (choice) {
+                case "1":
+                    employeeService.displayListEmployee();
+                    break;
+                case "2":
+                    employeeService.addNewEmployee();
+                    break;
+                case "3":
+                    employeeService.updateEmployee();
+                    break;
+                case "4":
+                    System.exit(0);
+            }
+        } while (true);
     }
 
     public void customerManagement() {
