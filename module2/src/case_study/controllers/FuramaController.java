@@ -1,5 +1,6 @@
 package case_study.controllers;
 
+import case_study.services.CustomerServiceImpl;
 import case_study.services.EmployeeServiceImpl;
 
 import java.util.Scanner;
@@ -38,7 +39,6 @@ public class FuramaController {
                 System.exit(0);
             default:
                 System.out.println("Invalid selection! Input selection to continue.");
-                scanner.nextLine();
                 displayMainMenu();
         }
     }
@@ -65,20 +65,37 @@ public class FuramaController {
                     employeeService.updateEmployee();
                     break;
                 case "4":
-                    System.exit(0);
+                    return;
             }
         } while (true);
     }
 
     public void customerManagement() {
-        System.out.println("-----Customer Menu-----");
-        System.out.println("1. Display list customers");
-        System.out.println("2. Add new customer");
-        System.out.println("3. Edit customer");
-        System.out.println("4. Return main menu");
-        System.out.println("-----------------");
-        System.out.print("Enter your choice: ");
-        String choice = scanner.nextLine();
+        do {
+            System.out.println("-----Customer Menu-----");
+            System.out.println("1. Display list customers");
+            System.out.println("2. Add new customer");
+            System.out.println("3. Edit customer");
+            System.out.println("4. Return main menu");
+            System.out.println("-----------------");
+            System.out.print("Enter your choice: ");
+            String choice = scanner.nextLine();
+            CustomerServiceImpl customerService = new CustomerServiceImpl();
+            switch (choice) {
+                case "1":
+                    customerService.displayListCustomer();
+                    break;
+                case "2":
+                    customerService.addNewCustomer();
+                    break;
+                case "3":
+                    customerService.updateCustomer();
+                    break;
+                case "4":
+                    return;
+            }
+        } while (true);
+
     }
 
     public void facilityManagement() {
