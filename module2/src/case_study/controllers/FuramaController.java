@@ -56,13 +56,13 @@ public class FuramaController {
             EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
             switch (choice) {
                 case "1":
-                    employeeService.displayListEmployee();
+                    employeeService.display();
                     break;
                 case "2":
-                    employeeService.addNewEmployee();
+                    employeeService.addNew();
                     break;
                 case "3":
-                    employeeService.updateEmployee();
+                    employeeService.update();
                     break;
                 case "4":
                     return;
@@ -83,13 +83,13 @@ public class FuramaController {
             CustomerServiceImpl customerService = new CustomerServiceImpl();
             switch (choice) {
                 case "1":
-                    customerService.displayListCustomer();
+                    customerService.display();
                     break;
                 case "2":
-                    customerService.addNewCustomer();
+                    customerService.addNew();
                     break;
                 case "3":
-                    customerService.updateCustomer();
+                    customerService.update();
                     break;
                 case "4":
                     return;
@@ -131,5 +131,4 @@ public class FuramaController {
         System.out.print("Enter your choice: ");
         String choice = scanner.nextLine();
     }
-
 }

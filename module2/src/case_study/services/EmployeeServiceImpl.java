@@ -7,10 +7,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
-    @Override
-    public void showInfo() {
-    }
-
     private static List<Employee> employeeList;
     private static Scanner scanner = new Scanner(System.in);
 
@@ -22,13 +18,24 @@ public class EmployeeServiceImpl implements EmployeeService {
                 "0332718476", "anguyen31@gmail.com", "002", "College", "IT", 1000));
     }
 
-    public void displayListEmployee() {
+    public Employee checkExist(String id) {
+        for (Employee employee : employeeList) {
+            if (employee.getEmployeeId().equals(id)) {
+                return employee;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void display() {
         for (Employee employee : employeeList) {
             System.out.println(employee.toString());
         }
     }
 
-    public void addNewEmployee() {
+    @Override
+    public void addNew() {
         String employeeId;
         do {
             System.out.println("Enter employee id: ");
@@ -66,7 +73,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         System.out.println("Add success!");
     }
 
-    public void updateEmployee() {
+    @Override
+    public void update() {
         String id;
         do {
             System.out.println("Enter employee id to edit: ");
@@ -114,14 +122,5 @@ public class EmployeeServiceImpl implements EmployeeService {
                     System.out.println("Invalid choice! Exit!");
             }
         } while (true);
-    }
-
-    public Employee checkExist(String id) {
-        for (Employee employee : employeeList) {
-            if (employee.getEmployeeId().equals(id)) {
-                return employee;
-            }
-        }
-        return null;
     }
 }

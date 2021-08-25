@@ -1,17 +1,12 @@
 package case_study.services;
 
 import case_study.models.Customer;
-import case_study.models.Employee;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService {
-    @Override
-    public void showInfo() {
-    }
-
     private static List<Customer> customerList;
     private static Scanner scanner = new Scanner(System.in);
 
@@ -23,13 +18,24 @@ public class CustomerServiceImpl implements CustomerService {
                 "0383361721", "nguyen71@gmail.com", "002", "VIP", "Da Nang"));
     }
 
-    public void displayListCustomer() {
+    public Customer checkExist(String id) {
+        for (Customer customer : customerList) {
+            if (customer.getCustomerId().equals(id)) {
+                return customer;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void display() {
         for (Customer customer : customerList) {
             System.out.println(customer.toString());
         }
     }
 
-    public void addNewCustomer() {
+    @Override
+    public void addNew() {
         String customerId;
         do {
             System.out.println("Enter customer id: ");
@@ -64,7 +70,8 @@ public class CustomerServiceImpl implements CustomerService {
         System.out.println("Add success!");
     }
 
-    public void updateCustomer() {
+    @Override
+    public void update() {
         String id;
         do {
             System.out.println("Enter customer id to edit: ");
@@ -112,14 +119,5 @@ public class CustomerServiceImpl implements CustomerService {
                     System.out.println("Invalid choice! Exit!");
             }
         } while (true);
-    }
-
-    public Customer checkExist(String id) {
-        for (Customer customer : customerList) {
-            if (customer.getCustomerId().equals(id)) {
-                return customer;
-            }
-        }
-        return null;
     }
 }
