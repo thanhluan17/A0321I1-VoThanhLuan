@@ -5,19 +5,17 @@ public class Booking {
     private String startDate;
     private String endDate;
     private String customerId;
-    private String serviceName;
-    private String serviceType;
+    private String serviceId;
 
     public Booking() {
     }
 
-    public Booking(String bookingId, String startDate, String endDate, String customerId, String serviceName, String serviceType) {
+    public Booking(String bookingId, String startDate, String endDate, String customerId, String serviceId) {
         this.bookingId = bookingId;
         this.startDate = startDate;
         this.endDate = endDate;
         this.customerId = customerId;
-        this.serviceName = serviceName;
-        this.serviceType = serviceType;
+        this.serviceId = serviceId;
     }
 
     public String getBookingId() {
@@ -52,26 +50,17 @@ public class Booking {
         this.customerId = customerId;
     }
 
-    public String getServiceName() {
-        return serviceName;
+    public String getServiceId() {
+        return serviceId;
     }
 
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
-    }
-
-    public String getServiceType() {
-        return serviceType;
-    }
-
-    public void setServiceType(String serviceType) {
-        this.serviceType = serviceType;
+    public void setServiceId(String serviceId) {
+        this.serviceId = serviceId;
     }
 
     @Override
     public String toString() {
-        return "Booking{" + "bookingId='" + bookingId + '\'' + ", startDate='" + startDate + '\''
-                + ", endDate='" + endDate + '\'' + ", customerId='" + customerId + '\''
-                + ", serviceName='" + serviceName + '\'' + ", serviceType='" + serviceType + '\'' + '}';
+        return "Booking{" + "bookingId='" + bookingId + '\'' + ", startDate='" + startDate + '\'' + ", endDate='"
+                + endDate + '\'' + ", customerId='" + customerId + '\'' + ", serviceId='" + serviceId + '\'' + '}';
     }
 }

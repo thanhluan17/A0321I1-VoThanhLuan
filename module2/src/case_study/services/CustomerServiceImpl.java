@@ -13,9 +13,13 @@ public class CustomerServiceImpl implements CustomerService {
     static {
         customerList = new LinkedList<>();
         customerList.add(new Customer("Vo Thanh Luan", "17/01/2000", true, "212464739",
-                "0383422211", "naul17@gmail.com", "001", "VIP", "Quang Ngai"));
+                "0383422211", "naul17@gmail.com", "001", "Diamond", "Quang Ngai"));
         customerList.add(new Customer("Nguyen Van B", "09/09/2000", true, "212371625",
-                "0383361721", "nguyen71@gmail.com", "002", "VIP", "Da Nang"));
+                "0383361721", "nguyen71@gmail.com", "002", "Gold", "Da Nang"));
+    }
+
+    public List<Customer> getCustomerList() {
+        return customerList;
     }
 
     public Customer checkExist(String id) {

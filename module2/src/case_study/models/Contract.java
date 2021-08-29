@@ -3,14 +3,14 @@ package case_study.models;
 public class Contract {
     private String contractId;
     private String bookingId;
-    private float deposit;
-    private float total;
+    private double deposit;
+    private double total;
     private String customerId;
 
     public Contract() {
     }
 
-    public Contract(String contractId, String bookingId, float deposit, float total, String customerId) {
+    public Contract(String contractId, String bookingId, double deposit, double total, String customerId) {
         this.contractId = contractId;
         this.bookingId = bookingId;
         this.deposit = deposit;
@@ -34,19 +34,19 @@ public class Contract {
         this.bookingId = bookingId;
     }
 
-    public float getDeposit() {
+    public double getDeposit() {
         return deposit;
     }
 
-    public void setDeposit(float deposit) {
+    public void setDeposit(double deposit) {
         this.deposit = deposit;
     }
 
-    public float getTotal() {
+    public double getTotal() {
         return total;
     }
 
-    public void setTotal(float total) {
+    public void setTotal(double total) {
         this.total = total;
     }
 

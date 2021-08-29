@@ -1,6 +1,7 @@
 package case_study.models;
 
 public abstract class Facility {
+    private String serviceId;
     private String serviceName;
     private double usableArea;
     private float rentCost;
@@ -10,12 +11,21 @@ public abstract class Facility {
     public Facility() {
     }
 
-    public Facility(String serviceName, double usableArea, float rentCost, int maxCustomer, String rentType) {
+    public Facility(String serviceId, String serviceName, double usableArea, float rentCost, int maxCustomer, String rentType) {
+        this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.usableArea = usableArea;
         this.rentCost = rentCost;
         this.maxCustomer = maxCustomer;
         this.rentType = rentType;
+    }
+
+    public String getServiceId() {
+        return serviceId;
+    }
+
+    public void setServiceId(String serviceId) {
+        this.serviceId = serviceId;
     }
 
     public String getServiceName() {
@@ -56,5 +66,11 @@ public abstract class Facility {
 
     public void setRentType(String rentType) {
         this.rentType = rentType;
+    }
+
+    @Override
+    public String toString() {
+        return "serviceId='" + serviceId + ", serviceName='" + serviceName + ", usableArea=" + usableArea + ", rentCost=" + rentCost + ", maxCustomer="
+                + maxCustomer + ", rentType='" + rentType + ", ";
     }
 }
