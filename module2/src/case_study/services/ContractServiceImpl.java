@@ -1,5 +1,6 @@
 package case_study.services;
 
+import case_study.data.ReadAndWrite;
 import case_study.models.Booking;
 import case_study.models.Contract;
 
@@ -12,6 +13,7 @@ public class ContractServiceImpl implements ContactService {
 
     @Override
     public void display() {
+        contractList = (List<Contract>) ReadAndWrite.readFile("src\\case_study\\data\\contract.csv");
         for (Contract contract : contractList) {
             System.out.println(contract.toString());
         }
@@ -40,6 +42,7 @@ public class ContractServiceImpl implements ContactService {
             contractList.add(new Contract(contractId, bookingId, deposit, total, customerId));
             System.out.println("Add contract success!");
         }
+        ReadAndWrite.writeFile(contractList, "src\\case_study\\data\\contract.csv");
     }
 
     @Override

@@ -2,11 +2,12 @@ package case_study.services;
 
 import case_study.models.Booking;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 
-public class BookingComparator implements Comparator<Booking> {
+public class BookingComparator implements Comparator<Booking>, Serializable {
     @Override
     public int compare(Booking o1, Booking o2) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");

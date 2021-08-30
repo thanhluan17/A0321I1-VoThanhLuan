@@ -1,5 +1,6 @@
 package case_study.services;
 
+import case_study.data.ReadAndWrite;
 import case_study.models.Customer;
 
 import java.util.LinkedList;
@@ -33,6 +34,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void display() {
+        //customerList = (List<Customer>) ReadAndWrite.readFile("src\\case_study\\data\\customer.csv");
         for (Customer customer : customerList) {
             System.out.println(customer.toString());
         }
@@ -71,6 +73,7 @@ public class CustomerServiceImpl implements CustomerService {
         System.out.println("Enter customer address: ");
         String address = scanner.nextLine();
         customerList.add(new Customer(name, dob, gender, identity, phone, email, customerId, cusType, address));
+        ReadAndWrite.writeFile(customerList, "src\\case_study\\data\\customer.csv");
         System.out.println("Add success!");
     }
 

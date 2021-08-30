@@ -1,5 +1,6 @@
 package case_study.services;
 
+import case_study.data.ReadAndWrite;
 import case_study.models.Employee;
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void display() {
+        //employeeList = (List<Employee>) ReadAndWrite.readFile("src\\case_study\\data\\employee.csv");
         for (Employee employee : employeeList) {
             System.out.println(employee.toString());
         }
@@ -70,6 +72,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         int salary = scanner.nextInt();
         scanner.skip("\\R");
         employeeList.add(new Employee(name, dob, gender, identity, phone, email, employeeId, education, position, salary));
+        ReadAndWrite.writeFile(employeeList, "src\\case_study\\data\\employee.csv");
         System.out.println("Add success!");
     }
 

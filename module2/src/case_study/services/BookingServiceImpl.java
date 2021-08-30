@@ -1,5 +1,6 @@
 package case_study.services;
 
+import case_study.data.ReadAndWrite;
 import case_study.models.Booking;
 
 import java.util.Scanner;
@@ -20,6 +21,7 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public void display() {
+        //bookingSet = (Set<Booking>) ReadAndWrite.readFile("src\\case_study\\data\\booking.csv");
         for (Booking booking : bookingSet) {
             System.out.println(booking.toString());
         }
@@ -39,6 +41,7 @@ public class BookingServiceImpl implements BookingService {
         String serviceId = chooseFacility();
         bookingSet.add(new Booking(bookingId, startDate, endDate, customerId, serviceId));
         facilityService.updateRentedValue(serviceId);
+        ReadAndWrite.writeFile(bookingSet, "src\\case_study\\data\\booking.csv");
         System.out.println("Book success!");
     }
 

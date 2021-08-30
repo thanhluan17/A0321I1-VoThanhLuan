@@ -12,18 +12,24 @@ public class FuramaController {
     BookingServiceImpl bookingService = new BookingServiceImpl();
     ContractServiceImpl contractService = new ContractServiceImpl();
     PromotionServiceImpl promotionService = new PromotionServiceImpl();
+    int choice;
 
     public void displayMainMenu() {
         System.out.println("-----Main Menu-----");
         System.out.println("1. Employee Management");
         System.out.println("2. Customer Management");
-        System.out.println("3. Facility  Management");
+        System.out.println("3. Facility Management");
         System.out.println("4. Booking Management");
         System.out.println("5. Promotion  Management");
         System.out.println("6. Exit");
         System.out.println("-----------------");
         System.out.print("Enter your choice: ");
-        int choice = Integer.parseInt(scanner.nextLine());
+        try {
+            choice = Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid choice! Enter again!");
+            displayMainMenu();
+        }
         switch (choice) {
             case 1:
                 employeeManagement();
@@ -42,9 +48,6 @@ public class FuramaController {
                 break;
             case 6:
                 System.exit(0);
-            default:
-                System.out.println("Invalid selection! Input selection to continue.");
-                displayMainMenu();
         }
     }
 
@@ -57,7 +60,12 @@ public class FuramaController {
             System.out.println("4. Return main menu");
             System.out.println("-----------------");
             System.out.print("Enter your choice: ");
-            int choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid choice! Enter again!");
+                employeeManagement();
+            }
             switch (choice) {
                 case 1:
                     employeeService.display();
@@ -84,7 +92,12 @@ public class FuramaController {
             System.out.println("4. Return main menu");
             System.out.println("-----------------");
             System.out.print("Enter your choice: ");
-            int choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid choice! Enter again!");
+                customerManagement();
+            }
             switch (choice) {
                 case 1:
                     customerService.display();
@@ -112,7 +125,12 @@ public class FuramaController {
             System.out.println("4. Return main menu");
             System.out.println("-----------------");
             System.out.print("Enter your choice: ");
-            int choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid choice! Enter again!");
+                facilityManagement();
+            }
             switch (choice) {
                 case 1:
                     facilityService.display();
@@ -142,7 +160,12 @@ public class FuramaController {
             System.out.println("6. Return main menu");
             System.out.println("-----------------");
             System.out.print("Enter your choice: ");
-            int choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid choice! Enter again!");
+                bookingManagement();
+            }
             switch (choice) {
                 case 1:
                     bookingService.addNew();
@@ -174,7 +197,12 @@ public class FuramaController {
             System.out.println("3. Return main menu");
             System.out.println("-----------------");
             System.out.print("Enter your choice: ");
-            int choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid choice! Enter again!");
+                promotionManagement();
+            }
             switch (choice) {
                 case 1:
                     promotionService.display();

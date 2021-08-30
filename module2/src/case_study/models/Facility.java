@@ -1,6 +1,8 @@
 package case_study.models;
 
-public abstract class Facility {
+import java.io.Serializable;
+
+public abstract class Facility implements Serializable {
     private String serviceId;
     private String serviceName;
     private double usableArea;
