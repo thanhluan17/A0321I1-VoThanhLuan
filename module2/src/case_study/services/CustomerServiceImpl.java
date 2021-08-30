@@ -2,12 +2,15 @@ package case_study.services;
 
 import case_study.data.ReadAndWrite;
 import case_study.models.Customer;
+import case_study.ulti.Validation;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class CustomerServiceImpl implements CustomerService {
+    private static final String REGEX_AGE_DOB = "/^(0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2}$/";
     private static List<Customer> customerList;
     private static Scanner scanner = new Scanner(System.in);
 
@@ -34,7 +37,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void display() {
-        //customerList = (List<Customer>) ReadAndWrite.readFile("src\\case_study\\data\\customer.csv");
+        customerList = (List<Customer>) ReadAndWrite.readFile("src\\case_study\\data\\customer.csv");
         for (Customer customer : customerList) {
             System.out.println(customer.toString());
         }
@@ -126,5 +129,9 @@ public class CustomerServiceImpl implements CustomerService {
                     System.out.println("Invalid choice! Exit!");
             }
         } while (true);
+    }
+
+    private String checkDoB() {
+        return Validation.checkDateOfBirth(scanner.nextLine(), REGEX_AGE_DOB);
     }
 }

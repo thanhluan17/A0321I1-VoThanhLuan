@@ -1,14 +1,13 @@
 package case_study.services;
 
+import case_study.data.ReadAndWrite;
 import case_study.models.Facility;
 import case_study.models.House;
 import case_study.models.Room;
 import case_study.models.Villa;
-import case_study.validation.Validation;
+import case_study.ulti.Validation;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class FacilityServiceImpl implements FacilityService {
     public static final String REGEX_STR = "[A-Z][a-z]+";
@@ -106,6 +105,7 @@ public class FacilityServiceImpl implements FacilityService {
         System.out.println("Enter floor number: ");
         int floorNumber = Integer.parseInt(inputInt());
         facilityIntegerMap.put(new Villa(villaId, name, usableArea, rentCost, maxCustomer, rentType, standard, poolArea, floorNumber), 0);
+        writeFacility("SVVL", "src\\case_study\\data\\villa.csv");
         System.out.println("Add success!");
     }
 
@@ -206,5 +206,15 @@ public class FacilityServiceImpl implements FacilityService {
 
     private String inputMaxCustomer() {
         return Validation.checkInput(scanner.nextLine(), REGEX_MAX_CUSTOMER, "Invalid format, id must be greater than 0 and less than 20!");
+    }
+
+    private void writeFacility(String type, String path) {
+        List<Facility> facilityList = new ArrayList<>();
+        for (Map.Entry<Facility, Integer> facilityIntegerEntry : facilityIntegerMap.entrySet()) {
+            if (type.equals(facilityIntegerEntry.getKey().getServiceId().substring(0, 4))) {
+                facilityList.add(facilityIntegerEntry.getKey());
+            }
+        }
+        ReadAndWrite.writeFile(facilityList, path);
     }
 }

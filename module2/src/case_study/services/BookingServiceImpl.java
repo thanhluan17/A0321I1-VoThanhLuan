@@ -2,6 +2,7 @@ package case_study.services;
 
 import case_study.data.ReadAndWrite;
 import case_study.models.Booking;
+import case_study.ulti.BookingComparator;
 
 import java.util.Scanner;
 import java.util.Set;
@@ -14,14 +15,14 @@ public class BookingServiceImpl implements BookingService {
 
     static {
         bookingSet.add(new Booking("001", "17/08/2020", "20/08/2021",
-                "001", "001"));
+                "001", "SVVL-0001"));
         bookingSet.add(new Booking("002", "07/11/2020", "10/11/2020",
-                "002", "003"));
+                "002", "SVVL-0003"));
     }
 
     @Override
     public void display() {
-        //bookingSet = (Set<Booking>) ReadAndWrite.readFile("src\\case_study\\data\\booking.csv");
+        bookingSet = (Set<Booking>) ReadAndWrite.readFile("src\\case_study\\data\\booking.csv");
         for (Booking booking : bookingSet) {
             System.out.println(booking.toString());
         }

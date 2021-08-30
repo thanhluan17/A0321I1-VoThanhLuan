@@ -30,7 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void display() {
-        //employeeList = (List<Employee>) ReadAndWrite.readFile("src\\case_study\\data\\employee.csv");
+        employeeList = (List<Employee>) ReadAndWrite.readFile("src\\case_study\\data\\employee.csv");
         for (Employee employee : employeeList) {
             System.out.println(employee.toString());
         }
