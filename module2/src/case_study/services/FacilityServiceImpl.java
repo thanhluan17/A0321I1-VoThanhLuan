@@ -5,7 +5,7 @@ import case_study.models.Facility;
 import case_study.models.House;
 import case_study.models.Room;
 import case_study.models.Villa;
-import case_study.ulti.Validation;
+import case_study.util.Validation;
 
 import java.util.*;
 

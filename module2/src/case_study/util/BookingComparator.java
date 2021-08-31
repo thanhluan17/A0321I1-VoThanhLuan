@@ -1,4 +1,4 @@
-package case_study.ulti;
+package case_study.util;
 
 import case_study.models.Booking;
 

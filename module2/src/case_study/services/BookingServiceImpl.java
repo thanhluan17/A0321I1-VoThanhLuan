@@ -2,7 +2,7 @@ package case_study.services;
 
 import case_study.data.ReadAndWrite;
 import case_study.models.Booking;
-import case_study.ulti.BookingComparator;
+import case_study.util.BookingComparator;
 
 import java.util.Scanner;
 import java.util.Set;

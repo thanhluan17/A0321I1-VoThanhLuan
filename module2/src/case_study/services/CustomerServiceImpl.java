@@ -2,7 +2,7 @@ package case_study.services;
 
 import case_study.data.ReadAndWrite;
 import case_study.models.Customer;
-import case_study.ulti.Validation;
+import case_study.util.Validation;
 
 import java.util.LinkedList;
 import java.util.List;
