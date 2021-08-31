@@ -2,6 +2,7 @@ package case_study.services;
 
 import case_study.data.ReadAndWrite;
 import case_study.models.Employee;
+import case_study.util.Validation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Scanner;
 public class EmployeeServiceImpl implements EmployeeService {
     private static List<Employee> employeeList;
     private static Scanner scanner = new Scanner(System.in);
+    private static final String REGEX_DOB = "^([0-2][0-9]|3[0-1])\\/(0[0-9]|1[0-2])\\/([0-9][0-9])?[0-9][0-9]$";
 
     static {
         employeeList = new ArrayList<>();
@@ -49,7 +51,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         System.out.println("Enter employee name: ");
         String name = scanner.nextLine();
         System.out.println("Enter date of birth: ");
-        String dob = scanner.nextLine();
+        String dob = checkDoB();
         int checkGender;
         System.out.println("Enter employee gender: '1' for male, '0' for female!");
         checkGender = scanner.nextInt();
@@ -74,6 +76,17 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeList.add(new Employee(name, dob, gender, identity, phone, email, employeeId, education, position, salary));
         ReadAndWrite.writeFile(employeeList, "src\\case_study\\data\\employee.csv");
         System.out.println("Add success!");
+    }
+
+    public void delete() {
+        System.out.println("Enter id: ");
+        String id = scanner.nextLine();
+        Employee employee = checkExist(id);
+        employeeList.remove(employee);
+    }
+
+    private String checkDoB() {
+        return Validation.checkDateOfBirth(scanner.nextLine(), REGEX_DOB);
     }
 
     @Override

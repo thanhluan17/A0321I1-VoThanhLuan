@@ -16,7 +16,8 @@ public class FacilityServiceImpl implements FacilityService {
     public static final String REGEX_ROOM_ID = "(SVRO)[-][0-9]{4}";
     public static final String REGEX_AREA = "^([3-9]\\d|[1-9]\\d{2,})";
     public static final String REGEX_MAX_CUSTOMER = "^[1-9]|([1][0-9])|(20)$";
-    public static final String REGEX_INT = "^[0-9]{1,}$";
+    public static final String REGEX_INT = "^([1-9])[0-9]*";
+    //^([1-9])[0-9]*$
     Scanner scanner = new Scanner(System.in);
     private static Map<Facility, Integer> facilityIntegerMap;
 
