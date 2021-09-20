@@ -10,9 +10,9 @@ CREATE TABLE loai_dich_vu (
 CREATE TABLE kieu_thue (
     id_kieu_thue INT AUTO_INCREMENT PRIMARY KEY,
     ten_kieu_thue VARCHAR(45) NOT NULL,
-    check(kieu_thue in ('Nam', 'Thang', 'Ngay', 'Gio')),
+    CHECK (ten_kieu_thue IN ('Nam' , 'Thang', 'Ngay', 'Gio')),
     gia DOUBLE NOT NULL,
-    check(gia >= 0)
+    CHECK (gia >= 0)
 );
 
 CREATE TABLE dich_vu (
@@ -23,9 +23,9 @@ CREATE TABLE dich_vu (
     so_tang INT,
     CHECK (so_tang >= 0),
     so_nguoi_toi_da INT,
-    check(so_nguoi_toi_da > 0),
+    CHECK (so_nguoi_toi_da > 0),
     chi_phi_thue DOUBLE,
-    check(chi_phi_thue >= 0),
+    CHECK (chi_phi_thue >= 0),
     id_kieu_thue INT,
     FOREIGN KEY (id_kieu_thue)
         REFERENCES kieu_thue (id_kieu_thue),
@@ -37,7 +37,8 @@ CREATE TABLE dich_vu (
 
 CREATE TABLE loai_khach (
     id_loai_khach INT AUTO_INCREMENT PRIMARY KEY,
-    ten_loai_khach VARCHAR(45)
+    ten_loai_khach VARCHAR(45),
+    CHECK (ten_loai_khach IN ('Diamond' , 'Platinium', 'Gold', 'Silver', 'Member'))
 );
 
 CREATE TABLE khach_hang (
@@ -48,8 +49,8 @@ CREATE TABLE khach_hang (
     ho_ten VARCHAR(45) NOT NULL,
     ngay_sinh DATE,
     so_cmnd VARCHAR(15) NOT NULL,
-    sdt CHAR(9),
-    email VARCHAR(45),
+    sdt CHAR(10) UNIQUE,
+    email VARCHAR(45) UNIQUE,
     dia_chi VARCHAR(45)
 );
 
@@ -57,23 +58,32 @@ CREATE TABLE dich_vu_di_kem (
     id_dv_di_kem INT AUTO_INCREMENT PRIMARY KEY,
     ten_dv_di_kem VARCHAR(45) NOT NULL,
     gia DOUBLE,
+    CHECK (gia >= 0),
     don_vi INT,
+    CHECK (don_vi >= 0),
     trang_thai_kha_dung VARCHAR(45)
 );
 
 CREATE TABLE vi_tri (
     id_vi_tri INT AUTO_INCREMENT PRIMARY KEY,
-    ten_vi_tri VARCHAR(45) NOT NULL
+    ten_vi_tri VARCHAR(45) NOT NULL,
+    CHECK (ten_vi_tri IN ('Le tan' , 'Phuc vu',
+        'Chuyen vien',
+        'Giam sat',
+        'Quan ly',
+        'Giam doc'))
 );
 
 CREATE TABLE trinh_do (
     id_trinh_do INT AUTO_INCREMENT PRIMARY KEY,
-    trinh_do VARCHAR(45) NOT NULL
+    ten_trinh_do VARCHAR(45) NOT NULL,
+    CHECK (ten_trinh_do IN ('Trung cap' , 'Cao dang', 'Dai hoc', 'Sau dai hoc'))
 );
 
 CREATE TABLE bo_phan (
     id_bo_phan INT AUTO_INCREMENT PRIMARY KEY,
-    ten_bo_phan VARCHAR(45) NOT NULL
+    ten_bo_phan VARCHAR(45) NOT NULL,
+    CHECK (ten_bo_phan IN ('Sale - Marketing' , 'Hanh chinh', 'Phuc vu', 'Quan ly'))
 );
 
 CREATE TABLE nhan_vien (
@@ -91,7 +101,8 @@ CREATE TABLE nhan_vien (
     ngay_sinh DATE,
     so_cmnd VARCHAR(15) NOT NULL,
     luong DOUBLE,
-    sdt CHAR(10),
+    CHECK (luong >= 0),
+    sdt CHAR(10) UNIQUE,
     email VARCHAR(45),
     dia_chi VARCHAR(45)
 );
@@ -109,8 +120,11 @@ CREATE TABLE hop_dong (
         REFERENCES dich_vu (id_dich_vu),
     ngay_lam_hd DATE NOT NULL,
     ngay_ket_thuc_hd DATE NOT NULL,
+    CHECK (ngay_ket_thuc_hd >= ngay_lam_hd),
     tien_dat_coc DOUBLE,
-    tong_tien DOUBLE
+    CHECK (tien_dat_coc >= 0),
+    tong_tien DOUBLE,
+    CHECK (tong_tien >= 0)
 );
 
 CREATE TABLE hop_dong_chi_tiet (
@@ -121,5 +135,7 @@ CREATE TABLE hop_dong_chi_tiet (
     id_dv_di_kem INT,
     FOREIGN KEY (id_dv_di_kem)
         REFERENCES dich_vu_di_kem (id_dv_di_kem),
-    so_luong INT
+    so_luong INT,
+    CHECK (so_luong >= 0)
 );
+
