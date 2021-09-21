@@ -70,21 +70,25 @@ INSERT INTO nhan_vien(ho_ten, id_vi_tri, id_trinh_do, id_bo_phan, ngay_sinh, so_
           ('Doan Ngoc Nhi', 5, 3, 4, '1990-12-10', '212464800', 15000000, '0381069504', 'nhingoc18@gmail.com', 'Quang Ngai'),
           ('Le Minh', 6, 4, 4, '1990-05-11', '212464893', 20000000, '0381171162', 'leminh99@gmail.com', 'Da Nang');
           
-insert into hop_dong(id_nhan_vien, id_khach_hang, id_dich_vu, ngay_lam_hd, ngay_ket_thuc_hd, tien_dat_coc)
-	values(1, 1, 1, '2019-02-17', '2019-03-17', 500000),
+INSERT INTO hop_dong(id_nhan_vien, id_khach_hang, id_dich_vu, ngay_lam_hd, ngay_ket_thuc_hd, tien_dat_coc)
+	VALUES(1, 1, 1, '2019-02-17', '2019-03-17', 500000),
 		  (2, 1, 3, '2019-03-17', '2019-04-17', 600000),
           (1, 3, 2, '2019-08-15', '2019-09-15', 700000),
           (1, 4, 4, '2019-03-17', '2019-04-17', 500000),
           (3, 5, 4, '2019-11-10', '2019-12-10', 500000),
-          (4, 2, 3, '2019-11-10', '2019-12-10', 500000);
+          (4, 2, 3, '2019-11-10', '2019-12-10', 500000),
+          (1, 1, 1, '2018-02-17', '2018-03-17', 500000),
+          (1, 5, 3, '2018-02-17', '2018-03-17', 500000);
     
-insert into hop_dong_chi_tiet(id_hop_dong, id_dv_di_kem, so_luong)
-	values(1, 1, 1),
+INSERT INTO hop_dong_chi_tiet(id_hop_dong, id_dv_di_kem, so_luong)
+	VALUES(1, 1, 1),
 		  (2, 2, 3),
           (3, 3, 2),
           (4, 4, 1),
           (5, 5, 3),
-          (6, 2, 2);
+          (6, 2, 2),
+          (7, 3, 2),
+          (8, 2, 1);
 		  
           
           
