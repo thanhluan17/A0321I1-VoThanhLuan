@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+div {
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-sp {
+    color: #00abff;
+}
+
+.blue-text {
+    color: #00538d;
+}

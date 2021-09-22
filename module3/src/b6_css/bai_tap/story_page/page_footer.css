@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif, Helvetica, Arial;
+    font-weight: 400;
+}
+
+.footer-panel {
+    padding: 15px 0;
+    width: 100%;
+    background-color: #1ab7ea;
+    text-align: center;
+}
+
+#p-footer{
+    color: #fff;
+}
