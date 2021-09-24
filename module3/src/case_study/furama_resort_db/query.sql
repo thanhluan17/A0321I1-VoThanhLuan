@@ -192,3 +192,77 @@ FROM
     inner join hop_dong_chi_tiet on hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_dong
     where not exists (select hop_dong.id_hop_dong where hop_dong.ngay_lam_hd between '2019-01-01' and '2019-06-31')
     and exists (select hop_dong.id_hop_dong where hop_dong.ngay_lam_hd between '2019-09-01' and '2019-12-31');
+    
+-- 13. hien thi cac dich vu di kem duoc su dung nhieu nhat
+SELECT 
+    dich_vu_di_kem.ten_dv_di_kem,
+    COUNT(hop_dong_chi_tiet.id_dv_di_kem) AS sl_su_dung
+FROM
+    dich_vu_di_kem
+        INNER JOIN
+    hop_dong_chi_tiet ON dich_vu_di_kem.id_dv_di_kem = hop_dong_chi_tiet.id_dv_di_kem
+GROUP BY hop_dong_chi_tiet.id_dv_di_kem
+HAVING sl_su_dung = (SELECT 
+        COUNT(hop_dong_chi_tiet.id_dv_di_kem) AS sl
+    FROM
+        dich_vu_di_kem
+            INNER JOIN
+        hop_dong_chi_tiet ON dich_vu_di_kem.id_dv_di_kem = hop_dong_chi_tiet.id_dv_di_kem
+    GROUP BY hop_dong_chi_tiet.id_dv_di_kem
+    ORDER BY sl DESC
+    LIMIT 1);
+
+-- 14. hien thi thong tin dich vu di kem chi moi duoc su dung 1 lan duy nhat
+SELECT 
+    hop_dong_chi_tiet.id_hop_dong,
+    loai_dich_vu.ten_loai_dv,
+    dich_vu_di_kem.ten_dv_di_kem,
+    COUNT(hop_dong_chi_tiet.id_hd_chi_tiet) AS sl_su_dung
+FROM
+    dich_vu_di_kem
+        INNER JOIN
+    hop_dong_chi_tiet ON dich_vu_di_kem.id_dv_di_kem = hop_dong_chi_tiet.id_dv_di_kem
+        INNER JOIN
+    hop_dong ON hop_dong_chi_tiet.id_hop_dong = hop_dong.id_hop_dong
+        INNER JOIN
+    dich_vu ON hop_dong.id_dich_vu = dich_vu.id_dich_vu
+        INNER JOIN
+    loai_dich_vu ON dich_vu.id_loai_dv = loai_dich_vu.id_loai_dv
+GROUP BY hop_dong_chi_tiet.id_dv_di_kem
+HAVING sl_su_dung = 1;
+
+-- 15. hien thi thong tin nhan vien moi chi lap duoc toi da 3 hop dong tu nam 2018 - 2019
+SELECT 
+    nhan_vien.id_nhan_vien,
+    nhan_vien.ho_ten,
+    trinh_do.ten_trinh_do,
+    bo_phan.ten_bo_phan,
+    nhan_vien.sdt,
+    nhan_vien.dia_chi,
+    COUNT(hop_dong.id_hop_dong) AS so_hd
+FROM
+    nhan_vien
+        INNER JOIN
+    hop_dong ON nhan_vien.id_nhan_vien = hop_dong.id_nhan_vien
+        INNER JOIN
+    trinh_do ON nhan_vien.id_trinh_do = trinh_do.id_trinh_do
+        INNER JOIN
+    bo_phan ON nhan_vien.id_bo_phan = bo_phan.id_bo_phan
+WHERE
+    YEAR(hop_dong.ngay_lam_hd) BETWEEN '2018' AND '2019'
+GROUP BY hop_dong.id_nhan_vien
+HAVING so_hd <= 3;
+
+-- 16. xoa nhan vien chua tung lap hop dong nao tu nam 2017 - 2019
+DELETE FROM nhan_vien 
+WHERE
+    nhan_vien.id_nhan_vien NOT IN (SELECT 
+        *
+    FROM
+        (SELECT DISTINCT
+            nhan_vien.id_nhan_vien
+        FROM
+            hop_dong
+        INNER JOIN nhan_vien ON hop_dong.id_nhan_vien = nhan_vien.id_nhan_vien where year(hop_dong.ngay_lam_hd) BETWEEN '2017' and '2019') AS temp)
+
+-- 17. cap nhat thong tin khach hang Platinium thanh Diamond voi nhung khach da thanh toan trong nam 2019 lon hon 10tr
