@@ -369,12 +369,32 @@ CREATE VIEW V_NHANVIEN AS
 -- 22. cap nhat dia chi cua nhan vien trong trong V_NHANVIEN thanh Lien Chieu
 UPDATE V_NHANVIEN 
 SET 
-    dia_chi = 'Lien Chieu'
+    dia_chi = 'Lien Chieu';
     
 -- 23. tao procedure de xoa thong tin cua 1 khach hang 
+	-- set on delete cascade cho cac khoa ngoai
+ALTER TABLE hop_dong DROP FOREIGN KEY `hop_dong_ibfk_2`;
+ALTER TABLE hop_dong_chi_tiet DROP FOREIGN KEY `hop_dong_chi_tiet_ibfk_1`;
+SET FOREIGN_KEY_CHECKS=0;
+ALTER TABLE hop_dong ADD CONSTRAINT `hop_dong_ibfk_2` FOREIGN KEY (id_khach_hang)
+    REFERENCES khach_hang (id_khach_hang) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE hop_dong_chi_tiet ADD CONSTRAINT `hop_dong_chi_tiet_ibfk_1` FOREIGN KEY (id_hop_dong)
+    REFERENCES hop_dong (id_hop_dong) ON UPDATE CASCADE ON DELETE CASCADE;
+SET FOREIGN_KEY_CHECKS=1;
 
+	-- tao procedure
+DELIMITER //
+CREATE PROCEDURE Sp_1(
+	IN id int
+)
+BEGIN
+  delete from khach_hang where khach_hang.id_khach_hang = id;
+END //
+DELIMITER ;
+	-- goi procedure
+CALL Sp_1(4);
 
-
+-- 24. 
 
 
 
