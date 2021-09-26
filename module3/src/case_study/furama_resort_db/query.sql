@@ -263,6 +263,118 @@ WHERE
             nhan_vien.id_nhan_vien
         FROM
             hop_dong
-        INNER JOIN nhan_vien ON hop_dong.id_nhan_vien = nhan_vien.id_nhan_vien where year(hop_dong.ngay_lam_hd) BETWEEN '2017' and '2019') AS temp)
+        INNER JOIN nhan_vien ON hop_dong.id_nhan_vien = nhan_vien.id_nhan_vien
+        
+        WHERE
+            YEAR(hop_dong.ngay_lam_hd) BETWEEN '2017' AND '2019') AS temp);
 
 -- 17. cap nhat thong tin khach hang Platinium thanh Diamond voi nhung khach da thanh toan trong nam 2019 lon hon 10tr
+UPDATE khach_hang 
+SET 
+    khach_hang.id_loai_khach = 1
+WHERE
+    khach_hang.id_khach_hang IN (SELECT 
+            t.id_khach_hang
+        FROM
+            (SELECT 
+                khach_hang.id_khach_hang, SUM(hop_dong.tong_tien) AS tong
+            FROM
+                khach_hang
+            INNER JOIN hop_dong ON khach_hang.id_khach_hang = hop_dong.id_khach_hang
+            WHERE
+                khach_hang.id_loai_khach = 2
+                    AND YEAR(hop_dong.ngay_lam_hd) = 2019
+            GROUP BY hop_dong.id_khach_hang
+            HAVING tong >= 1000000) AS t);
+            
+-- 18. xoa khach hang co hop dong truoc nam 2016
+SET FOREIGN_KEY_CHECKS=0;
+DELETE FROM khach_hang 
+WHERE
+    khach_hang.id_khach_hang IN (SELECT 
+        *
+    FROM
+        (SELECT DISTINCT
+            khach_hang.id_khach_hang
+        FROM
+            khach_hang
+        INNER JOIN hop_dong ON khach_hang.id_khach_hang = hop_dong.id_khach_hang
+        
+        WHERE
+            hop_dong.ngay_lam_hd < '2016-12-31') AS temp)
+    AND khach_hang.id_khach_hang NOT IN (SELECT 
+        *
+    FROM
+        (SELECT DISTINCT
+            khach_hang.id_khach_hang
+        FROM
+            khach_hang
+        INNER JOIN hop_dong ON khach_hang.id_khach_hang = hop_dong.id_khach_hang
+        
+        WHERE
+            hop_dong.ngay_lam_hd > '2016-12-31') AS temp);
+SET FOREIGN_KEY_CHECKS=1;
+
+-- 19. cap nhat gia dv di kem duoc su dung tren 10 lan
+UPDATE dich_vu_di_kem 
+SET 
+    dich_vu_di_kem.gia = (dich_vu_di_kem.gia * 10)
+WHERE
+    dich_vu_di_kem.id_dv_di_kem IN (SELECT 
+            temp.id_dv_di_kem
+        FROM
+            (SELECT 
+                dich_vu_di_kem.id_dv_di_kem,
+                    SUM(hop_dong_chi_tiet.so_luong) AS so_lan
+            FROM
+                dich_vu_di_kem
+            INNER JOIN hop_dong_chi_tiet ON dich_vu_di_kem.id_dv_di_kem = hop_dong_chi_tiet.id_dv_di_kem
+            GROUP BY hop_dong_chi_tiet.id_dv_di_kem
+            HAVING so_lan > 10) AS temp);
+
+-- 20. hien thi thong tin tat ca nhan vien va khach hang co trong he thong
+SELECT 
+    nhan_vien.id_nhan_vien AS id,
+    nhan_vien.ho_ten,
+    nhan_vien.email,
+    nhan_vien.sdt,
+    nhan_vien.ngay_sinh,
+    nhan_vien.dia_chi,
+    'nv' AS loai
+FROM
+    nhan_vien 
+UNION SELECT 
+    khach_hang.id_khach_hang AS id,
+    khach_hang.ho_ten,
+    khach_hang.email,
+    khach_hang.sdt,
+    khach_hang.ngay_sinh,
+    khach_hang.dia_chi,
+    'kh' AS loai
+FROM
+    khach_hang;
+    
+-- 21. tao khung nhin lay thong tin cac nhan vien co dia chi la Hai Chau va tung lap 1 hoac nhieu hop dong voi ngay lam hop dong la 12/12/2019
+CREATE VIEW V_NHANVIEN AS
+    SELECT 
+        nhan_vien.*
+    FROM
+        nhan_vien
+            INNER JOIN
+        hop_dong ON nhan_vien.id_nhan_vien = hop_dong.id_nhan_vien
+    WHERE
+        nhan_vien.dia_chi = 'Hai Chau'
+            AND hop_dong.ngay_lam_hd = '2019-12-12';
+
+-- 22. cap nhat dia chi cua nhan vien trong trong V_NHANVIEN thanh Lien Chieu
+UPDATE V_NHANVIEN 
+SET 
+    dia_chi = 'Lien Chieu'
+    
+-- 23. tao procedure de xoa thong tin cua 1 khach hang 
+
+
+
+
+
+
