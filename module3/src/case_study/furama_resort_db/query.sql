@@ -394,7 +394,39 @@ DELIMITER ;
 	-- goi procedure
 CALL Sp_1(4);
 
--- 24. 
+-- 24. tao procedure dung de them moi hop dong
+DELIMITER //
+CREATE PROCEDURE Sp_2(
+	IN id_nv int,
+	IN id_kh int,
+	IN id_dv int,
+    IN ngay_lam_hd date,
+    IN ngay_ket_thuc date,
+    IN tien_coc double,
+    IN tong_tien double
+)
+BEGIN
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+	GET DIAGNOSTICS condition 1
+			@SQLState = RETURNED_SQLSTATE, @SQLMessage = MESSAGE_TEXT; 
+			SELECT CONCAT('Database error occurred, state - ',@SQLState, '; error msg - ', @SQLMessage) As errorString; 
+  insert into hop_dong(id_nhan_vien, id_khach_hang, id_dich_vu, ngay_lam_hd, ngay_ket_thuc_hd, tien_dat_coc, tong_tien)
+  value(id_nv, id_kh, id_dv, ngay_lam_hd, ngay_ket_thuc, tien_coc, tong_tien);
+END //
+DELIMITER ;
+CALL Sp_2(1, 4, 1, '2019-07-07', '2019-09-07', 1000000, 5000000);
 
+-- 25. tao trigger khi xoa ban ghi trong hop dong thi hien thi tong so luong ban ghi con lai ra man hinh console
+DELIMITER $$
+CREATE TRIGGER Tr_1
+    AFTER DELETE
+    ON hop_dong FOR EACH ROW
+BEGIN
+  SET @record_count = (SELECT count(hop_dong.id_hop_dong) from hop_dong);
+END$$
+DELIMITER ;
 
-
+DELETE FROM hop_dong 
+WHERE
+    hop_dong.id_hop_dong = 9;
+SELECT @record_count
