@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.header-panel {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 55px;
+    background-color: #FFF;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#face-icon {
+    margin-left: 15px;
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+
+#search-form {
+    margin-left: 7px;
+    float: left;
+    width: 230px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #F2F3F5;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.home {
+    /*border-bottom: #1877F2 3px solid;*/
+}
+
+.stroke {
+    -webkit-text-stroke: 2px #828282;
+    -webkit-text-fill-color: transparent;
+}
+
+.right-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #F2F3F5;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin: 0 10px;
+    border-radius: 20px;
+}
+
+.right-icon:last-child {
+    width: 90px;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.container {
+    height: 700px;
+    background-color: #F2F3F5;
+}
+
+.option-menu {
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.option-menu span {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #333333;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #d0d0d0;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+.shortcut {
+    margin: 10px 0 0 20px;
+    color: #575757;
+}
+
+.shortcut-1 {
+    margin: 20px 0 0 20px;
+    color: #717171;
+}
+
+.content {
+    background-color: #1ab7ea;
+    width: 70%;
+    margin: 0 auto;
+    height: 700px;
+}
+
+/*::-webkit-scrollbar {*/
+/*    width: 5px;*/
+/*}*/
+
+/*!* Track *!*/
+/*::-webkit-scrollbar-track {*/
+/*    background: #f1f1f1;*/
+/*}*/
+
+/*!* Handle *!*/
+/*::-webkit-scrollbar-thumb {*/
+/*    background: #888;*/
+/*}*/
+
+/*!* Handle on hover *!*/
+/*::-webkit-scrollbar-thumb:hover {*/
+/*    background: #555;*/
+/*}*/
