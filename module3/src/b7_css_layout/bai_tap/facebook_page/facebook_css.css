@@ -3,13 +3,12 @@
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 [class*="col-"] {
     float: left;
-    padding: 5px;
 }
 
 .col-1 {
@@ -126,13 +125,12 @@ body {
 }
 
 .container {
-    height: 700px;
+    padding: 0 15px;
     background-color: #F2F3F5;
 }
 
 .option-menu {
     margin-top: 10px;
-    margin-left: 20px;
     display: flex;
     align-items: center;
     height: 50px;
@@ -145,6 +143,7 @@ body {
 }
 
 hr {
+    width: 96%;
     border: 0;
     border-top: 1px solid #d0d0d0;
     box-sizing: content-box;
@@ -153,37 +152,35 @@ hr {
 }
 
 .shortcut {
-    margin: 10px 0 0 20px;
+    margin-top: 10px;
     color: #575757;
 }
 
 .shortcut-1 {
-    margin: 20px 0 0 20px;
+    margin-top: 10px;
     color: #717171;
 }
 
 .content {
-    background-color: #1ab7ea;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
-    height: 700px;
 }
 
-/*::-webkit-scrollbar {*/
-/*    width: 5px;*/
-/*}*/
+.post-content {
+    background-color: #FFF;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 
-/*!* Track *!*/
-/*::-webkit-scrollbar-track {*/
-/*    background: #f1f1f1;*/
-/*}*/
+.post p {
+    margin: 0 0 10px 20px;
+}
 
-/*!* Handle *!*/
-/*::-webkit-scrollbar-thumb {*/
-/*    background: #888;*/
-/*}*/
+.poster {
+    padding-left: 20px;
+}
 
-/*!* Handle on hover *!*/
-/*::-webkit-scrollbar-thumb:hover {*/
-/*    background: #555;*/
-/*}*/
+.interact {
+    text-align: center;
+    height: 50px;
+}
