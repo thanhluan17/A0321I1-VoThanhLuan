@@ -1,0 +1,47 @@
+body {
+    background-color: #f1f1f1;
+    margin: 0;
+    font-family: Tahoma, sans-serif, Helvetica, Arial;
+    font-weight: 400;
+}
+
+.page-container {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h3 {
+    margin: 0;
+    color: #1ab7ea;
+    line-height: 30px;
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #fff;
+}
+
+.flex-container > div {
+    width: 210px;
+    height: 300px;
+    margin: 10px;
+}
+
+.comic{
+    width: 100%;
+    height: 90%;
+    border: none;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
