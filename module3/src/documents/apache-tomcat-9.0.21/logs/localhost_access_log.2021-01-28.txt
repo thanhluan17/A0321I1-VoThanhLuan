@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [28/Jan/2021:21:04:38 +0700] "GET / HTTP/1.1" 200 3855
+0:0:0:0:0:0:0:1 - - [28/Jan/2021:21:04:41 +0700] "GET /studentServlet?actionUser=update&id=3 HTTP/1.1" 200 582
+0:0:0:0:0:0:0:1 - - [28/Jan/2021:21:04:54 +0700] "POST /studentServlet HTTP/1.1" 200 3857
+0:0:0:0:0:0:0:1 - - [28/Jan/2021:21:05:02 +0700] "GET /studentServlet?actionUser=update&id=3 HTTP/1.1" 200 584
+0:0:0:0:0:0:0:1 - - [28/Jan/2021:21:05:05 +0700] "POST /studentServlet HTTP/1.1" 200 3855
