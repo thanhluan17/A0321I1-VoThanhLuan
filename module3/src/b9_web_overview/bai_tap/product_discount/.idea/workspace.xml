@@ -25,35 +25,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c053bd5a-81e3-4d7b-a303-bca2d3390b55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/product_discount_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/product_discount_war_exploded/WEB-INF/classes/servlet/ProductDiscount.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/product_discount_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/product_discount_war_exploded/discount_calculator.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/product_discount_war_exploded/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/product_discount/servlet/ProductDiscount.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product_discount.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/ProductDiscount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/discount_calculator.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/.idea/artifacts/simple_dictionary_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/out/artifacts/simple_dictionary_war_exploded/WEB-INF/classes/servlet/SimpleDictionary.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/out/artifacts/simple_dictionary_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/out/artifacts/simple_dictionary_war_exploded/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/out/production/simple_dictionary/servlet/SimpleDictionary.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/simple_dictionary.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/src/servlet/SimpleDictionary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/simple_dictionary/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/display_greeting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/display_greeting/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.gradle/6.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/lib/javax.annotation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/lib/javax.ejb.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/lib/javax.jms.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/lib/javax.persistence.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/lib/javax.resource.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/lib/javax.servlet.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/lib/javax.servlet.jsp.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/lib/javax.transaction.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/src/main/java/controllers/ConvertServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/src/main/webapp/convert.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b10_jsp_jstl/thuc_hanh/currency_convert/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/META-INF/war-tracker" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/controllers/ConvertServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/convert.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +105,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false">
@@ -178,6 +191,7 @@
       <option name="presentableId" value="Default" />
       <updated>1633277123213</updated>
       <workItem from="1633277127933" duration="1995000" />
+      <workItem from="1633518201714" duration="70000" />
     </task>
     <servers />
   </component>
@@ -194,59 +208,60 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1633277150643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1633277150643" />
-    <state width="1024" height="210" key="GridCell.Tab.0.bottom" timestamp="1633279146666">
+    <state width="1024" height="210" key="GridCell.Tab.0.bottom" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633279146666" />
-    <state width="1024" height="210" key="GridCell.Tab.0.center" timestamp="1633279146666">
+    <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
+    <state width="1024" height="210" key="GridCell.Tab.0.center" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1633279146666" />
-    <state width="1024" height="210" key="GridCell.Tab.0.left" timestamp="1633279146666">
+    <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
+    <state width="1024" height="210" key="GridCell.Tab.0.left" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1633279146666" />
-    <state width="1024" height="210" key="GridCell.Tab.0.right" timestamp="1633279146666">
+    <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
+    <state width="1024" height="210" key="GridCell.Tab.0.right" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1633279146666" />
-    <state width="1024" height="210" key="GridCell.Tab.1.bottom" timestamp="1633279146667">
+    <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
+    <state width="1024" height="210" key="GridCell.Tab.1.bottom" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633279146667" />
-    <state width="1024" height="210" key="GridCell.Tab.1.center" timestamp="1633279146667">
+    <state width="1024" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
+    <state width="1024" height="210" key="GridCell.Tab.1.center" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1633279146667" />
-    <state width="1024" height="210" key="GridCell.Tab.1.left" timestamp="1633279146666">
+    <state width="1024" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
+    <state width="1024" height="210" key="GridCell.Tab.1.left" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1633279146666" />
-    <state width="1024" height="210" key="GridCell.Tab.1.right" timestamp="1633279146667">
+    <state width="1024" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
+    <state width="1024" height="210" key="GridCell.Tab.1.right" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1633279146667" />
-    <state width="1024" height="210" key="GridCell.Tab.2.bottom" timestamp="1633279146667">
+    <state width="1024" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
+    <state width="1024" height="210" key="GridCell.Tab.2.bottom" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633279146667" />
-    <state width="1024" height="210" key="GridCell.Tab.2.center" timestamp="1633279146667">
+    <state width="1024" height="210" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
+    <state width="1024" height="210" key="GridCell.Tab.2.center" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1633279146667" />
-    <state width="1024" height="210" key="GridCell.Tab.2.left" timestamp="1633279146667">
+    <state width="1024" height="210" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
+    <state width="1024" height="210" key="GridCell.Tab.2.left" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1633279146667" />
-    <state width="1024" height="210" key="GridCell.Tab.2.right" timestamp="1633279146667">
+    <state width="1024" height="210" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
+    <state width="1024" height="210" key="GridCell.Tab.2.right" timestamp="1633518271365">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1633279146667" />
+    <state width="1024" height="210" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1633518271365" />
   </component>
 </project>
