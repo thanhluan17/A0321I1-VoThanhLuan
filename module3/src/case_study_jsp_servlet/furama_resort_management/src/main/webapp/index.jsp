@@ -12,7 +12,7 @@
     <title>Home page</title>
     <link rel="stylesheet" href="/asset/bootstrap413/css/bootstrap.min.css">
     <link rel="stylesheet" href="/asset/datatables/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="/asset/css/home_css.css">
+<%--    <link rel="stylesheet" href="/asset/css/home_css.css">--%>
 </head>
 <body>
 <div class="container-fluid bg-light">
@@ -26,7 +26,7 @@
     </div>
     <div class="row px-lg-5">
         <div class="col-lg-12">
-            <hr>
+            <hr class="m-0">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
@@ -37,13 +37,13 @@
                             <a class="nav-link" href="/employee">Employee</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Customer</a>
+                            <a class="nav-link" href="/customer">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contract">Contract</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Service</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contract</a>
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">

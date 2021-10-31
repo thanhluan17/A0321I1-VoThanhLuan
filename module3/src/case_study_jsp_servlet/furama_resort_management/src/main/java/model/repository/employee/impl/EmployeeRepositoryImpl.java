@@ -20,7 +20,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
             "employee_address, position_id, education_degree_id, division_id) values (?,?,?,?,?,?,?,?,?,?);";
     private static final String FIND_BY_ID = "select * from employee where employee_id = ?;";
     private static final String DELETE_EMPLOYEE = "delete from employee where employee_id = ?;";
-    private static final String UPDATE_PRODUCT = "update employee set employee_name = ?, employee_birthday = ?, " +
+    private static final String UPDATE_EMPLOYEE = "update employee set employee_name = ?, employee_birthday = ?, " +
             "employee_id_card = ?, employee_salary = ?, employee_phone = ?, employee_email = ?, employee_address = ?, " +
             "position_id = ?, education_degree_id = ?, division_id = ? where employee_id = ?;";
     private static final String SELECT_BY_CONTAIN_NAME = "select * from employee inner join position on employee.position_id " +
@@ -119,7 +119,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
         Connection connection = BaseRepository.getConnection();
         if (connection != null) {
             try {
-                PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_PRODUCT);
+                PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_EMPLOYEE);
                 preparedStatement.setString(1, employee.getName());
                 preparedStatement.setString(2, employee.getBirthday());
                 preparedStatement.setString(3, employee.getIdCard());

@@ -148,7 +148,7 @@ public class EmployeeServlet extends HttpServlet {
                 break;
             case "search":
                 try {
-                    searchProduct(request, response);
+                    searchEmployee(request, response);
                 } catch (ServletException | IOException e) {
                     e.printStackTrace();
                 }
@@ -162,7 +162,7 @@ public class EmployeeServlet extends HttpServlet {
         }
     }
 
-    private void searchProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void searchEmployee(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String key = request.getParameter("key");
         List<Employee> employeeList = employeeService.findByContainName(key);
         request.setAttribute("employeeList", employeeList);

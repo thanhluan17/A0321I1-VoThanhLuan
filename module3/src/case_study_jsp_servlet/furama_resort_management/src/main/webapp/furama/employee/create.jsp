@@ -37,13 +37,13 @@
                             <a class="nav-link" href="/employee">Employee</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Customer</a>
+                            <a class="nav-link" href="/customer">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contract">Contract</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Service</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contract</a>
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">

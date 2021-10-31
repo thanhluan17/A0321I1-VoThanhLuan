@@ -20,8 +20,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="895c2624-be62-436c-82fb-666382437c6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/furama/employee/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/employee/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/bean/contract/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/bean/contract/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/bean/customer/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/bean/customer/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/repository/customer/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/repository/customer/CustomerTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/repository/customer/impl/CustomerRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/repository/customer/impl/CustomerTypeRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/contract/ContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/contract/ServiceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/contract/impl/ContractServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/contract/impl/ServiceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/customer/CustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/customer/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/service/customer/impl/CustomerTypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/furama/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/furama/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/furama/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/furama/service/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/furama/service/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/controller/CustomerServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/bean/contract/Contract.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/bean/contract/Service.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/bean/customer/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/bean/customer/CustomerType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/customer/CustomerRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/customer/CustomerTypeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/customer/impl/CustomerRepositoryImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/customer/impl/CustomerTypeRepositoryImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/contract/ContractService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/contract/ServiceService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/contract/impl/ContractServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/contract/impl/ServiceServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/customer/CustomerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/customer/CustomerTypeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/customer/impl/CustomerServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/customer/impl/CustomerTypeServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/service/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/service/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../b13_querying_transaction/user_management/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../b13_querying_transaction/user_management/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -32,64 +74,21 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/EmployeeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/EmployeeServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/bean/employee/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/bean/employee/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/DivisionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/EducationRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/EmployeeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/PositionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/impl/DivisionRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/impl/EducationRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/impl/EmployeeRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/impl/PositionRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/DivisionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/EducationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/EmployeeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/PositionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/impl/DivisionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/impl/EducationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/impl/EmployeeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/service/impl/PositionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/repository/employee/impl/EmployeeRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/model/repository/employee/impl/EmployeeRepositoryImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/furama_resort_management-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/furama_resort_management-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/EmployeeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/EmployeeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/bean/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/bean/employee/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/DivisionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/repository/employee/DivisionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/EducationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/repository/employee/EducationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/repository/employee/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/PositionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/repository/employee/PositionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/impl/DivisionRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/repository/employee/impl/DivisionRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/impl/EducationRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/repository/employee/impl/EducationRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/impl/EmployeeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/repository/employee/impl/EmployeeRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/impl/PositionRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/repository/employee/impl/PositionRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/DivisionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/service/employee/DivisionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/EducationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/service/employee/EducationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/service/employee/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/PositionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/service/employee/PositionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/DivisionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/service/employee/impl/DivisionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/EducationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/service/employee/impl/EducationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/service/employee/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/impl/PositionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/service/employee/impl/PositionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/repository/employee/impl/EmployeeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/repository/employee/impl/EmployeeRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/furama/employee/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/furama/employee/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/furama/employee/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/furama/employee/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/furama/employee/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/furama/employee/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/controller/EmployeeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/controller/EmployeeServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/bean/employee/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/bean/employee/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/DivisionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/EducationRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/EmployeeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/PositionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/impl/DivisionRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/impl/EducationRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/impl/EmployeeRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/impl/PositionRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/DivisionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/EducationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/EmployeeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/PositionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/impl/DivisionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/impl/EducationServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/impl/EmployeeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/service/impl/PositionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/employee/impl/EmployeeRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/model/repository/employee/impl/EmployeeRepositoryImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/employee/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/employee/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/employee/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/employee/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/employee/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/furama/employee/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../documents/apache-tomcat-9.0.21/webapps/ROOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../documents/~$-DN Case Study for JSP&amp;Servlet.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../documents/~$-DN Case Study for JSP&amp;Servlet.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,20 +138,22 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module3\src\case_study_jsp_servlet\furama_resort_management\src\main\webapp\asset\css" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module3\src\case_study_jsp_servlet\furama_resort_management\src\main\webapp\furama\service" />
+      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module3\src\case_study_jsp_servlet\furama_resort_management\src\main\webapp\furama\customer" />
+      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module3\src\case_study_jsp_servlet\furama_resort_management\src\main\webapp\furama" />
+      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module3\src\case_study_jsp_servlet\furama_resort_management\src\main\webapp\furama\employee" />
+      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module3\src\case_study_jsp_servlet\furama_resort_management\src\main\webapp\asset\images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model.repository.service.impl" />
+      <recent name="controller" />
       <recent name="model.service.impl" />
       <recent name="model.service" />
       <recent name="model.repository.impl" />
-      <recent name="model.repository" />
-      <recent name="config" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module3\src\case_study_jsp_servlet\furama_resort_management\src\main\webapp\furama\employee" />
-      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module3\src\case_study_jsp_servlet\furama_resort_management\src\main\webapp\asset\images" />
-      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module3\src\case_study_jsp_servlet\furama_resort_management\src\main\webapp" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module3\src\case_study_jsp_servlet\furama_resort_management\src\main\webapp\asset\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -245,7 +246,7 @@
       <workItem from="1635605761075" duration="3850000" />
       <workItem from="1635648680069" duration="10305000" />
       <workItem from="1635666481884" duration="400000" />
-      <workItem from="1635667035661" duration="293000" />
+      <workItem from="1635667035661" duration="16438000" />
     </task>
     <servers />
   </component>
@@ -268,14 +269,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1635332134411">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1635674047013">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1635332134411" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1635660390014">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1635674047013" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1635682310662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1635660390014" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1635682310662" />
     <state x="254" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1635662292811">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -284,57 +285,57 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="551" y="281" width="433" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1635652309473" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1635659838153">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1635682992989">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1635659838153" />
-    <state width="1024" height="206" key="GridCell.Tab.0.bottom" timestamp="1635666881302">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1635682992989" />
+    <state width="1216" height="169" key="GridCell.Tab.0.bottom" timestamp="1635688485104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635666881302" />
-    <state width="1024" height="206" key="GridCell.Tab.0.center" timestamp="1635666881302">
+    <state width="1216" height="169" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635688485104" />
+    <state width="1216" height="169" key="GridCell.Tab.0.center" timestamp="1635688485104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1635666881302" />
-    <state width="1024" height="206" key="GridCell.Tab.0.left" timestamp="1635666881302">
+    <state width="1216" height="169" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1635688485104" />
+    <state width="1216" height="169" key="GridCell.Tab.0.left" timestamp="1635688485104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1635666881302" />
-    <state width="1024" height="206" key="GridCell.Tab.0.right" timestamp="1635666881302">
+    <state width="1216" height="169" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1635688485104" />
+    <state width="1216" height="169" key="GridCell.Tab.0.right" timestamp="1635688485104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1635666881302" />
-    <state width="1024" height="206" key="GridCell.Tab.1.bottom" timestamp="1635662325170">
+    <state width="1216" height="169" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1635688485104" />
+    <state width="1216" height="169" key="GridCell.Tab.1.bottom" timestamp="1635688485105">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635662325170" />
-    <state width="1024" height="206" key="GridCell.Tab.1.center" timestamp="1635662325169">
+    <state width="1216" height="169" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635688485105" />
+    <state width="1216" height="169" key="GridCell.Tab.1.center" timestamp="1635688485105">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1635662325169" />
-    <state width="1024" height="206" key="GridCell.Tab.1.left" timestamp="1635662325169">
+    <state width="1216" height="169" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1635688485105" />
+    <state width="1216" height="169" key="GridCell.Tab.1.left" timestamp="1635688485105">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1635662325169" />
-    <state width="1024" height="206" key="GridCell.Tab.1.right" timestamp="1635662325170">
+    <state width="1216" height="169" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1635688485105" />
+    <state width="1216" height="169" key="GridCell.Tab.1.right" timestamp="1635688485105">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1635662325170" />
-    <state width="1024" height="206" key="GridCell.Tab.2.bottom" timestamp="1635662325170">
+    <state width="1216" height="169" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1635688485105" />
+    <state width="1216" height="169" key="GridCell.Tab.2.bottom" timestamp="1635688485105">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635662325170" />
-    <state width="1024" height="206" key="GridCell.Tab.2.center" timestamp="1635662325170">
+    <state width="1216" height="169" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635688485105" />
+    <state width="1216" height="169" key="GridCell.Tab.2.center" timestamp="1635688485104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1635662325170" />
-    <state width="1024" height="206" key="GridCell.Tab.2.left" timestamp="1635662325170">
+    <state width="1216" height="169" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1635688485104" />
+    <state width="1216" height="169" key="GridCell.Tab.2.left" timestamp="1635688485104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1635662325170" />
-    <state width="1024" height="206" key="GridCell.Tab.2.right" timestamp="1635662325170">
+    <state width="1216" height="169" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1635688485104" />
+    <state width="1216" height="169" key="GridCell.Tab.2.right" timestamp="1635688485104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="206" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1635662325170" />
+    <state width="1216" height="169" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1635688485104" />
   </component>
 </project>
