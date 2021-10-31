@@ -18,6 +18,8 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     private static final String INSERT_EMPLOYEE = "insert into employee " +
             "(employee_name, employee_birthday, employee_id_card, employee_salary, employee_phone, employee_email, employee_address, position_id, education_degree_id, division_id) " +
             "values (?,?,?,?,?,?,?,?,?,?);";
+    private static final String FIND_BY_ID = "select * from employee where employee_id = ?;";
+    private static final String DELETE_PRODUCT = "delete from employee where employee_id = ?;";
 
     @Override
     public List<Employee> findAll() {
@@ -88,12 +90,56 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
     @Override
     public void delete(int id) {
-
+        Connection connection = BaseRepository.getConnection();
+        if (connection != null) {
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement(DELETE_PRODUCT);
+                preparedStatement.setInt(1, id);
+                preparedStatement.executeUpdate();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            } finally {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
     }
 
     @Override
     public Employee findById(int id) {
-        return null;
+        Employee employee = null;
+        Connection connection = BaseRepository.getConnection();
+        if (connection != null) {
+            try {
+                PreparedStatement preparedStatement = connection.prepareStatement(FIND_BY_ID);
+                preparedStatement.setInt(1, id);
+                ResultSet resultSet = preparedStatement.executeQuery();
+                while (resultSet.next()) {
+                    employee.setId(resultSet.getInt("employee_id"));
+                    employee.setBirthday(resultSet.getString("employee_birthday"));
+                    employee.setIdCard(resultSet.getString("employee_id_card"));
+                    employee.setSalary(resultSet.getDouble("employee_salary"));
+                    employee.setPhone(resultSet.getString("employee_phone"));
+                    employee.setEmail(resultSet.getString("employee_email"));
+                    employee.setAddress(resultSet.getString("employee_address"));
+                    employee.setPositionId(resultSet.getInt("position_id"));
+                    employee.setEducationId(resultSet.getInt("education_degree_id"));
+                    employee.setDivisionId(resultSet.getInt("division_id"));
+                }
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            } finally {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        }
+        return employee;
     }
 
     @Override

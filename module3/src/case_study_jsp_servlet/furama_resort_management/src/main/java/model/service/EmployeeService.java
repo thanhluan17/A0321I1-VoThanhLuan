@@ -8,5 +8,9 @@ import java.util.Map;
 public interface EmployeeService {
     List<Employee> findAll();
 
+    Employee findById(int id);
+
     Map<String, String> create(Employee employee);
+
+    void delete(int id);
 }

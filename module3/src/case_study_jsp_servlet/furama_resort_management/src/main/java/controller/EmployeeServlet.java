@@ -39,8 +39,18 @@ public class EmployeeServlet extends HttpServlet {
                 createProduct(request, response);
                 break;
             case "delete":
-//                deleteProduct(request, response);
+                deleteProduct(request, response);
                 break;
+        }
+    }
+
+    private void deleteProduct(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        employeeService.delete(id);
+        try {
+            response.sendRedirect("/employee");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

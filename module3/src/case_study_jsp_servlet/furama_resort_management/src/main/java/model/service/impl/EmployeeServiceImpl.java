@@ -19,6 +19,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
+    public Employee findById(int id) {
+        return employeeRepository.findById(id);
+    }
+
+    @Override
     public Map<String, String> create(Employee employee) {
         Map<String, String> mapMessage = new HashMap<>();
         if (Validator.validateDate(employee.getBirthday()) != null
@@ -35,5 +40,10 @@ public class EmployeeServiceImpl implements EmployeeService {
             employeeRepository.save(employee);
         }
         return mapMessage;
+    }
+
+    @Override
+    public void delete(int id) {
+        employeeRepository.delete(id);
     }
 }

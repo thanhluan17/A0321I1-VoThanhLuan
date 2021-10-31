@@ -121,7 +121,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <input name="id" id="id" hidden>
+                    <input name="id" id="id">
                     Are you sure about that?
                 </div>
                 <div class="modal-footer">
