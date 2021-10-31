@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Home page</title>
+    <title>Create employee</title>
     <link rel="stylesheet" href="/asset/bootstrap413/css/bootstrap.min.css">
     <link rel="stylesheet" href="/asset/datatables/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="/asset/css/home_css.css">

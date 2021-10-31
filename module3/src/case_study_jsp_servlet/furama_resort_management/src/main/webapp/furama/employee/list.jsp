@@ -46,8 +46,9 @@
                             <a class="nav-link" href="#">Contract</a>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <form action="/employee" class="form-inline my-2 my-lg-0">
+                        <input name="action" value="search" hidden>
+                        <input class="form-control mr-sm-2" name="key" type="search" placeholder="Name..." aria-label="Search">
                         <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </div>
@@ -93,7 +94,7 @@
                         <td> ${employee.divisionName}</td>
                         <td>
                             <button type="button" class="btn btn-info">
-                                Edit
+                                <a href="/employee?action=update&id=${employee.id}" class="text-white">Update</a>
                             </button>
                         </td>
                         <td>

@@ -4,14 +4,14 @@ import model.bean.employee.Division;
 import model.bean.employee.Education;
 import model.bean.employee.Employee;
 import model.bean.employee.Position;
-import model.service.DivisionService;
-import model.service.EducationService;
-import model.service.EmployeeService;
-import model.service.PositionService;
-import model.service.impl.DivisionServiceImpl;
-import model.service.impl.EducationServiceImpl;
-import model.service.impl.EmployeeServiceImpl;
-import model.service.impl.PositionServiceImpl;
+import model.service.employee.DivisionService;
+import model.service.employee.EducationService;
+import model.service.employee.EmployeeService;
+import model.service.employee.PositionService;
+import model.service.employee.impl.DivisionServiceImpl;
+import model.service.employee.impl.EducationServiceImpl;
+import model.service.employee.impl.EmployeeServiceImpl;
+import model.service.employee.impl.PositionServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,15 +36,53 @@ public class EmployeeServlet extends HttpServlet {
         }
         switch (action) {
             case "create":
-                createProduct(request, response);
+                createEmployee(request, response);
+                break;
+            case "update":
+                updateEmployee(request, response);
                 break;
             case "delete":
-                deleteProduct(request, response);
+                deleteEmployee(request, response);
                 break;
         }
     }
 
-    private void deleteProduct(HttpServletRequest request, HttpServletResponse response) {
+    private void updateEmployee(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String birthday = request.getParameter("birthday");
+        String idCard = request.getParameter("idCard");
+        double salary = Double.parseDouble(request.getParameter("salary"));
+        String phone = request.getParameter("phone");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        int positionId = Integer.parseInt(request.getParameter("position"));
+        int educationId = Integer.parseInt(request.getParameter("education"));
+        int divisionId = Integer.parseInt(request.getParameter("division"));
+        Employee employee = new Employee(id, name, birthday, idCard, salary, phone, email, address, positionId, educationId, divisionId);
+        Map<String, String> mapMessage = employeeService.edit(employee);
+        if (!mapMessage.isEmpty()) {
+            request.setAttribute("errBirthday", mapMessage.get("birthday"));
+            request.setAttribute("errIdCard", mapMessage.get("idCard"));
+            request.setAttribute("errSalary", mapMessage.get("salary"));
+            request.setAttribute("errPhone", mapMessage.get("phone"));
+            request.setAttribute("errEmail", mapMessage.get("email"));
+            request.setAttribute("employee", employee);
+            try {
+                showUpdateForm(request, response);
+            } catch (ServletException | IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                showListEmployee(request, response);
+            } catch (ServletException | IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void deleteEmployee(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         employeeService.delete(id);
         try {
@@ -54,7 +92,7 @@ public class EmployeeServlet extends HttpServlet {
         }
     }
 
-    private void createProduct(HttpServletRequest request, HttpServletResponse response) {
+    private void createEmployee(HttpServletRequest request, HttpServletResponse response) {
         String name = request.getParameter("name");
         String birthday = request.getParameter("birthday");
         String idCard = request.getParameter("idCard");
@@ -95,7 +133,25 @@ public class EmployeeServlet extends HttpServlet {
         }
         switch (action) {
             case "create":
-                showCreateForm(request, response);
+                try {
+                    showCreateForm(request, response);
+                } catch (ServletException | IOException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case "update":
+                try {
+                    showUpdateForm(request, response);
+                } catch (ServletException | IOException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case "search":
+                try {
+                    searchProduct(request, response);
+                } catch (ServletException | IOException e) {
+                    e.printStackTrace();
+                }
                 break;
             default:
                 try {
@@ -104,6 +160,26 @@ public class EmployeeServlet extends HttpServlet {
                     e.printStackTrace();
                 }
         }
+    }
+
+    private void searchProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String key = request.getParameter("key");
+        List<Employee> employeeList = employeeService.findByContainName(key);
+        request.setAttribute("employeeList", employeeList);
+        request.getRequestDispatcher("/furama/employee/list.jsp").forward(request, response);
+    }
+
+    private void showUpdateForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Employee employee = employeeService.findById(id);
+        List<Position> positionList = positionService.findAll();
+        List<Education> educationList = educationService.findAll();
+        List<Division> divisionList = divisionService.findAll();
+        request.setAttribute("positionList", positionList);
+        request.setAttribute("educationList", educationList);
+        request.setAttribute("divisionList", divisionList);
+        request.setAttribute("employee", employee);
+        request.getRequestDispatcher("/furama/employee/edit.jsp").forward(request, response);
     }
 
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
