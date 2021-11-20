@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>List</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <title>Customer List</title>
+  <style>
+    table {
+      border: 1px solid #000;
+    }
+
+    th, td {
+      border: 1px dotted #555;
+    }
+  </style>
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12">
-            <h2 class="text-center">List products</h2>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row p-lg-3">
-        <div class="col-lg-12">
-            <a href="/product/save" class="btn btn-success mt-lg-2">Add new</a>
-            <table id="product" class="table table-bordered mt-lg-2">
-                <thead class="thead-light">
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Color</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:each="row,rowStat : ${products}">
-                    <td th:text="${row.getName()}"></td>
-                    <td th:text="${row.getPrice()}"></td>
-                    <td th:text="${row.getColor()}"></td>
-                    <td><a th:href="@{/product/{id}/edit(id=${row.getId()})}">Edit</a></td>
-                    <td><a th:href="@{/product/{id}/delete(id=${row.getId()})}">Delete</a></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+There are <span th:text="${customers.size()}"></span> customer(s).
+<table>
+  <caption>Customers List</caption>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Address</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="c : ${customers}">
+    <td th:text="${c.id}"></td>
+    <td>
+      <a th:href="@{/customers/{id}(id=${c.id})}" th:text="${c.name}"></a>
+    </td>
+    <td th:text="${c.email}"></td>
+    <td th:text="${c.address}"></td>
+  </tr>
+  </tbody>
+</table>
 </body>
 </html>
