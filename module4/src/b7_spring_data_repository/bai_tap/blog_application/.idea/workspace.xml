@@ -20,127 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb4e17b6-5d4e-4dbe-842f-2edc0dc6ef29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/.gradle/6.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/blog_application.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/config/AppConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/config/AppInitializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/controller/BlogController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/controller/CategoryController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/model/Blog.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/repository/BlogRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/repository/CategoryRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/BlogService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/impl/BlogServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/impl/CategoryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/blog_application-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/formatter/CategoryFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/BlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/BlogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blog/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blog/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blog/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blog/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blog/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/category/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/controller/BlogController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/controller/CategoryController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/formatter/CategoryFormatter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/model/Blog.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/model/Category.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/repository/BlogRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/repository/CategoryRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/service/BlogService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/service/CategoryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/service/impl/BlogServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/service/impl/CategoryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/Category/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/Category/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/Category/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/Category/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/Category/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/blog/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/blog/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/blog/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/blog/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/blog/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/cms_paging_sorting/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/cms_paging_sorting/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/cms_paging_sorting/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/cms_paging_sorting/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/cms_paging_sorting/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/cms_paging_sorting/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/cms_paging_sorting/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/cms_paging_sorting/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/cms_paging_sorting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/cms_paging_sorting/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/config/AppConfiguration$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/config/AppConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/config/AppConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/controller/CustomerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/controller/ProvinceController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/formatter/ProvinceFormatter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/model/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/model/Province.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/repository/CustomerRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/repository/ProvinceRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/service/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/service/ProvinceService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/service/impl/CustomerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes/com/codegym/service/impl/ProvinceServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/customer/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/customer/delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/customer/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/customer/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/error.404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/province/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/province/delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/province/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/province/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/views/province/view.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/src/main/java/com/codegym/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web/src/test/java/com/codegym/ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +76,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../b17_spring_boot/thuc_hanh/simple_web" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -287,7 +178,7 @@
       <workItem from="1637755035015" duration="2604000" />
       <workItem from="1637931492883" duration="68000" />
       <workItem from="1637999755705" duration="11069000" />
-      <workItem from="1638013532787" duration="666000" />
+      <workItem from="1638013532787" duration="1653000" />
     </task>
     <servers />
   </component>
@@ -326,10 +217,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1637754948234" />
-    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1638013712966">
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1638015419767">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1638013712966" />
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1638015419767" />
     <state width="1024" height="217" key="GridCell.Tab.0.bottom" timestamp="1638013457482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -410,9 +301,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1637752567676" />
-    <state x="209" y="73" key="new project wizard" timestamp="1638013742520">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1638014573491">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="209" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1638013742520" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1638014573491" />
+    <state x="258" y="66" key="new project wizard" timestamp="1638014675040">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="258" y="66" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1638014675040" />
   </component>
 </project>
