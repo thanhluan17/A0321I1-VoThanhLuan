@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8e6d535-02e6-4a15-b650-4606cde3021f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/CmsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/controller/ProvinceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/formatter/ProvinceFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/model/Province.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/repository/ProvinceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/ProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/impl/ProvinceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error.404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/province/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/province/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/province/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/province/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/province/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/codegym/cms/CmsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b7_spring_data_repository/thuc_hanh/cms_province/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7_spring_data_repository/thuc_hanh/cms_province/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="21agUvlfW2eaBtbw5RPuceX56pc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="E:/DG/DauGiaMain2/DauGia" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module4\src\b17_spring_boot\bai_tap\customer_management\src\main\resources\templates" />
+      <recent name="D:\Codegym\A0321I1-VoThanhLuan\module4\src\b17_spring_boot\bai_tap\customer_management\src\main\java\com\example\cms" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cms.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.codegym.cms.CmsApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8e6d535-02e6-4a15-b650-4606cde3021f" name="Default Changelist" comment="" />
+      <created>1638184631053</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638184631053</updated>
+      <workItem from="1638184636112" duration="1407000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638185163332">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1638185163332" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1638185467173">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1638185467173" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1638186068120">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1638186068120" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1638186068120">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1638186068120" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1638186068120">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1638186068120" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1638186068120">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1638186068120" />
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom" timestamp="1638186068120">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1638186068120" />
+    <state width="1493" height="210" key="GridCell.Tab.1.center" timestamp="1638186068120">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1638186068120" />
+    <state width="1493" height="210" key="GridCell.Tab.1.left" timestamp="1638186068120">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1638186068120" />
+    <state width="1493" height="210" key="GridCell.Tab.1.right" timestamp="1638186068120">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1638186068120" />
+  </component>
+</project>
