@@ -20,43 +20,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8e6d535-02e6-4a15-b650-4606cde3021f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/CmsApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/controller/ProvinceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/formatter/ProvinceFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/model/Province.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/repository/ProvinceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/ProvinceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/cms/service/impl/ProvinceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/province/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/province/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/province/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/province/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/province/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/codegym/cms/CmsApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b7_spring_data_repository/thuc_hanh/cms_province/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7_spring_data_repository/thuc_hanh/cms_province/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/src/main/java/com/codegym/validate/ValidateApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/src/main/java/com/codegym/validate/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/src/main/java/com/codegym/validate/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/src/main/java/com/codegym/validate/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/src/main/java/com/codegym/validate/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/src/test/java/com/codegym/validate/ValidateApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/src/main/java/com/codegym/validate/ValidateApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/src/main/java/com/codegym/validate/config/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/src/main/java/com/codegym/validate/controller/PhoneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/src/main/java/com/codegym/validate/model/PhoneNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/src/main/resources/ValidationMessages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/src/main/resources/templates/result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/custom_validation/src/test/java/com/codegym/validate/ValidateApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/src/main/java/com/codegym/validate/ValidateApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/src/main/java/com/codegym/validate/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/src/main/java/com/codegym/validate/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/src/main/resources/templates/result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8_validation/thuc_hanh/input_validate/src/test/java/com/codegym/validate/ValidateApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +104,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/DG/DauGiaMain2/DauGia" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
@@ -125,6 +134,9 @@
       <option name="presentableId" value="Default" />
       <updated>1638184631053</updated>
       <workItem from="1638184636112" duration="1407000" />
+      <workItem from="1638355118162" duration="912000" />
+      <workItem from="1638359689651" duration="1561000" />
+      <workItem from="1638434721087" duration="200000" />
     </task>
     <servers />
   </component>
@@ -141,16 +153,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1638185163332">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1638185163332" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1638185467173">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1638355373386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1638185467173" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1638355373386" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1638186068120">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -183,5 +196,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1638186068120" />
+    <state x="209" y="73" key="new project wizard" timestamp="1638355436995">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1638355436995" />
   </component>
 </project>
