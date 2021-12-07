@@ -19,22 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb4e17b6-5d4e-4dbe-842f-2edc0dc6ef29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/java/com/codegym/validate/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/java/com/codegym/validate/controller/SongController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/java/com/codegym/validate/model/Song.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/java/com/codegym/validate/repository/SongRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/java/com/codegym/validate/service/SongService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/java/com/codegym/validate/service/impl/SongServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/resources/ValidationMessages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/resources/templates/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b8_validation/bai_tap/song_validate/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../documents/CornelNote/Bài.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../documents/CornelNote/Bài.docx" afterDir="false" />
-    </list>
+    <list default="true" id="fb4e17b6-5d4e-4dbe-842f-2edc0dc6ef29" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../b17_spring_boot/bai_tap/customer_management" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
@@ -184,6 +169,7 @@
       <workItem from="1638013532787" duration="1653000" />
       <workItem from="1638529149733" duration="638000" />
       <workItem from="1638602656512" duration="3129000" />
+      <workItem from="1638786117234" duration="245000" />
     </task>
     <servers />
   </component>
@@ -222,10 +208,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1637754948234" />
-    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1638015419767">
+    <state x="549" y="153" key="FileChooserDialogImpl" timestamp="1638786277377">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1638015419767" />
+    <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1638786277377" />
     <state width="1024" height="217" key="GridCell.Tab.0.bottom" timestamp="1638013457482">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
