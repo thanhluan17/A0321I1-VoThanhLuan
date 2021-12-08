@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h3>Thông tin sách</h3>
+    <a th:href="@{/book/list}">Danh mục sách</a>
+    <th:block th:if="${message != null}">
+        <hr>
+        <h4 th:text="${message}"></h4>
+    </th:block>
+    <hr>
+    <div th:if="${card != null}">
+        <div>
+            <label>Mã thẻ mượn:</label>
+            <label th:text="${card.id}"></label>
+        </div>
+        <div>
+            <label>Mã sách: </label>
+            <label th:text="${card.book.id}"></label>
+        </div>
+        <div>
+            <label>Tên sách: </label>
+            <label th:text="${card.book.name}"></label>
+        </div>
+        <hr>
+        <a th:href="@{/return?cardId={cardId}(cardId = ${card.id})}">Trả sách</a>
+    </div>
+</div>
+</body>
+</html>

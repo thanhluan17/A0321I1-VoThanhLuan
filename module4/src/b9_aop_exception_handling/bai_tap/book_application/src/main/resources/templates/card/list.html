@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h3>Danh mục thẻ mượn sách</h3>
+    <table>
+        <tr>
+            <td>Mã thẻ</td>
+            <td>Mã sách</td>
+            <td>Tên sách</td>
+            <td></td>
+        </tr>
+        <tr th:each="cards : ${card}">
+            <td th:text="${cards.id}"></td>
+            <td th:text="${cards.book.id}"></td>
+            <td th:text="${cards.book.name}"></td>
+            <td><a th:href="@{/card/view/{idCard}(idCard= ${cards.id})}">Chi tiết</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
