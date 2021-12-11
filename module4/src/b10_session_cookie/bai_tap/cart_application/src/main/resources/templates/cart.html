@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+<table>
+    <thead>
+    <a th:href="@{/products}">Back</a>
+    <tr>
+        <td>
+            <h4>Cart:
+                <th:block th:text="${cart.size()}"></th:block>
+                product
+            </h4>
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${cart}">
+        <td>
+            <h4 th:text="${product.key.name}"></h4>
+            <h5>ID:
+                <th:block th:text="${product.key.id}"></th:block>
+            </h5>
+            <h5>Price:
+                <th:block th:text="${product.key.price}"></th:block>
+            </h5>
+            <th:block th:if="${product.key.id != id}">
+                <h5>
+                    Quantity
+                    <th:block th:text="${product.getValue()}"></th:block>
+                    <a th:href="@{/cart(id=${product.getKey().getId()})}">Change</a>
+                </h5>
+            </th:block>
+            <th:block th:if="${product.getKey().getId() == id}">
+                <form method="get" th:action="@{/updateCart}">
+                    <input type="text" name="id" th:value="${id}" hidden>
+                    <h5>Quantity: </h5>
+                    <input type="number" name="quantity" min="1" th:value="${product.getValue()}" required>
+                    <input type="submit" value="Save">
+                </form>
+            </th:block>
+        </td>
+        <td>
+            <a th:href="@{/delete(id=${product.key.id})}">Delete</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h5>Total:
+                <th:block th:text="${amount}"></th:block>
+            </h5>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <a th:href="@{/delete}">Delete cart</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>
