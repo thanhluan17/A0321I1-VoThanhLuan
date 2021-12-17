@@ -19,7 +19,41 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb4e17b6-5d4e-4dbe-842f-2edc0dc6ef29" name="Default Changelist" comment="" />
+    <list default="true" id="fb4e17b6-5d4e-4dbe-842f-2edc0dc6ef29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/java/com/codegym/blog/BlogApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/java/com/codegym/blog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/java/com/codegym/blog/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/java/com/codegym/blog/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/java/com/codegym/blog/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/java/com/codegym/blog/repository/BlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/java/com/codegym/blog/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/java/com/codegym/blog/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/java/com/codegym/blog/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/java/com/codegym/blog/service/impl/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/java/com/codegym/blog/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/static/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/static/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/templates/blog/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/templates/blog/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/templates/blog/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/templates/blog/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/templates/blog/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/templates/category/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/templates/category/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/templates/category/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/templates/category/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/main/resources/templates/category/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_ajax/bai_tap/blog_application/src/test/java/com/codegym/blog/BlogApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +98,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../b17_spring_boot/bai_tap/customer_management" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
@@ -170,6 +204,7 @@
       <workItem from="1638529149733" duration="638000" />
       <workItem from="1638602656512" duration="3129000" />
       <workItem from="1638786117234" duration="245000" />
+      <workItem from="1639738729481" duration="1387000" />
     </task>
     <servers />
   </component>
