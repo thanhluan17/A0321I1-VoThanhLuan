@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <head>
+        <title>Create employee</title>
+        <link rel="stylesheet" href="/asset/bootstrap413/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/asset/css/home_css.css">
+    </head>
+</head>
+<body>
+<div class="container-fluid bg-light">
+    <div class="row px-lg-5 pt-lg-3 pb-lg-1">
+        <div class="col-lg-10">
+            <img class="img-fluid" src="/asset/images/furama.png"/>
+        </div>
+        <div class="col-lg-2">
+            <p class="font-weight-bold text-info">A0321I1 - Võ Thành Luân</p>
+        </div>
+    </div>
+    <div class="row px-lg-5">
+        <div class="col-lg-12">
+            <hr>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/employee">Employee</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/customer">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contract">Contract</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Service</a>
+                        </li>
+                    </ul>
+                    <div class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" name="name" type="text" id="name"
+                               placeholder="Search..."
+                               aria-label="Search"/>
+                        <button class="btn btn-outline-info my-2 my-sm-0" id="search">Search</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row bg-white p-lg-5">
+        <div class="col-lg-12">
+            <h3 class="text-center">Add new employee</h3>
+            <form th:action="@{/employee/save}" th:object="${employee}" method="post">
+                <div class="form-group">
+                    <label for="em-name">Name</label>
+                    <input type="text" class="form-control" id="em-name" th:field="*{employeeName}"
+                           required>
+                </div>
+                <div class="form-group">
+                    <label for="birthday">Birthday</label>
+                    <input type="date" class="form-control" id="birthday" th:field="*{employeeBirthday}" required>
+                </div>
+                <div class="form-group">
+                    <label for="idCard">Card ID</label>
+                    <input type="text" class="form-control" id="idCard" th:field="*{employeeIdCard}"
+                           required minlength="9"
+                           maxlength="15">
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salary</label>
+                    <input type="number" class="form-control" id="salary" th:field="*{employeeSalary}"
+                           required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control" id="phone" th:field="*{employeePhone}"
+                           required minlength="10">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" th:field="*{employeeEmail}"
+                           required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" th:field="*{employeeAddress}" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position</label>
+                    <select class="form-control" id="position" th:field="*{position}" required>
+                        <option th:each="p : ${positions}" th:value="${p.positionId}"
+                                th:text="${p.positionName}"></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="education">Education degree</label>
+                    <select class="form-control" id="education" th:field="*{educationDegree}" required>
+                        <option th:each="e : ${educations}" th:value="${e.educationDegreeId}"
+                                th:text="${e.educationDegreeName}"></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="division">Division</label>
+                    <select class="form-control" id="division" th:field="*{division}" required>
+                        <option th:each="d : ${divisions}" th:value="${d.divisionId}"
+                                th:text="${d.divisionName}"></option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

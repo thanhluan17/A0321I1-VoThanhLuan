@@ -6,7 +6,7 @@ import java.util.Set;
 @Entity
 public class CustomerType {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "customer_type_id")
     private Integer customerTypeId;
 
