@@ -15,8 +15,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
 import java.util.Optional;
 
 @Controller
@@ -97,10 +100,29 @@ public class EmployeeController {
         return "redirect:/employee/list";
     }
 
-    @PostMapping("/save")
-    public String saveEmployee(@ModelAttribute Employee employee, Model model) {
+    @PostMapping("/create")
+    public String saveEmployee(@Valid @ModelAttribute Employee employee,
+                               BindingResult bindingResult,
+                               RedirectAttributes redirectAttributes) {
+        if (bindingResult.hasErrors()) {
+            return "/employee/create";
+        }
         employeeService.save(employee);
-        model.addAttribute("message", "Saved successfully");
+        redirectAttributes.addFlashAttribute("message", "Add success employee: "
+                + employee.getEmployeeName());
+        return "redirect:/employee/list";
+    }
+
+    @PostMapping("/update")
+    public String updateEmployee(@Valid @ModelAttribute Employee employee,
+                               BindingResult bindingResult,
+                               RedirectAttributes redirectAttributes) {
+        if (bindingResult.hasErrors()) {
+            return "/employee/edit";
+        }
+        employeeService.save(employee);
+        redirectAttributes.addFlashAttribute("message", "Update success employee: "
+                + employee.getEmployeeName());
         return "redirect:/employee/list";
     }
 }

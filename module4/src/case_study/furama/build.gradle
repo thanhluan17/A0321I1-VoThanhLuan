@@ -22,6 +22,7 @@ dependencies {
     runtimeOnly 'mysql:mysql-connector-java'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+    implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
     //testImplementation 'org.springframework.security:spring-security-test'
 }
 

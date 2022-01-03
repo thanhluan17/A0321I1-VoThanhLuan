@@ -1,6 +1,9 @@
 package com.codegym.furama.model;
 
+import com.codegym.furama.validation.Birthday;
+
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.Set;
 
 @Entity
@@ -11,24 +14,31 @@ public class Employee {
     @Column(name = "employee_id")
     private Integer employeeId;
 
+    @NotBlank(message = "name must be not empty!")
     @Column(name = "employee_name")
     private String employeeName;
 
+    @Birthday(message = "age must be more than 18!")
     @Column(name = "employee_birthday")
     private String employeeBirthday;
 
+    @Pattern(regexp = "(^\\d{9}$)|(^\\d{12}$)", message = "id card length must be 9 or 12 number!")
     @Column(name = "employee_id_card")
     private String employeeIdCard;
 
+    @Positive(message = "salary must be greater than 0!")
     @Column(name = "employee_salary")
     private double employeeSalary;
 
+    @Pattern(regexp = "(^(090)\\d{7}$)|(^(091)\\d{7}$)|(^(\\(\\+84\\)90)\\d{7}$)|(^(\\(\\+84\\)91)\\d{7}$)", message = "invalid phone number!")
     @Column(name = "employee_phone")
     private String employeePhone;
 
+    @Pattern(regexp = "^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$", message = "invalid email format (abc123@gmail.com)!")
     @Column(name = "employee_email")
     private String employeeEmail;
 
+    @NotBlank(message = "address must be not empty!")
     @Column(name = "employee_address")
     private String employeeAddress;
 

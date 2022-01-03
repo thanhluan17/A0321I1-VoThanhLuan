@@ -54,40 +54,41 @@
     <div class="row bg-white p-lg-5">
         <div class="col-lg-12">
             <h3 class="text-center">Add new employee</h3>
-            <form th:action="@{/employee/save}" th:object="${employee}" method="post">
+            <form th:action="@{/employee/create}" th:object="${employee}" method="post">
                 <div class="form-group">
                     <label for="em-name">Name</label>
-                    <input type="text" class="form-control" id="em-name" th:field="*{employeeName}"
-                           required>
+                    <input type="text" class="form-control" id="em-name" th:field="*{employeeName}">
+                    <td class="text-danger" th:if="${#fields.hasErrors('employeeName')}" th:errors="*{employeeName}">Name Error</td>
                 </div>
                 <div class="form-group">
                     <label for="birthday">Birthday</label>
-                    <input type="date" class="form-control" id="birthday" th:field="*{employeeBirthday}" required>
+                    <input type="date" class="form-control" id="birthday" th:field="*{employeeBirthday}">
+                    <td class="text-danger" th:if="${#fields.hasErrors('employeeBirthday')}" th:errors="*{employeeBirthday}">Name Error</td>
                 </div>
                 <div class="form-group">
                     <label for="idCard">Card ID</label>
-                    <input type="text" class="form-control" id="idCard" th:field="*{employeeIdCard}"
-                           required minlength="9"
-                           maxlength="15">
+                    <input type="text" class="form-control" id="idCard" th:field="*{employeeIdCard}">
+                    <td class="text-danger" th:if="${#fields.hasErrors('employeeIdCard')}" th:errors="*{employeeIdCard}">Name Error</td>
                 </div>
                 <div class="form-group">
                     <label for="salary">Salary</label>
-                    <input type="number" class="form-control" id="salary" th:field="*{employeeSalary}"
-                           required>
+                    <input type="number" class="form-control" id="salary" th:field="*{employeeSalary}">
+                    <td class="text-danger" th:if="${#fields.hasErrors('employeeSalary')}" th:errors="*{employeeSalary}">Name Error</td>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="text" class="form-control" id="phone" th:field="*{employeePhone}"
-                           required minlength="10">
+                    <input type="text" class="form-control" id="phone" th:field="*{employeePhone}">
+                    <td class="text-danger" th:if="${#fields.hasErrors('employeePhone')}" th:errors="*{employeePhone}">Name Error</td>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" class="form-control" id="email" th:field="*{employeeEmail}"
-                           required>
+                    <input type="text" class="form-control" id="email" th:field="*{employeeEmail}">
+                    <td class="text-danger" th:if="${#fields.hasErrors('employeeEmail')}" th:errors="*{employeeEmail}">Name Error</td>
                 </div>
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="text" class="form-control" id="address" th:field="*{employeeAddress}" required>
+                    <input type="text" class="form-control" id="address" th:field="*{employeeAddress}">
+                    <td class="text-danger" th:if="${#fields.hasErrors('employeeAddress')}" th:errors="*{employeeAddress}">Name Error</td>
                 </div>
                 <div class="form-group">
                     <label for="position">Position</label>
