@@ -20,7 +20,6 @@ public class UserRole {
     public UserRole() {
     }
 
-
     public Integer getId() {
         return Id;
     }
