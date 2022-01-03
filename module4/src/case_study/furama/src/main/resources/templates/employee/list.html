@@ -3,8 +3,6 @@
 <head>
     <title>Employee</title>
     <link rel="stylesheet" href="/asset/bootstrap413/css/bootstrap.min.css">
-    <script src="/asset/jquery/jquery.js"></script>
-    <script src="/asset/jquery/employee.js"></script>
 </head>
 <body>
 <div class="employee-table">
@@ -54,9 +52,9 @@
         <div class="row bg-white">
             <div class="col-lg-12 bg-white px-lg-5 pt-lg-3">
                 <p><a href="/employee/create" class="btn btn-success mt-lg-2">Add new</a></p>
-                <th:block th:if="${message}">
-                    <p th:text="${message}"></p>
-                </th:block>
+<!--                <th:block th:if="${message}">-->
+<!--                    <p th:text="${message}"></p>-->
+<!--                </th:block>-->
                 <table id="employee" class="table table-bordered mt-lg-2">
                     <thead class="thead-light">
                     <tr>
@@ -88,7 +86,12 @@
                             <td th:text="${employee.educationDegree.educationDegreeName}"></td>
                             <td th:text="${employee.division.divisionName}"></td>
                             <td><a th:href="@{/employee/edit/__${employee.employeeId}__ }">Edit</a></td>
-                            <td><a th:href="@{/employee/delete/__${employee.employeeId}__ }">Delete</a></td>
+                            <td>
+                                <!--<a th:href="@{/employee/delete/__${employee.employeeId}__ }">Delete</a>-->
+                                <button id="btnModalDelete" type="button" class="btn btn-outline-dark"
+                                        th:onclick="'javascript:showDelete(\''+${employee.employeeId}+'\');'">Delete
+                                </button>
+                            </td>
                         </tr>
                     </th:block>
                     </tbody>
@@ -103,5 +106,26 @@
         </div>
     </div>
 </div>
+<!-- Modal confirm delete -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Body
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/asset/jquery/jquery.js"></script>
+<script src="/asset/jquery/list.js"></script>
+<script src="/asset/bootstrap413/js/bootstrap.min.js"></script>
 </body>
 </html>

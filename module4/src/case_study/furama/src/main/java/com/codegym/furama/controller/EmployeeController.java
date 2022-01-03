@@ -77,10 +77,30 @@ public class EmployeeController {
         return "/employee/create";
     }
 
-    @PostMapping("/save")
-    public String saveEmployee(@ModelAttribute Employee employee, Model model){
-        employeeService.save(employee);
-//        model.addAttribute("message", "Saved successfully");
+    @GetMapping("/edit/{id}")
+    public String editEmployee(@PathVariable Integer id, Model model) {
+        Employee employee = employeeService.findById(id);
+        model.addAttribute("employee", employee);
+        return "/employee/edit";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String deleteEmployee(@PathVariable Integer id, Model model) {
+        Employee employee = employeeService.findById(id);
+        model.addAttribute("employee", employee);
+        return "employee/delete";
+    }
+
+    @PostMapping("/actionDelete/{id}")
+    public String deleteEmployee(@PathVariable Integer id) {
+        employeeService.remove(id);
         return "redirect:/employee/list";
-    } 
+    }
+
+    @PostMapping("/save")
+    public String saveEmployee(@ModelAttribute Employee employee, Model model) {
+        employeeService.save(employee);
+        model.addAttribute("message", "Saved successfully");
+        return "redirect:/employee/list";
+    }
 }

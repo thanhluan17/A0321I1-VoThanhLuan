@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Employee</title>
+</head>
+<body>
+<h1>Delete?</h1>
+<h2>Are you sure?</h2>
+<input type="hidden" th:field="${employee.employeeId}">
+<div>
+    Employee name: <p th:text="${employee.employeeName}"></p>
+    Employee id card: <p th:text="${employee.employeeIdCard}"></p>
+    Do you sure to delete?
+</div>
+<button id="clickDelete" type="button" class="btn bg-danger"
+        th:onclick="'javascript:actionDelete(\''+${employee.employeeId}+'\');'">Delete
+</button>
+</body>
+</html>
