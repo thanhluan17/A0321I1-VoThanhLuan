@@ -22,8 +22,8 @@ INSERT INTO division (division_name)
           
 INSERT INTO role (role_name)
 	VALUES('ROLE_ADMIN'),
-		  ('ROLE_CUSTOMER'),	
-		  ('ROLE_EMPLOYEE');
+		  ('ROLE_USER'),	
+		  ('ROLE_USER');
 
 INSERT INTO user (username, password)
 	VALUES('Admin', 'Admin'),

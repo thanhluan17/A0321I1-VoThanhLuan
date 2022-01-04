@@ -26,7 +26,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/", "/login").permitAll();
+        http.csrf().disable();
+
+        http.authorizeRequests().antMatchers("/", "/login", "/logout").permitAll();
 
         http.authorizeRequests().antMatchers("/user").access("hasAnyRole('ROLE_USER','ROLE_ADMIN')");
         http.authorizeRequests().antMatchers("/employee/**").hasRole("ADMIN");
@@ -34,11 +36,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().and().formLogin()
                 .loginProcessingUrl("/doLogin")
                 .loginPage("/login")
-                .defaultSuccessUrl("/employee/list")
+                .defaultSuccessUrl("/index")
                 .failureUrl("/login?error=true")
                 .usernameParameter("username")
                 .passwordParameter("password")
-                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logoutSuccess");
+                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/login");
 
         //remember me
         http.authorizeRequests().and()

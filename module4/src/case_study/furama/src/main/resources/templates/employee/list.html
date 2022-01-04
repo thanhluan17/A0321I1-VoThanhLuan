@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <title>Employee</title>
     <link rel="stylesheet" href="/asset/bootstrap413/css/bootstrap.min.css">
@@ -12,8 +13,13 @@
                 <img class="img-fluid" src="/asset/images/furama.png"/>
             </div>
             <div class="col-lg-2">
-                <p class="font-weight-bold text-info">A0321I1 - Võ Thành Luân</p>
+                <div class="col-lg-2 row-text" sec:authorize="isAuthenticated()">
+                    <p class="font-weight-bold text-info" sec:authentication="principal.username"></p>
+                </div>
             </div>
+            <a th:if="${#request.userPrincipal != null}" th:href="@{/logout}"
+               class="btn btn-success mt-3 ml-1">Logout</a>
+
         </div>
         <div class="row px-lg-5">
             <div class="col-lg-12">
