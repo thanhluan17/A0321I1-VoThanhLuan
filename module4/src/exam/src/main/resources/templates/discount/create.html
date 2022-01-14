@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create</title>
+    <link rel="stylesheet" href="/asset/bootstrap413/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row bg-white p-lg-5">
+        <div class="col-lg-12">
+            <h2 class="text-center">Add new discount</h2>
+            <form th:action="@{/discount/create}" th:object="${discount}" method="post">
+                <div class="form-group">
+                    <label for="em-name">Title</label>
+                    <input type="text" class="form-control" id="em-name" th:field="*{title}">
+                    <span class="text-danger" th:if="${#fields.hasErrors('title')}"
+                          th:errors="*{title}">Name Error</span>
+                </div>
+                <div class="form-group">
+                    <label for="birthday1">Start time</label>
+                    <input type="date" class="form-control" id="birthday1" th:field="*{startTime}">
+                    <span class="text-danger" th:if="${#fields.hasErrors('startTime')}"
+                          th:errors="*{startTime}">Name Error</span>
+                </div>
+                <div class="form-group">
+                    <label for="birthday2">Start time</label>
+                    <input type="date" class="form-control" id="birthday2" th:field="*{endTime}">
+                    <span class="text-danger" th:if="${#fields.hasErrors('endTime')}"
+                          th:errors="*{endTime}">Name Error</span>
+                </div>
+                <div class="form-group">
+                    <label for="salary">Discount amount</label>
+                    <input type="number" class="form-control" id="salary" th:field="*{discountAmount}">
+                    <span class="text-danger" th:if="${#fields.hasErrors('discountAmount')}"
+                          th:errors="*{discountAmount}">Name Error</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Detail</label>
+                    <textarea type="text" class="form-control" id="email" th:field="*{detail}"></textarea>
+                    <span class="text-danger" th:if="${#fields.hasErrors('detail')}"
+                          th:errors="*{detail}">Name Error</span>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Discount</title>
+</head>
+<body>
+<h1>Delete?</h1>
+<h2>Are you sure?</h2>
+<input type="hidden" th:field="${discount.discountId}">
+<div>
+    Discount title: <span th:text="${discount.title}"></span><br/>
+    Discount amount: <span th:text="${discount.discountAmount}"></span><br/><br/>
+    Do you sure to delete?
+</div>
+<br/>
+<button id="clickDelete" type="button" class="btn bg-danger text-white"
+        th:onclick="'javascript:actionDelete(\''+${discount.discountId}+'\');'">Delete
+</button>
+
+<button type="button" class="btn btn-info">
+    <a class="text-white text-decoration-none"
+       th:href="@{/discount/list}">No</a>
+</button>
+</body>
+</html>
