@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/b2_typescript/bai_tap/search_async" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/b2_typescript/thuc_hanh/typescript-demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/b2_typescript/thuc_hanh/typescript-demo/typescript-demo" vcs="Git" />
   </component>
 </project>
