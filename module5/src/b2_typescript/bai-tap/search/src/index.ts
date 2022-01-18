@@ -1,11 +1,5 @@
 // happy coding 👻
 // console.log("hello world");
-// function greeter(person: string): string {
-//     return "Hello, " + person;
-// }
-//
-// let user: string = "MINH KHOA";
-// console.log(greeter(user));
 interface ISingleRepo {
     name: string;
 }

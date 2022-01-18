@@ -69,6 +69,7 @@ function main() {
                     // step 4: call hàm container.appendChild(item mà hàm createItem trả về)
                     res.forEach(function (item) {
                         var li = createItem(item.name);
+                        // @ts-ignore
                         container.appendChild(li);
                     });
                     return [2 /*return*/];
