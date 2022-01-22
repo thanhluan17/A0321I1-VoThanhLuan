@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<hr>
+<div class="p-lg-5">
+  <h1> Add new Title</h1>
+  <input placeholder="title..." [(ngModel)]='articleForm.title'><br>
+  <input placeholder="url..." [(ngModel)]='articleForm.url'><br/>
+  <button (click)='addArticle()'>Add article</button>
+  <h2>Today's article</h2>
+  <div>
+    <div *ngFor="let art of articles">
+      <a href="{{art.url}}" target="_blank">{{art.title}} </a>
+      <app-likes></app-likes>
+    </div>
+  </div>
+  <hr>
+</div>
+<app-footer></app-footer>
+
