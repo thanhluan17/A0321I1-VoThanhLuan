@@ -1,0 +1,12 @@
+<h2>Rating bar</h2>
+<div>
+  <label>Max: </label>
+  <input type="text" [value]="max" #maxInput>
+</div>
+<div class="form-group row">
+  <label>Rating: </label>
+  <input type="text" [value]="ratingValue" #ratingValueInput>
+</div>
+<button (click)="setValue(maxInput, ratingValueInput)">Set values</button>
+<app-rating-bar [max]="max" [ratingValue]="ratingValue" [showRatingValue]="showRatingValue"
+                (rateChange)="onRateChange($event)"></app-rating-bar>
