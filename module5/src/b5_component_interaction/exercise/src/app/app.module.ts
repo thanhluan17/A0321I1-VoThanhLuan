@@ -11,6 +11,14 @@ import { CountdownTimerEventGetSetComponent } from './countdown_and_rate/countdo
 import { CountdownTimerOnchangesComponent } from './countdown_and_rate/countdown-timer-onchanges/countdown-timer-onchanges.component';
 import { UserRatingComponent } from './countdown_and_rate/user-rating/user-rating.component';
 import {RatingBarComponent} from './countdown_and_rate/rating-bar/rating-bar.component';
+import { CountdownTimerGetSetComponent } from './countdown_and_rate/countdown-timer-get-set/countdown-timer-get-set.component';
+import { SetTimeComponent } from './countdown_and_rate/set-time/set-time.component';
+import { HackerNewsComponent } from './hacker-news/hacker-news.component';
+import { AddArticleComponent } from './hacker-news/add-article/add-article.component';
+import { DetailArticleComponent } from './hacker-news/detail-article/detail-article.component';
+import { LikeArticleComponent } from './hacker-news/like-article/like-article.component';
+import { NavBarComponent } from './hacker-news/nav-bar/nav-bar.component';
+import { FooterComponent } from './hacker-news/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +31,15 @@ import {RatingBarComponent} from './countdown_and_rate/rating-bar/rating-bar.com
     CountdownTimerOnchangesComponent,
     RatingBarComponent,
     UserRatingComponent,
-    RatingBarComponent
+    RatingBarComponent,
+    CountdownTimerGetSetComponent,
+    SetTimeComponent,
+    HackerNewsComponent,
+    AddArticleComponent,
+    DetailArticleComponent,
+    LikeArticleComponent,
+    NavBarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

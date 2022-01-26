@@ -1,0 +1,12 @@
+<div class="card border-success">
+  <div class="card-body">
+    <h4 class="card-title">New article</h4>
+    <div class="form-group">
+      <input type="text" class="form-group" placeholder="Title..." #title>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-group" placeholder="Url..." #url>
+    </div>
+    <button type="button" class="btn bg-info" (click)="addArticle(title.value, url.value)">Add article</button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="card border-success">
+  <div class="card-body">
+    <h4 class="card-title">Detail article</h4>
+    <div *ngIf="articleDetail; else noData"></div>
+    <div class="form-group">
+      <label>Title: {{articleDetail.title}}</label>
+    </div>
+    <div class="form-group">
+      <a href="{{articleDetail.url}}" target="_blank">Url: {{articleDetail.url}}</a>
+    </div>
+    <ng-template #noData>
+      <p class="text-danger">No data.</p>
+    </ng-template>
+  </div>
+</div>

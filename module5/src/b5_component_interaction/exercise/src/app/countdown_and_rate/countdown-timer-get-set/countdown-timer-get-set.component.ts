@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-countdown-timer-get-set',
@@ -10,11 +10,14 @@ export class CountdownTimerGetSetComponent implements OnInit, OnDestroy {
   message = '';
   remainingTime: number;
 
-  private _seconds = 11;
+  private _seconds = 10;
+  time: number | undefined;
+
   @Input()
   get seconds(): number {
     return this._seconds;
   }
+
   set seconds(v) {
     v = typeof v === 'undefined' ? 11 : v;
     const vFixed = Number(v);
@@ -29,6 +32,7 @@ export class CountdownTimerGetSetComponent implements OnInit, OnDestroy {
     this.reset();
     this.start();
   }
+
   ngOnDestroy() {
     this.clearTimer();
   }
@@ -39,10 +43,12 @@ export class CountdownTimerGetSetComponent implements OnInit, OnDestroy {
       this.remainingTime = this.seconds;
     }
   }
+
   stop() {
     this.clearTimer();
     this.message = `Holding at T-${this.remainingTime} seconds`;
   }
+
   reset() {
     this.clearTimer();
     this.remainingTime = this.seconds;
@@ -60,5 +66,9 @@ export class CountdownTimerGetSetComponent implements OnInit, OnDestroy {
         this.message = `T-${this.remainingTime} seconds and counting`;
       }
     }, 1000);
+  }
+
+  setTime(time) {
+    this._seconds = time
   }
 }

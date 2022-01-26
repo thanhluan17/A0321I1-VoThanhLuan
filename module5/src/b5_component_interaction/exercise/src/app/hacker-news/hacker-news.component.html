@@ -1,0 +1,25 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <div class="row">
+    <div class="card border-success mt-4 col-lg-7">
+      <div class="card-body">
+        <h4 class="card-title">List article</h4>
+        <div *ngFor="let art of articleList">
+          <p (click)="getArticle(art)">{{art.title}}</p>
+          <app-like-article></app-like-article><hr/>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-4 mt-4">
+      <app-add-article (onCreate)="addNewArticle($event)"></app-add-article>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 mt-4 p-0">
+      <app-detail-article [articleDetail]="articleDetail"></app-detail-article>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
