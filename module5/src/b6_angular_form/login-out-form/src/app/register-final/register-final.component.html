@@ -15,7 +15,7 @@
     Email not allow null!
   </div>
   <div class="alert alert-danger" role="alert"
-       *ngIf="registerForm.controls.email.errors?.min && registerForm.controls.email.touched">
+       *ngIf="registerForm.controls.email.errors?.email && registerForm.controls.email.touched">
     Email invalid!
   </div>
   <fieldset formGroupName="pwGroup">
