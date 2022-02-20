@@ -1,74 +1,126 @@
 {
+  "customerTypes": [
+    {
+      "typeId": 1,
+      "typeName": "Diamond"
+    },
+    {
+      "typeId": 2,
+      "typeName": "Platinum"
+    },
+    {
+      "typeId": 3,
+      "typeName": "Gold"
+    },
+    {
+      "typeId": 4,
+      "typeName": "Silver"
+    },
+    {
+      "typeId": 5,
+      "typeName": "Member"
+    }
+  ],
   "customers": [
     {
-      "customerId": 1,
+      "id": 1,
       "customerType": {
-        "id": 1,
-        "name": "Diamond"
+        "typeId": 1,
+        "typeName": "Diamond"
       },
       "customerName": "Nguyen Van A",
       "customerBirthday": "2000-12-01",
-      "customerGender": 0,
+      "customerGender": true,
       "customerIdCard": "212464733",
       "customerPhone": "0383422212",
       "customerEmail": "vana17@gmail.com",
       "customerAddress": "Quang Ngai"
     },
     {
-      "customerId": 2,
+      "id": 2,
       "customerType": {
-        "id": 2,
-        "name": "Platinum"
+        "typeId": 2,
+        "typeName": "Platinum"
       },
       "customerName": "Nguyen Van B",
       "customerBirthday": "2000-07-26",
-      "customerGender": 0,
+      "customerGender": true,
       "customerIdCard": "212464739",
       "customerPhone": "0987162837",
       "customerEmail": "vanb81@gmail.com",
       "customerAddress": "Da Nang"
     },
     {
-      "customerId": 3,
+      "id": 3,
       "customerType": {
-        "id": 3,
-        "name": "Gold"
+        "typeId": 3,
+        "typeName": "Gold"
       },
       "customerName": "Nguyen Thi C",
       "customerBirthday": "2000-09-11",
-      "customerGender": 1,
+      "customerGender": false,
       "customerIdCard": "212467361",
       "customerPhone": "0981273612",
-      "customerEmail": "thi92@gmail.com",
+      "customerEmail": "thic92@gmail.com",
       "customerAddress": "Quang Nam"
     },
     {
-      "customerId": 4,
+      "id": 4,
       "customerType": {
-        "id": 2,
-        "name": "Platinum"
+        "typeId": 2,
+        "typeName": "Platinum"
       },
       "customerName": "Nguyen Van D",
       "customerBirthday": "2000-10-09",
-      "customerGender": 0,
+      "customerGender": true,
       "customerIdCard": "212466152",
       "customerPhone": "0338117261",
       "customerEmail": "vand76@gmail.com",
       "customerAddress": "Quang Ngai"
     },
     {
-      "customerId": 5,
+      "id": 5,
       "customerType": {
-        "id": 1,
-        "name": "Diamond"
+        "typeId": 1,
+        "typeName": "Diamond"
       },
       "customerName": "Nguyen Thi E",
       "customerBirthday": "2000-05-1",
-      "customerGender": 1,
+      "customerGender": false,
       "customerIdCard": "212469192",
       "customerPhone": "0361283209",
       "customerEmail": "thie09@gmail.com",
       "customerAddress": "Hue"
+    },
+    {
+      "customerId": "",
+      "customerName": "Luân Võ",
+      "customerType": {
+        "typeId": 3,
+        "typeName": "Gold"
+      },
+      "customerBirthday": "2022-02-09",
+      "customerGender": "true",
+      "customerIdCard": "111111111",
+      "customerPhone": "0383422211",
+      "customerEmail": "luan@gmail.com",
+      "customerAddress": "48 cao thắng",
+      "id": 6
+    },
+    {
+      "customerId": "",
+      "customerName": "Luân Võ",
+      "customerType": {
+        "typeId": 3,
+        "typeName": "Gold"
+      },
+      "customerBirthday": "2022-02-17",
+      "customerGender": "true",
+      "customerIdCard": "122222222344",
+      "customerPhone": "(+84)902422223",
+      "customerEmail": "a@gmail.com",
+      "customerAddress": "48 cao thắng",
+      "id": 7
     }
   ]
 }

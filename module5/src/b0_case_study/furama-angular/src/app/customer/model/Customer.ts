@@ -1,11 +1,11 @@
-import {ICustomerType} from './CustomerType';
+import {CustomerType} from './CustomerType';
 
-export interface ICustomer {
+export interface Customer {
   customerId: number;
-  customerType: ICustomerType;
+  customerType: CustomerType;
   customerName: string;
   customerBirthday: string;
-  customerGender: number;
+  customerGender: boolean;
   customerIdCard: string;
   customerPhone: string;
   customerEmail: string;
