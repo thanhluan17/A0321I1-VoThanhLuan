@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <h2 class="text-info font-weight-bold text-center mt-3">Add new customer</h2>
-  <form method="post" [formGroup]="formAddNewCustomer" (ngSubmit)="onSubmit()">
+  <form method="post" [formGroup]="formEditCustomer" (ngSubmit)="onSubmit()">
     <div class="row px-5">
       <div class="col-lg-6 px-5">
         <div class="form-group">
           <label>Name</label>
           <input type="text" class="form-control" formControlName="customerName">
-          <p class="text-danger" *ngIf="formAddNewCustomer.controls.customerName.errors?.required &&
-          formAddNewCustomer.controls.customerName.touched">Please enter customer name!</p>
+          <p class="text-danger" *ngIf="formEditCustomer.controls.customerName.errors?.required &&
+          formEditCustomer.controls.customerName.touched">Please enter customer name!</p>
         </div>
       </div>
       <div class="col-lg-6 px-5">
@@ -18,8 +18,8 @@
             <input hidden formControlName="typeId" [(ngModel)]="typeId">
             <input hidden formControlName="typeName" [(ngModel)]="typeName">
           </select>
-          <p class="text-danger" *ngIf="formAddNewCustomer.hasError('required', ['customerType']) &&
-      formAddNewCustomer.get('customerType').touched">Please select customer type!</p>
+          <p class="text-danger" *ngIf="formEditCustomer.hasError('required', ['customerType']) &&
+      formEditCustomer.get('customerType').touched">Please select customer type!</p>
         </div>
       </div>
     </div>
@@ -28,8 +28,8 @@
         <div class="form-group">
           <label>Birthday</label>
           <input type="date" class="form-control" formControlName="customerBirthday">
-          <p class="text-danger" *ngIf="formAddNewCustomer.controls.customerBirthday.errors?.required &&
-          formAddNewCustomer.controls.customerBirthday.touched">Please enter customer birthday!</p>
+          <p class="text-danger" *ngIf="formEditCustomer.controls.customerBirthday.errors?.required &&
+          formEditCustomer.controls.customerBirthday.touched">Please enter customer birthday!</p>
         </div>
       </div>
       <div class="col-lg-6 px-5">
@@ -39,8 +39,8 @@
             <option [ngValue]="true">Male</option>
             <option [ngValue]="false">Female</option>
           </select>
-          <p class="text-danger" *ngIf="formAddNewCustomer.controls.customerGender.errors?.required &&
-          formAddNewCustomer.controls.customerGender.touched">Please enter customer gender!</p>
+          <p class="text-danger" *ngIf="formEditCustomer.controls.customerGender.errors?.required &&
+          formEditCustomer.controls.customerGender.touched">Please enter customer gender!</p>
         </div>
       </div>
     </div>
@@ -49,20 +49,20 @@
         <div class="form-group">
           <label>ID card</label>
           <input type="text" class="form-control" formControlName="customerIdCard">
-          <p class="text-danger" *ngIf="formAddNewCustomer.controls.customerIdCard.errors?.required &&
-          formAddNewCustomer.controls.customerIdCard.touched">Please enter id card!</p>
-          <p class="text-danger" *ngIf="formAddNewCustomer.controls.customerIdCard.errors?.pattern &&
-          formAddNewCustomer.controls.customerIdCard.touched">Id card must be 9 or 12 number!</p>
+          <p class="text-danger" *ngIf="formEditCustomer.controls.customerIdCard.errors?.required &&
+          formEditCustomer.controls.customerIdCard.touched">Please enter id card!</p>
+          <p class="text-danger" *ngIf="formEditCustomer.controls.customerIdCard.errors?.pattern &&
+          formEditCustomer.controls.customerIdCard.touched">Id card must be 9 or 12 number!</p>
         </div>
       </div>
       <div class="col-lg-6 px-5">
         <div class="form-group">
           <label>Phone</label>
           <input type="text" class="form-control" formControlName="customerPhone">
-          <p class="text-danger" *ngIf="formAddNewCustomer.controls.customerPhone.errors?.required &&
-          formAddNewCustomer.controls.customerPhone.touched">Please enter phone number!</p>
-          <p class="text-danger" *ngIf="formAddNewCustomer.controls.customerPhone.errors?.pattern &&
-          formAddNewCustomer.controls.customerPhone.touched">Invalid phone number format!</p>
+          <p class="text-danger" *ngIf="formEditCustomer.controls.customerPhone.errors?.required &&
+          formEditCustomer.controls.customerPhone.touched">Please enter phone number!</p>
+          <p class="text-danger" *ngIf="formEditCustomer.controls.customerPhone.errors?.pattern &&
+          formEditCustomer.controls.customerPhone.touched">Invalid phone number format!</p>
 
         </div>
       </div>
@@ -72,18 +72,18 @@
         <div class="form-group">
           <label>Email</label>
           <input type="text" class="form-control" formControlName="customerEmail">
-          <p class="text-danger" *ngIf="formAddNewCustomer.controls.customerEmail.errors?.required &&
-          formAddNewCustomer.controls.customerEmail.touched">Please enter customer email!</p>
-          <p class="text-danger" *ngIf="formAddNewCustomer.controls.customerEmail.errors?.email &&
-          formAddNewCustomer.controls.customerEmail.touched">Invalid email format!</p>
+          <p class="text-danger" *ngIf="formEditCustomer.controls.customerEmail.errors?.required &&
+          formEditCustomer.controls.customerEmail.touched">Please enter customer email!</p>
+          <p class="text-danger" *ngIf="formEditCustomer.controls.customerEmail.errors?.email &&
+          formEditCustomer.controls.customerEmail.touched">Invalid email format!</p>
         </div>
       </div>
       <div class="col-lg-6 px-5">
         <div class="form-group">
           <label>Address</label>
           <input type="text" class="form-control" formControlName="customerAddress">
-          <p class="text-danger" *ngIf="formAddNewCustomer.controls.customerAddress.errors?.required &&
-          formAddNewCustomer.controls.customerAddress.touched">Please enter customer address!</p>
+          <p class="text-danger" *ngIf="formEditCustomer.controls.customerAddress.errors?.required &&
+          formEditCustomer.controls.customerAddress.touched">Please enter customer address!</p>
         </div>
       </div>
     </div>

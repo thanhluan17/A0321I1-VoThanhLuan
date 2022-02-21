@@ -24,7 +24,19 @@ export class CustomerService {
     return this.http.get<CustomerType[]>(this.API_TYPE);
   }
 
-  addNewCustomer(customer): Observable<Customer>{
+  addNewCustomer(customer): Observable<Customer> {
     return this.http.post<Customer>(this.API, customer);
+  }
+
+  getCustomerById(customerId): Observable<Customer> {
+    return this.http.get<Customer>(this.API + '/' + customerId);
+  }
+
+  editCustomer(customer, customerId): Observable<Customer> {
+    return this.http.put<Customer>(this.API + '/' + customerId, customer);
+  }
+
+  deleteCustomer(id: number): Observable<Customer> {
+    return this.http.delete<Customer>(this.API + '/' + id);
   }
 }

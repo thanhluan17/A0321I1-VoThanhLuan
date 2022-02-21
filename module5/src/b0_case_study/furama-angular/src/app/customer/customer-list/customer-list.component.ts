@@ -10,6 +10,8 @@ export class CustomerListComponent implements OnInit {
   public customers;
   term;
   p;
+  public name!: string;
+  public idDelete!: number;
 
   constructor(
     public customerService: CustomerService
@@ -24,4 +26,17 @@ export class CustomerListComponent implements OnInit {
     });
   }
 
+  deleteCus(id: number) {
+    this.customerService.deleteCustomer(id).subscribe(data => {
+      this.ngOnInit();
+    });
+  }
+
+  getCustomerName(id: any) {
+    this.customerService.getCustomerById(id).subscribe(data => {
+      this.idDelete = data.id;
+      this.name = data.customerName;
+      console.log(this.idDelete);
+    });
+  }
 }

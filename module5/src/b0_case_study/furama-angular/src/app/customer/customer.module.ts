@@ -8,9 +8,10 @@ import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { CustomerAddComponent } from './customer-add/customer-add.component';
 import {HttpClientModule} from '@angular/common/http';
+import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 
 @NgModule({
-  declarations: [CustomerListComponent, CustomerAddComponent],
+  declarations: [CustomerListComponent, CustomerAddComponent, CustomerEditComponent],
   imports: [
     CommonModule,
     CustomerRoutingModule,
@@ -18,7 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
     Ng2SearchPipeModule,
     NgxPaginationModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ]
 })
 export class CustomerModule {

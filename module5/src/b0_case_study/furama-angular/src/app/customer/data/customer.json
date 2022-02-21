@@ -77,50 +77,6 @@
       "customerPhone": "0338117261",
       "customerEmail": "vand76@gmail.com",
       "customerAddress": "Quang Ngai"
-    },
-    {
-      "id": 5,
-      "customerType": {
-        "typeId": 1,
-        "typeName": "Diamond"
-      },
-      "customerName": "Nguyen Thi E",
-      "customerBirthday": "2000-05-1",
-      "customerGender": false,
-      "customerIdCard": "212469192",
-      "customerPhone": "0361283209",
-      "customerEmail": "thie09@gmail.com",
-      "customerAddress": "Hue"
-    },
-    {
-      "customerId": "",
-      "customerName": "Luân Võ",
-      "customerType": {
-        "typeId": 3,
-        "typeName": "Gold"
-      },
-      "customerBirthday": "2022-02-09",
-      "customerGender": "true",
-      "customerIdCard": "111111111",
-      "customerPhone": "0383422211",
-      "customerEmail": "luan@gmail.com",
-      "customerAddress": "48 cao thắng",
-      "id": 6
-    },
-    {
-      "customerId": "",
-      "customerName": "Luân Võ",
-      "customerType": {
-        "typeId": 3,
-        "typeName": "Gold"
-      },
-      "customerBirthday": "2022-02-17",
-      "customerGender": "true",
-      "customerIdCard": "122222222344",
-      "customerPhone": "(+84)902422223",
-      "customerEmail": "a@gmail.com",
-      "customerAddress": "48 cao thắng",
-      "id": 7
     }
   ]
 }
