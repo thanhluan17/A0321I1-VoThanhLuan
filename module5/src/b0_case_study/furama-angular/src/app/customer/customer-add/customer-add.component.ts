@@ -31,7 +31,7 @@ export class CustomerAddComponent implements OnInit {
     });
 
     this.formAddNewCustomer = this.fb.group({
-      customerId: [''],
+      id: [''],
       customerName: ['', [Validators.required]],
       customerType: this.fb.group({
         typeId: [''],

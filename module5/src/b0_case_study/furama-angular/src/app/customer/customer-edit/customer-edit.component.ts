@@ -33,7 +33,7 @@ export class CustomerEditComponent implements OnInit {
     });
 
     this.formEditCustomer = this.fb.group({
-      customerId: [''],
+      id: [''],
       customerName: ['', [Validators.required]],
       customerType: this.fb.group({
         typeId: [''],

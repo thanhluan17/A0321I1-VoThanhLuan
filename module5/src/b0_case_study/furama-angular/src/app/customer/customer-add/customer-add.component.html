@@ -14,6 +14,7 @@
         <div class="form-group">
           <label>Type</label>
           <select class="custom-select" formGroupName="customerType" (change)="changeCustomerType($event.target.value)">
+            <option selected>Select customer type</option>
             <option [value]="type | json" *ngFor="let type of customerTypes">{{type.typeName}}</option>
             <input hidden formControlName="typeId" [(ngModel)]="typeId">
             <input hidden formControlName="typeName" [(ngModel)]="typeName">

@@ -16,8 +16,8 @@ export class CustomerService {
   ) {
   }
 
-  getAllCustomer(): Observable<Customer[]> {
-    return this.http.get<Customer[]>(this.API);
+  getAllCustomer(): Observable<any> {
+    return this.http.get<any>(this.API);
   }
 
   getAllCustomerType(): Observable<CustomerType[]> {

@@ -67,16 +67,16 @@
     {
       "id": 4,
       "customerType": {
-        "typeId": 2,
-        "typeName": "Platinum"
+        "typeId": 3,
+        "typeName": "Gold"
       },
-      "customerName": "Nguyen Van D",
-      "customerBirthday": "2000-10-09",
-      "customerGender": true,
-      "customerIdCard": "212466152",
-      "customerPhone": "0338117261",
-      "customerEmail": "vand76@gmail.com",
-      "customerAddress": "Quang Ngai"
+      "customerName": "Nguyen Thi Z",
+      "customerBirthday": "2000-09-11",
+      "customerGender": false,
+      "customerIdCard": "212467361",
+      "customerPhone": "0981273612",
+      "customerEmail": "thic92@gmail.com",
+      "customerAddress": "Quang Nam"
     }
   ]
 }
