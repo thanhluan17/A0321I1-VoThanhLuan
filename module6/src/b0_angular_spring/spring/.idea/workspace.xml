@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="291519a8-a451-4bb6-976b-96973c2f158c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../angular/exam-md5/tslint.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="25pML9kzq5F5ZrTaKgokMNvv9IP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../module4/src/case_study/furama" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="291519a8-a451-4bb6-976b-96973c2f158c" name="Default Changelist" comment="" />
+      <created>1646219515954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646219515954</updated>
+      <workItem from="1646219533464" duration="357000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1646219849787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1646219849787" />
+    <state x="209" y="73" key="new project wizard" timestamp="1646219889937">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1646219889937" />
+  </component>
+</project>
