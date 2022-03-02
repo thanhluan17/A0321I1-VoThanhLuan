@@ -1,0 +1,72 @@
+<div class="container-fluid px-lg-5">
+  <div class="row justify-content-between pt-lg-3">
+    <h2 class="text-info font-weight-bold">Customer list</h2>
+    <div class="form-inline d-flex">
+      <input class="form-control mr-sm-2" type="text" placeholder="name..." [(ngModel)]="sName"/>
+      <input class="form-control mr-sm-2" type="text" placeholder="type..." [(ngModel)]="sType"/>
+      <input class="form-control mr-sm-2" type="text" placeholder="birthday..." [(ngModel)]="sBirthday"/>
+      <button class="btn btn-outline-info my-2 my-sm-0 btn-search" id="search" (click)="search()">Search</button>
+    </div>
+  </div>
+  <div class="col-lg-12 bg-white pt-lg-1">
+    <div class="row bg-white">
+      <div class="col-lg-8">
+        <p><a routerLink="/customer/add" class="btn btn-success mt-lg-2">Add new</a></p>
+      </div>
+    </div>
+    <table id="discount" class="table table-bordered mt-lg-2">
+      <thead class="thead-light">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Birthday</th>
+        <th scope="col">Gender</th>
+        <th scope="col">ID card</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let customer of customers | paginate: { itemsPerPage: 2, currentPage: p }">
+        <td>{{customer.customerName}}</td>
+        <td>{{customer.customerType.customerTypeName}}</td>
+        <td>{{customer.customerBirthday}}</td>
+        <td>{{customer.customerGender ? "Male" : "Female"}}</td>
+        <td>{{customer.customerIdCard}}</td>
+        <td>{{customer.customerPhone}}</td>
+        <td>{{customer.customerEmail}}</td>
+        <td>{{customer.customerAddress}}</td>
+        <td>
+          <button class="btn btn-sm btn-primary mr-3" [routerLink]="['/customer/edit/' + customer.id]">Edit</button>
+          <button data-toggle="modal" data-target="#idModal" class="btn btn-sm btn-danger"
+                  (click)="getCustomerName(customer.id)">Delete
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <pagination-controls (pageChange)="p = $event" class="text-right p-0"></pagination-controls>
+</div>
+<div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure to delete customer '{{name}}'?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="deleteCus(idDelete)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+

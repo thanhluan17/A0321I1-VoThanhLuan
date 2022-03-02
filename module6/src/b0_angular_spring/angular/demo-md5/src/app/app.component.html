@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container-fluid" style="margin-top: 90px">
+  <div class="row">
+    <div class="col-lg-2 p-0 panel-left">
+      <div class="list-group font-weight-bold" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action list-group-item-info" data-toggle="list" routerLink="/" role="tab" aria-controls="home">Home</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" routerLink="/customer/list" role="tab" aria-controls="profile">Customer</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Employee</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Service</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Contract</a>
+      </div>
+    </div>
+    <div class="col-lg-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
