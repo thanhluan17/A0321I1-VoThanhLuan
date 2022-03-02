@@ -1,0 +1,84 @@
+<div class="container-fluid" style="padding: 0 150px">
+  <h2 class="text-info font-weight-bold text-center mt-3">Sửa chuyến xe</h2>
+  <form method="post" [formGroup]="formEditChuyen" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Số xe</label>
+      <input type="text" class="form-control" disabled formControlName="soXe">
+    </div>
+
+    <div class="form-group">
+      <label>Loại xe</label>
+      <input type="text" class="form-control" formControlName="loaiXe">
+      <p class="text-danger" *ngIf="formEditChuyen.controls.loaiXe.errors?.required &&
+                formEditChuyen.controls.loaiXe.touched">Không được để trống!</p>
+    </div>
+
+    <div class="form-group">
+      <label>Nhà xe</label>
+      <input type="text" class="form-control" formControlName="nhaXe">
+      <p class="text-danger" *ngIf="formEditChuyen.controls.nhaXe.errors?.required &&
+                formEditChuyen.controls.nhaXe.touched">Không được để trống!</p>
+    </div>
+
+    <div class="form-group">
+      <label>Điểm đi</label>
+      <select [compareWith]="compareFn" class="custom-select" formControlName="diemDi">
+        <option [ngValue]="type1" *ngFor="let type1 of diemDi"
+                [selected]="type1.maDiem == formEditChuyen.value.diemDi.maDiem">{{type1.tenDiem}}</option>
+      </select>
+      <p class="text-danger" *ngIf="formEditChuyen.controls.diemDi.errors?.required &&
+                formEditChuyen.controls.diemDi.touched">Không được để trống!</p>
+    </div>
+
+    <div class="form-group">
+      <label>Điểm đến</label>
+      <select [compareWith]="compareFn" class="custom-select" formControlName="diemDen">
+        <option [ngValue]="type2" *ngFor="let type2 of diemDen"
+                [selected]="type2.maDiem == formEditChuyen.value.diemDen.maDiem">{{type2.tenDiem}}</option>
+      </select>
+      <p class="text-danger" *ngIf="formEditChuyen.controls.diemDen.errors?.required &&
+                formEditChuyen.controls.diemDen.touched">Không được để trống!</p>
+    </div>
+
+    <div class="form-group">
+      <label>Số điện thoại</label>
+      <input type="text" class="form-control" formControlName="sdt">
+      <p class="text-danger" *ngIf="formEditChuyen.controls.sdt.errors?.required &&
+                formEditChuyen.controls.sdt.touched">Không được để trống!</p>
+      <p class="text-danger" *ngIf="formEditChuyen.controls.sdt.errors?.pattern &&
+                formEditChuyen.controls.sdt.touched">Sai định dạng!</p>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" class="form-control" formControlName="email">
+      <p class="text-danger" *ngIf="formEditChuyen.controls.email.errors?.required &&
+                formEditChuyen.controls.email.touched">Không được để trống!</p>
+      <p class="text-danger" *ngIf="formEditChuyen.controls.email.errors?.email &&
+                formEditChuyen.controls.email.touched">Sai định dạng!</p>
+    </div>
+
+    <div class="form-group">
+      <label>Giờ đi</label>
+      <input type="time" class="form-control" formControlName="gioDi">
+      <p class="text-danger" *ngIf="formEditChuyen.controls.gioDi.errors?.required &&
+                formEditChuyen.controls.gioDi.touched">Không được để trống!</p>
+    </div>
+
+    <div class="form-group">
+      <label>Giờ đến</label>
+      <input type="time" class="form-control" formControlName="gioDen">
+      <p class="text-danger" *ngIf="formEditChuyen.controls.gioDen.errors?.required &&
+                formEditChuyen.controls.gioDen.touched">Không được để trống!</p>
+    </div>
+    <div class="row text-center mb-4">
+      <div class="col-lg-6">
+        <button type="button" class="btn btn-warning mx-auto" [routerLink]="['/exam/list']">Trở về</button>
+      </div>
+      <div class="col-lg-6">
+        <button type="submit" class="btn btn-primary mx-auto" [disabled]="formEditChuyen.invalid">Lưu</button>
+      </div>
+    </div>
+
+  </form>
+</div>

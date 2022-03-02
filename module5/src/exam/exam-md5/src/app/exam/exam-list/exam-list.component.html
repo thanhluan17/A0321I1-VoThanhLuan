@@ -1,0 +1,74 @@
+<div class="container-fluid px-lg-5">
+  <div class="row justify-content-between pt-lg-3">
+    <h2 class="text-info font-weight-bold">Danh sách chuyến xe</h2>
+    <div class="form-inline d-flex">
+      <!--      <input class="form-control mr-sm-2" type="text" placeholder="name..." [(ngModel)]="sName"/>-->
+      <!--      <input class="form-control mr-sm-2" type="text" placeholder="type..." [(ngModel)]="sType"/>-->
+      <!--      <input class="form-control mr-sm-2" type="text" placeholder="birthday..." [(ngModel)]="sBirthday"/>-->
+      <!--      <button class="btn btn-outline-info my-2 my-sm-0 btn-search" id="search" (click)="search()">Search</button>-->
+    </div>
+  </div>
+  <div class="col-lg-12 bg-white pt-lg-1">
+    <div class="row bg-white">
+      <div class="col-lg-8">
+        <p><a routerLink="/customer/add" class="btn btn-success mt-lg-2">Thêm mới</a></p>
+      </div>
+    </div>
+    <table id="discount" class="table table-bordered mt-lg-2">
+      <thead class="thead-light">
+      <tr>
+        <th scope="col">Số xe</th>
+        <th scope="col">Loại xe</th>
+        <th scope="col">Tên nhà xe</th>
+        <th scope="col">Điểm đi</th>
+        <th scope="col">Điểm đến</th>
+        <th scope="col">SĐT</th>
+        <th scope="col">Email</th>
+        <th scope="col">Giờ đi</th>
+        <th scope="col">Giờ đến</th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let chuyen of chuyenXe | paginate: { itemsPerPage: 2, currentPage: p }">
+        <td>{{chuyen.soXe}}</td>
+        <td>{{chuyen.loaiXe}}</td>
+        <td>{{chuyen.nhaXe}}</td>
+        <td>{{chuyen.diemDi.tenDiem}}</td>
+        <td>{{chuyen.diemDen.tenDiem}}</td>
+        <td>{{chuyen.sdt}}</td>
+        <td>{{chuyen.email}}</td>
+        <td>{{chuyen.gioDi}}</td>
+        <td>{{chuyen.gioDen}}</td>
+        <td>
+          <button class="btn btn-sm btn-primary mr-3" [routerLink]="['/exam/edit/' + chuyen.id]">Sửa</button>
+          <button data-toggle="modal" data-target="#idModal" class="btn btn-sm btn-danger"
+                  (click)="getCustomerName(chuyen.id)">Xóa
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <pagination-controls (pageChange)="p = $event" class="text-right p-0"></pagination-controls>
+</div>
+<div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cảnh báo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Bạn có muốn xóa chuyến xe số '{{name}}' không?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="deleteCus(idDelete)">Xóa</button>
+      </div>
+    </div>
+  </div>
+</div>
+

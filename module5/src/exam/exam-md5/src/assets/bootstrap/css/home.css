@@ -1,0 +1,42 @@
+.header {
+  background-color: #00ADEE;
+}
+
+.nav-link {
+  font-weight: bolder;
+  margin: 0 20px;
+}
+
+.bg-nav {
+  background-color: #E3F2FD;;
+}
+
+.footer-top, .footer-bottom {
+  background-color: #E3F2FD;;
+}
+
+i {
+  color: #6c757d;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  color: #bbb;
+  border: 0;
+}
+
+.footer-social a:hover, .footer-social a:focus {
+  color: #856dc0;
+  border: 0;
+}
+
+.footer-social i {
+  font-size: 24px;
+  vertical-align: middle;
+  margin-left: 30px;
+}
+
+.panel-left{
+  height: 570px;
+  border: #b3cefa solid 1px;
+}

@@ -24,11 +24,8 @@
   "customers": [
     {
       "id": 1,
-      "customerType": {
-        "typeId": 1,
-        "typeName": "Diamond"
-      },
-      "customerName": "Nguyen Van A",
+      "customerName": "Nguyen Van b",
+      "customerType": "[object Object]",
       "customerBirthday": "2000-12-01",
       "customerGender": true,
       "customerIdCard": "212464733",
@@ -77,6 +74,17 @@
       "customerPhone": "0981273612",
       "customerEmail": "thic92@gmail.com",
       "customerAddress": "Quang Nam"
+    },
+    {
+      "id": 5,
+      "customerName": "Luân Võ",
+      "customerType": "{\n  \"typeId\": 4,\n  \"typeName\": \"Silver\"\n}",
+      "customerBirthday": "2022-02-02",
+      "customerGender": true,
+      "customerIdCard": "111111111",
+      "customerPhone": "0903422211",
+      "customerEmail": "a@a",
+      "customerAddress": "48 cao thắng"
     }
   ]
 }

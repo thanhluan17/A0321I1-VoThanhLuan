@@ -7,6 +7,7 @@ import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {HomeComponent} from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
